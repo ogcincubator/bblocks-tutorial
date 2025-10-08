@@ -1,0 +1,24 @@
+{
+  "$schema": "metaschema.yaml",
+  "name": "02 - JSON-LD (completed)",
+  "highlighted": true,
+  "abstract": "Semantically annotate a schema by adding a simple JSON-LD context",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "schema",
+  "register": "building-blocks-tutorial",
+  "version": "0.1",
+  "dateOfLastChange": "2023-04-05",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "sources": [
+    {
+      "title": "Sample source document",
+      "link": "https://example.com/sources/1"
+    }
+  ],
+  "maturity": "mature",
+  "scope": "unstable",
+  "tags": ["building-blocks-tutorial",
+    "templates"
+  ]
+}

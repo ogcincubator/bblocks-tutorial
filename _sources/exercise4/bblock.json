@@ -2,7 +2,7 @@
   "$schema": "metaschema.yaml",
   "name": "04 - Profile a BB (using rules)",
   "highlighted": true,
-  "abstract": "Profile another Building Block with additional constraint rules",
+  "abstract": "Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases.",
   "status": "under-development",
   "dateTimeAddition": "2023-04-05T00:00:00Z",
   "itemClass": "model",

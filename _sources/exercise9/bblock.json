@@ -1,6 +1,6 @@
 {
   "$schema": "metaschema.yaml",
-  "name": "09 - Schema-agnostic (Semantic) Building Block",
+  "name": "09 - RDF BB",
   "highlighted": true,
   "abstract": "A building block defining a building block for a data model described in ontology standards OWL and SHACL.  Such a building block allows logical constraints to be inherited by multiple implementation schemas using semantic annotations (such as JSON-LD)",
   "status": "under-development",

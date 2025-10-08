@@ -1,6 +1,6 @@
 {
   "$schema": "metaschema.yaml",
-  "name": "02 - Add a JSON-LD context",
+  "name": "02 - JSON-LD",
   "highlighted": true,
   "abstract": "Semantically annotate a schema by adding a simple JSON-LD context",
   "status": "under-development",

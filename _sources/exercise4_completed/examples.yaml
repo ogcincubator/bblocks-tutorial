@@ -1,0 +1,12 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml
+## Prefixes for examples
+prefixes:
+  mynamespace: http://example.org/ns1/
+## List of examples
+examples:
+- title: Valid under new rule
+
+  snippets:
+    - language: json
+      ref: examples/example_b_lt_5.json
+

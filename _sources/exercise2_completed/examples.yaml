@@ -1,0 +1,15 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml
+## Prefixes for examples
+#prefixes:
+#  mynamespace: http://example.com/mythings/
+## List of examples
+examples:
+- title: Reference a local file for examples
+  content: |-
+    [Example from Exercise  1](/bblock/ogc.bbr.tutorial.exercise1/example)
+    
+    In **Markdown** format.
+
+  snippets:
+    - language: json
+      ref: ../exercise1/example.json

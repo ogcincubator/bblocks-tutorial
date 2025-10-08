@@ -1,0 +1,10 @@
+examples:
+  - title: Example for transforms
+    snippets:
+      - language: json
+        code: |
+          {
+            "one": 1,
+            "two": 2,
+            "string": "value"
+          }

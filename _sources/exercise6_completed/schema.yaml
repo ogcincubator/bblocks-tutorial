@@ -1,0 +1,10 @@
+description: Line with only two points
+allOf:
+  - $ref: bblocks://ogc.geo.topo.features.topo-line
+  - properties:
+      topology:
+        properties:
+          references:
+            minItems: 2
+            maxItems: 2
+

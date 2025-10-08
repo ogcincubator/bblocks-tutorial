@@ -1,0 +1,8 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml
+description: Example of a simple GeoJSON Feature specialisation
+allOf:
+  - $ref: bblocks://ogc.geo.features.feature
+  - properties:
+     properties:
+        $ref: ../exercise4/schema.yaml
+

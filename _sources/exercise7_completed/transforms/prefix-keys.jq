@@ -1,0 +1,1 @@
+walk(if type == "object" then with_entries( .key |= "PREF\(.)" ) else . end)

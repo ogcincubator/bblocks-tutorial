@@ -1,6 +1,6 @@
 {
   "$schema": "metaschema.yaml",
-  "name": "01 - JSON schema with example",
+  "name": "01 - JSON schema",
   "highlighted": true,
   "abstract": "Provide and validate an example JSON file.  Shows how the examples management component works and introduces a basic JSON schema.  (Note that building blocks may documented other forms of specification, however JSON schemas support semantic interoperability using available standard approaches and OpenAPI applications, and will be featured in these tutorials.)",
   "status": "under-development",

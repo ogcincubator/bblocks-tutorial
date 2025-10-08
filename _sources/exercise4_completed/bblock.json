@@ -1,0 +1,24 @@
+{
+  "$schema": "metaschema.yaml",
+  "name": "04 - Profiling (completed)",
+  "highlighted": true,
+  "abstract": "Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "model",
+  "register": "building-blocks-tutorial",
+  "version": "0.1",
+  "dateOfLastChange": "2023-04-05",
+  "link": "https://github.com/opengeospatial/bblock-template",
+  "sources": [
+    {
+      "title": "Sample source document",
+      "link": "https://example.com/sources/1"
+    }
+  ],
+  "maturity": "mature",
+  "scope": "unstable",
+  "tags": ["building-blocks-tutorial",
+    "templates"
+  ]
+}

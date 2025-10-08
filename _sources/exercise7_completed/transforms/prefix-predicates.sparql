@@ -1,0 +1,11 @@
+DELETE {
+  ?s ?p ?o
+}
+INSERT {
+  ?s ?p2 ?o
+}
+WHERE {
+  ?s ?p ?o
+  FILTER(STRSTARTS(STR(?p), "http://example.com/"))
+  BIND(URI(REPLACE(STR(?p), "^http://example.com/", "urn:example:ex#")) as ?p2)
+}

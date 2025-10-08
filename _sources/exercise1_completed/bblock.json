@@ -1,6 +1,6 @@
 {
   "$schema": "metaschema.yaml",
-  "name": "01 - JSON schema with example - completed",
+  "name": "01 - JSON schema (completed)",
   "highlighted": true,
   "abstract": "Shows what Exercise 1 looks like when finished",
   "status": "under-development",

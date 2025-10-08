@@ -10,7 +10,7 @@
   "version": "0.1",
   "dateOfLastChange": "2023-04-05",
   "dependsOn": [
-    "ogc.bbr.tutorial.exercise9"
+    "ogc.bbr.tutorial.exercise9_completed"
   ],
   "sources": [
     {

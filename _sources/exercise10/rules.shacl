@@ -8,11 +8,9 @@
 <#testValues>
     a              sh:NodeShape ;
     sh:targetClass :Researcher ;
-    sh:message     "Researchers must belong to at least one named Organization and an Association" ;
+    sh:message     "Researchers must belong to at least one named Association" ;
     sh:property    [ sh:path     :partOf ;
                       sh:qualifiedValueShape [ sh:class    :Association ; ] ;
                      sh:qualifiedMinCount 1 ] ;
-     sh:property    [ sh:path     :partOf ;
-                      sh:qualifiedValueShape [ sh:class    :Organization ; ] ;
-                     sh:qualifiedMinCount 1 ]
+
 .

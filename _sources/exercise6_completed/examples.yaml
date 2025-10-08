@@ -1,0 +1,11 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml
+## Prefixes will be used for all RDF Turtle resources so that they can be omitted from the actual snippets
+
+## List of examples
+examples:
+  - title: Line with 2 points
+
+    snippets:
+      - language: json
+        # Reference to file
+        ref: examples/example.json
