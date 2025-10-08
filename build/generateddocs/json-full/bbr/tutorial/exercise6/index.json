@@ -2,14 +2,14 @@
 
 {
   "itemIdentifier": "ogc.bbr.tutorial.exercise6",
-  "name": "06 - Import and extend",
+  "name": "06 - Import/Extend",
   "abstract": "Profiling a BBlock from another register",
   "status": "under-development",
   "dateTimeAddition": "2023-05-19T00:00:00Z",
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "1.0",
-  "dateOfLastChange": "2025-10-07",
+  "dateOfLastChange": "2025-10-08",
   "sources": [],
   "maturity": "development",
   "scope": "unstable",
@@ -31,7 +31,7 @@
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise6/",
-  "description": "## Importing and profiling from an external register\n\n### Steps\n- uncomment the import in [bblocks-config.yaml](../../bblocks-config.yaml)\n- uncomment the reference to `topo-line` in [schema.yaml](schema.yaml)\n- examine the examples and validation reports.\n\n\n",
+  "description": "## Importing and profiling from an external register\n\nImporting from another Building Block register allows grouping of related Building Blocks into single governance environments using GIT.\n\nThis forces **transparency of reuse**, i.e. FAIR principles. \n\nIt also means maintenance is relatively simple for static Building Blocks - such as those defining published standards.\n\n\n### Steps\n- review the docs on [imports](https://ogcincubator.github.io/bblocks-docs/create/imports)\n- view the import in line 17 of [bblocks-config.yaml](../../bblocks-config.yaml)\n- uncomment the reference to `topo-line` in [schema.yaml](schema.yaml)\n- build and view\n- examine the examples and validation reports.\n\n\n",
   "examples": [
     {
       "title": "Line with 2 points",

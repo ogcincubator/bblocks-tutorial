@@ -1,0 +1,23 @@
+Validation report for ogc.bbr.tutorial.exercise3_completed - 03 - Rules (completed)
+Generated 2025-10-08T06:05:36.371521+00:00
+=== Files ===
+Using example_1_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/exercise3_completed/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise3_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nc8cb2f614e5d4961b05c8b8b5d29d679
+
+=== End SHACL ===
+

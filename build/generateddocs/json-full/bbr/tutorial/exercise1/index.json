@@ -3,7 +3,7 @@
 {
   "itemIdentifier": "ogc.bbr.tutorial.exercise1",
   "$schema": "metaschema.yaml",
-  "name": "01 - JSON schema with example",
+  "name": "01 - JSON schema",
   "highlighted": true,
   "abstract": "Provide and validate an example JSON file.  Shows how the examples management component works and introduces a basic JSON schema.  (Note that building blocks may documented other forms of specification, however JSON schemas support semantic interoperability using available standard approaches and OpenAPI applications, and will be featured in these tutorials.)",
   "status": "under-development",
@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-07",
+  "dateOfLastChange": "2025-10-08",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [],
   "maturity": "mature",
@@ -28,7 +28,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise1/",
   "rdfData": [],
   "validationPassed": true,
-  "description": "## Exercise 1\n\nGoal: take a simple JSON schema and test with an example\n\n### Steps\n- un-comment the reference to a local file in [examples.yaml](examples.yaml)\n- run build\n- run viewer\n- navigate to \"Exercise 1\"\n- view validation results at [build-local/...](/register/build-local/tests/bbr/template/exercise1/_report.json)",
+  "description": "## Exercise 1\n\nGoal: take a simple JSON schema and test with an example\n\nAn example of the end result is available [here](/bblock/ogc.bbr.tutorial.exercise1_completed)\n\n### Steps\n- un-comment the reference to a local file in [examples.yaml](examples.yaml)\n- run build\n- run viewer\n- navigate to [Exercise 1]((/bblock/ogc.bbr.tutorial.exercise1)\n- navigate to [Examples]((/bblock/ogc.bbr.tutorial.exercise1/examples) tab\n- view validation results at [build-local/...](/register/build-local/tests/report.html#bblock-ogc.bbr.tutorial.exercise1)",
   "examples": [
     {
       "title": "Reference a local file for examples",

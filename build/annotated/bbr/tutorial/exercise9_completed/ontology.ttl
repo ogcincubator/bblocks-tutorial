@@ -1,8 +1,8 @@
 @prefix : <https://w3id.org/example#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix ns1: <http://schema.org/> .
-@prefix ns2: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix ns1: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix ns2: <http://schema.org/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -30,11 +30,11 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 
 vann:preferredNamespaceUri a owl:AnnotationProperty .
 
-ns1:author a owl:AnnotationProperty .
+ns2:author a owl:AnnotationProperty .
 
-ns1:citation a owl:AnnotationProperty .
+ns2:citation a owl:AnnotationProperty .
 
-ns2:rationale a owl:AnnotationProperty .
+ns1:rationale a owl:AnnotationProperty .
 
 <https://w3id.org/example> a owl:Ontology ;
     dc:abstract "An example vocabulary designed to illustrate how to publish vocabularies on the Web following the FAIR principles"@en ;
@@ -46,7 +46,7 @@ ns2:rationale a owl:AnnotationProperty .
     dcterms:license <http://creativecommons.org/licenses/by/2.0/> ;
     vann:preferredNamespacePrefix "exo"@en ;
     vann:preferredNamespaceUri "https://w3id.org/example" ;
-    ns1:citation "Cite this vocabulary as: Garijo, D. and Poveda-Villalon, M. The example ontology 1.0.0."@en ;
+    ns2:citation "Cite this vocabulary as: Garijo, D. and Poveda-Villalon, M. The example ontology 1.0.0."@en ;
     rdfs:comment "An example vocabulary designed to illustrate how to publish vocabularies on the Web following the FAIR principles. This vocabulary describes two simple classes with 2 properties and a data property."@en ;
     owl:versionIRI <https://w3id.org/example/1.0.0> ;
     owl:versionInfo "1.0.0"@en .
@@ -74,7 +74,7 @@ xsd:date a rdfs:Datatype .
 :Researcher a owl:Class ;
     rdfs:label "Researcher"@en ;
     vann:example "An example using the Researcher class, e.g., Bob is a professor at the University of Southern California."@en ;
-    ns2:rationale "The reason why this concept was added to the ontology. This could reflect some agreement or use cases that may need to be reflected here. For example: The concept Researcher was added to the ontology to represent those authors of scientific publications that belong to a public institution."@en ;
+    ns1:rationale "The reason why this concept was added to the ontology. This could reflect some agreement or use cases that may need to be reflected here. For example: The concept Researcher was added to the ontology to represent those authors of scientific publications that belong to a public institution."@en ;
     rdfs:comment "A definition of your class. For example, A researcher is a person who publishes scientific papers, writes research proposals and mentors students"@en .
 
 :Organization a owl:Class ;

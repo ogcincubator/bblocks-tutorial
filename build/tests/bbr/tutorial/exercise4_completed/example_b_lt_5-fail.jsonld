@@ -1,0 +1,6 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/context.jsonld",
+  "a": "mynamespace:aThing",
+  "b": 4,
+  "c": 1
+}

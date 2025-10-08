@@ -1,0 +1,190 @@
+
+
+{
+  "itemIdentifier": "ogc.bbr.tutorial.exercise7_completed",
+  "name": "07 - Transforms (completed)",
+  "abstract": "schema and graph transforms",
+  "status": "under-development",
+  "dateTimeAddition": "2024-10-03T11:31:00+02:00",
+  "itemClass": "schema",
+  "version": "0.1",
+  "dateOfLastChange": "2025-10-08",
+  "highlighted": true,
+  "shaclShapes": {},
+  "ldContext": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise7_completed/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise7_completed/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise7_completed/",
+  "rdfData": [],
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise7_completed/",
+  "transforms": [
+    {
+      "id": "prefix-keys",
+      "description": "Adds a \"PREF\" prefix to all object keys.",
+      "type": "jq",
+      "ref": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise7_completed/transforms/prefix-keys.jq",
+      "code": "walk(if type == \"object\" then with_entries( .key |= \"PREF\\(.)\" ) else . end)",
+      "inputs": {
+        "mediaTypes": [
+          {
+            "id": "json",
+            "defaultExtension": "json",
+            "label": "JSON",
+            "mimeType": "application/json",
+            "extensions": [
+              "json"
+            ]
+          }
+        ]
+      },
+      "outputs": {
+        "mediaTypes": [
+          {
+            "id": "json",
+            "defaultExtension": "json",
+            "label": "JSON",
+            "mimeType": "application/json",
+            "extensions": [
+              "json"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "prefix-predicates",
+      "description": "Changes the \"http://example.com/\" prefix of every predicate to a URN",
+      "type": "sparql-update",
+      "ref": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise7_completed/transforms/prefix-predicates.sparql",
+      "code": "DELETE {\n  ?s ?p ?o\n}\nINSERT {\n  ?s ?p2 ?o\n}\nWHERE {\n  ?s ?p ?o\n  FILTER(STRSTARTS(STR(?p), \"http://example.com/\"))\n  BIND(URI(REPLACE(STR(?p), \"^http://example.com/\", \"urn:example:ex#\")) as ?p2)\n}",
+      "inputs": {
+        "mediaTypes": [
+          {
+            "id": "ttl",
+            "defaultExtension": "ttl",
+            "label": "RDF/Turtle",
+            "mimeType": "text/turtle",
+            "aliases": [
+              "turtle",
+              "rdf/turtle"
+            ],
+            "extensions": [
+              "ttl"
+            ]
+          },
+          {
+            "id": "rdf",
+            "defaultExtension": "rdf",
+            "label": "RDF/XML",
+            "mimeType": "application/rdf+xml",
+            "aliases": [
+              "rdf/xml"
+            ],
+            "extensions": [
+              "rdf"
+            ]
+          }
+        ]
+      },
+      "outputs": {
+        "mediaTypes": [
+          {
+            "id": "ttl",
+            "defaultExtension": "ttl",
+            "label": "RDF/Turtle",
+            "mimeType": "text/turtle",
+            "aliases": [
+              "turtle",
+              "rdf/turtle"
+            ],
+            "extensions": [
+              "ttl"
+            ]
+          },
+          {
+            "id": "rdf",
+            "defaultExtension": "rdf",
+            "label": "RDF/XML",
+            "mimeType": "application/rdf+xml",
+            "aliases": [
+              "rdf/xml"
+            ],
+            "extensions": [
+              "rdf"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "inline-transform",
+      "description": "A transform's code can also be defined inside the transform's object",
+      "type": "jq",
+      "code": ".test = \"test\"\n",
+      "inputs": {
+        "mediaTypes": [
+          {
+            "id": "json",
+            "defaultExtension": "json",
+            "label": "JSON",
+            "mimeType": "application/json",
+            "extensions": [
+              "json"
+            ]
+          }
+        ]
+      },
+      "outputs": {
+        "mediaTypes": [
+          {
+            "id": "json",
+            "defaultExtension": "json",
+            "label": "JSON",
+            "mimeType": "application/json",
+            "extensions": [
+              "json"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "description": "## Exercise 7\n\nGoal: Examine [transform support](https://ogcincubator.github.io/bblocks-docs/create/transforms)\n\nNote: User Experience for FAIR transform publishing is a work in progress - feel free to [contribute](https://github.com/ogcincubator/bblocks-tutorial/issues) ideas!\n\n### Steps\n- See the documentation on [transform support](https://ogcincubator.github.io/bblocks-docs/create/transforms)\n- rename [transforms.example](context.example) to [transforms.yaml](context.jsonld)\n- run build\n- run viewer\n- navigate to [Transforms](/bblock/ogc.bbr.tutorial.exercise7_completed/transforms) Tab\n- examine transforms available\n- note how each transform supports specific input formats - e.g. an XSLT transform will be applied to XML\n- navigate to [Examples](/bblock/ogc.bbr.tutorial.exercise7_completed/examples) Tab\n- click on `Transform Results` button\n- Select the transform (drop down list) and view results\n\n### further development\n\nIn future there is expected to be a finer-grained binding of transforms to input and output profiles for data conformance, and integrated validation.\n\nAlso a \"plug-in\" custom transform capability \n",
+  "examples": [
+    {
+      "title": "Example for transforms",
+      "snippets": [
+        {
+          "language": "json",
+          "code": "{\n  \"one\": 1,\n  \"two\": 2,\n  \"string\": \"value\"\n}",
+          "transformResults": {
+            "prefix-keys": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise7_completed/transforms/example_1_1.prefix-keys.json",
+            "inline-transform": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise7_completed/transforms/example_1_1.inline-transform.json"
+          },
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise7_completed/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/context.jsonld\",\n  \"one\": 1,\n  \"two\": 2,\n  \"string\": \"value\"\n}",
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise7_completed/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "@prefix ex: <http://example.com/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] ex:hasOne 1 ;\n    ex:hasString \"value\" ;\n    ex:hasTwo 2 .\n\n",
+          "transformResults": {
+            "prefix-predicates": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise7_completed/transforms/example_1_3.prefix-predicates.ttl"
+          },
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise7_completed/example_1_1.ttl"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "type: object\nproperties:\n  one:\n    type: number\n    x-jsonld-id: http://example.com/hasOne\n  two:\n    type: number\n    x-jsonld-id: http://example.com/hasTwo\n  string:\n    type: string\n    x-jsonld-id: http://example.com/hasString\nx-jsonld-prefixes:\n  ex: http://example.com/\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-tutorial",
+  "gitPath": "_sources/exercise7_completed"
+}

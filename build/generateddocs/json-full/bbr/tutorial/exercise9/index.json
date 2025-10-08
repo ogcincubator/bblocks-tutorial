@@ -3,7 +3,7 @@
 {
   "itemIdentifier": "ogc.bbr.tutorial.exercise9",
   "$schema": "metaschema.yaml",
-  "name": "09 - Schema-agnostic (Semantic) Building Block",
+  "name": "09 - RDF BB",
   "highlighted": true,
   "abstract": "A building block defining a building block for a data model described in ontology standards OWL and SHACL.  Such a building block allows logical constraints to be inherited by multiple implementation schemas using semantic annotations (such as JSON-LD)",
   "status": "under-development",
@@ -11,7 +11,8 @@
   "itemClass": "model",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-07",
+  "dateOfLastChange": "2025-10-08",
+  "ontology": "ontology.ttl",
   "sources": [
     {
       "title": "Sample source document",
@@ -29,12 +30,11 @@
       "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise9/rules.shacl"
     ]
   },
-  "ontology": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise9/ontology.ttl",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise9/",
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise9/",
-  "description": "## Exercise 9\n\nGoal: Define a Building Block for a semantic data model\n\nThis approach is appropriate where a given schema is one of many possible schemas for the same underlying semantic model, and allows defining the model and logical constraints independently, with re-usable validation rules and unit testing advantages.\n\n### Steps\n- uncomment line\n- examine file \"ontology.ttl\"\n- run build\n- run viewer\n- navigate to \"Exercise 9\"/Ontology and examine classes\n- view validation results on \"about tab\"\n- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)",
+  "description": "## Exercise 9\n\nGoal: Define a Building Block for a semantic data model using OWL and SHACL\n\nThis supports **transparent dependency relationships** between modules of an model composed of multiple ontologies.\n\nIt also support CI/CT of SHACL rules including testing against _pass_ and _fail_ tests, as per [Excercise 4](../exercise4_completed) - this is extremely important since SHACL rules are hard to debug.\n\nNote also this approach is appropriate where a given schema is **one of many possible schemas** for the same underlying semantic model, and allows defining the model and logical constraints independently, with re-usable validation rules and unit testing advantages.\n\n**A richer integration with the PyLODE documentation tool is planned to support generation of comprehensive documentation**\n\n### Steps\n- uncomment line 12 of [bblock.json](bblock.json) to identify the source \n- examine file [ontology.ttl-example](ontology.ttl-example)\"\n- rename to **ontology.ttl**\n- run build\n- run viewer\n- navigate to \"Exercise 9\"/Ontology and examine `Classes` and `Properties`\n- view validation results on \"About\n- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)",
   "examples": [
     {
       "title": "Example",

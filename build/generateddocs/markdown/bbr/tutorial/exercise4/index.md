@@ -3,7 +3,7 @@
 
 `ogc.bbr.tutorial.exercise4` *v0.1*
 
-Profile another Building Block with additional constraint rules
+Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 

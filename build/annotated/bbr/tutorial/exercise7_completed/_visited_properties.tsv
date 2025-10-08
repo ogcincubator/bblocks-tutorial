@@ -1,0 +1,4 @@
+path	@id
+/one	http://example.com/hasOne
+/two	http://example.com/hasTwo
+/string	http://example.com/hasString

@@ -1,0 +1,6 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/context.jsonld",
+  "one": 1,
+  "two": 2,
+  "string": "value"
+}

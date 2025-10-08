@@ -11,7 +11,7 @@
   "itemClass": "model",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-07",
+  "dateOfLastChange": "2025-10-08",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -41,7 +41,7 @@
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise3/",
-  "description": "## Exercise 3\n\nGoal: Define logical rules to exploit semantic annotation\n\nThis will be a basic example that uses the JSON-LD bindings and simple rules.  Note that richer rules can be defined that use referenced semantic models and advanced reasoning, however significant extra functionality is provided simply by being able to identify and operate on schema elements with richer logic languages like SHACL.\n\n### Steps\n- uncomment line 11 in `rules.shacl` \n- run build\n- run viewer\n- navigate to \"Exercise 3\"/Validation\n- view validation results on \"about tab\" \n",
+  "description": "## Exercise 3\n\nGoal: Define logical rules to exploit semantic annotation\n\nThis will be a basic example that uses the JSON-LD bindings and simple rules.  Note that richer rules can be defined that use referenced semantic models and advanced reasoning, however significant extra functionality is provided simply by being able to identify and operate on schema elements with richer logic languages like SHACL.\n\n### Steps\n- uncomment line 11 in [rules.shacl](rules.shacl) \n- run build\n- run viewer\n- navigate to \"Exercise 3\"/Validation\n- view validation results on \"about tab\" \n",
   "examples": [
     {
       "title": "Reference a local file for examples",

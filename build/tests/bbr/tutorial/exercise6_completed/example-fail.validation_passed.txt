@@ -1,0 +1,25 @@
+Validation report for ogc.bbr.tutorial.exercise6_completed - 06 - Import/Extend (completed)
+Generated 2025-10-08T06:05:38.538811+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using example-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD example-fail.jsonld created
+Output Turtle example-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: ['P1', 'P2', 'P3'] is too long
+
+Failed validating 'maxItems' in schema['allOf'][1]['properties']['topology']['properties']['references']:
+    {'maxItems': 2, 'minItems': 2}
+
+On instance['topology']['references']:
+    ['P1', 'P2', 'P3']
+=== End JSON Schema ===
+

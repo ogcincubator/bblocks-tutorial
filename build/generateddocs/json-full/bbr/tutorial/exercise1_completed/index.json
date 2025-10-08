@@ -3,7 +3,7 @@
 {
   "itemIdentifier": "ogc.bbr.tutorial.exercise1_completed",
   "$schema": "metaschema.yaml",
-  "name": "01 - JSON schema with example - completed",
+  "name": "01 - JSON schema (completed)",
   "highlighted": true,
   "abstract": "Shows what Exercise 1 looks like when finished",
   "status": "under-development",
@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-07",
+  "dateOfLastChange": "2025-10-08",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [],
   "maturity": "mature",
@@ -29,7 +29,7 @@
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise1_completed/",
-  "description": "## Exercise 1\n\nGoal: take a simple JSON schema and test with an example\n\nAn example of the end result is available [here](../ogc.bbr.tutorial.exercise1_completed)\n\n### Steps\n- un-comment the reference to a local file in [examples.yaml](examples.yaml)\n- run build\n- run viewer\n- navigate to \"Exercise 1\"\n- view validation results at [build-local/...](/register/build-local/tests/bbr/template/exercise1/_report.json)",
+  "description": "## Exercise 1\n\nGoal: take a simple JSON schema and test with an example\n\n### Steps\n- un-comment the reference to a local file in [examples.yaml](examples.yaml)\n- run build\n- run viewer\n- navigate to [Exercise 1](/bblock/ogc.bbr.tutorial.exercise1_completed)\n- view validation results at [build-local/...](/register/build-local/tests/report.html#bblock-ogc.bbr.tutorial.exercise1_completed)",
   "examples": [
     {
       "title": "Reference a local file for examples",

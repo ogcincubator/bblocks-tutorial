@@ -1,0 +1,9 @@
+description: Line with only two points
+allOf:
+- $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml
+- properties:
+    topology:
+      properties:
+        references:
+          minItems: 2
+          maxItems: 2

@@ -1,0 +1,11 @@
+@prefix : <https://w3id.org/example#> .
+@prefix eg: <https://w3id.org/example-data#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+eg:Fred a :Researcher ;
+    rdfs:label "Fred the Gardener" ;
+    :partOf eg:GnomesInc .
+
+eg:GnomesInc a :Organization ;
+    rdfs:label "Gnomes Inc. Gardeners to the Stars" .
+

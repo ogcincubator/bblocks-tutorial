@@ -1,0 +1,21 @@
+Validation report for ogc.bbr.tutorial.exercise9_completed - 09 - RDF BB (completed) 
+Generated 2025-10-08T06:05:36.325062+00:00
+=== Files ===
+Using example_1_1.ttl from examples
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== Turtle ===
+Prefixes are defined for mynamespace
+=== End Turtle ===
+
+=== SHACL ===
+Validation result for _sources/exercise9_completed/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise9_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred
+
+=== End SHACL ===
+

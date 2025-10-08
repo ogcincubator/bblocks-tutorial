@@ -1,0 +1,29 @@
+Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Profiling (completed)
+Generated 2025-10-08T06:05:36.647710+00:00
+=== General ===
+
+** Validation error **
+Test was expected to fail but it did not.
+=== End General ===
+
+=== Files ===
+Using example_b_lt_c-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD example_b_lt_c-fail.jsonld created
+Output Turtle example_b_lt_c-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/exercise4_completed/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise4_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: *none*
+
+=== End SHACL ===
+
