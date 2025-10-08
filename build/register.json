@@ -2,7 +2,7 @@
   "name": "OGC Building Blocks tutorial examples repository",
   "abstract": "A set of building blocks introducing capabilities, as a sequence of exercises.\n",
   "description": "Follow the instructions in the \"About section\" of each building block, starting with the [Orientation](bblock/ogc.bbr.tutorial.exercise0) exercise.\n",
-  "modified": "2025-10-08T06:05:30.115853",
+  "modified": "2025-10-08T07:04:24.844679",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",

@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Profiling (completed)
-Generated 2025-10-08T06:05:36.651247+00:00
+Generated 2025-10-08T07:04:30.223516+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting

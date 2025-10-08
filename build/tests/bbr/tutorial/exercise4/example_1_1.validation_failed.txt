@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise4 - 04 - Profile a BB (using rules)
-Generated 2025-10-08T06:05:36.378919+00:00
+Generated 2025-10-08T07:04:29.948829+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting

@@ -31,7 +31,7 @@ Note: User Experience for FAIR transform publishing is a work in progress - feel
 
 In future there is expected to be a finer-grained binding of transforms to input and output profiles for data conformance, and integrated validation.
 
-Also a "plug-in" custom transform capability 
+Also a "plug-in" custom transform capability is planned - allowing CI/CT of multiple transformation testing as part of specification development or augmentation of resources supporting implementations.
 
 ## Examples
 
