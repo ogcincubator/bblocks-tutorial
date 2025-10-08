@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.bbr.tutorial.exercise10 - 10 - Profiling an Ontology",
   "bblockName": "10 - Profiling an Ontology",
   "bblockId": "ogc.bbr.tutorial.exercise10",
-  "generated": "2025-10-07T10:49:04.541737+00:00",
+  "generated": "2025-10-07T13:02:30.066058+00:00",
   "result": true,
   "items": [
     {
@@ -50,17 +50,17 @@
             {
               "shaclFile": "_sources/exercise10/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape": {
-                  "nodes": []
-                },
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
                     "eg:Fred"
                   ]
+                },
+                "<https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise10/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+              "message": "Focus nodes for _sources/exercise10/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n"
             }
           ]
         }
@@ -120,17 +120,17 @@
             {
               "shaclFile": "_sources/exercise10/rules.shacl",
               "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape": {
-                  "nodes": []
-                },
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
                     "eg:Fred"
                   ]
+                },
+                "<https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape": {
+                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise10/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+              "message": "Focus nodes for _sources/exercise10/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n"
             }
           ]
         }

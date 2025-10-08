@@ -14,7 +14,7 @@ Semantically annotate a schema by adding a simple JSON-LD context
 Goal: Semantically annotate a JSON schema
 
 ### Steps
-- rename `context.example` to `context.jsonld` 
+- rename [context.example](context.example) to [context.jsonld](context.jsonld)
 - run build
 - run viewer
 - navigate to "Exercise 2"/Examples

@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise10 - 10 - Profiling an Ontology
-Generated 2025-10-07T10:49:04.537262+00:00
+Generated 2025-10-07T13:02:30.061554+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -22,9 +22,9 @@ Validation result for _sources/exercise10/rules.shacl:
   	Result Path: :partOf
   
 Focus nodes for _sources/exercise10/rules.shacl:
- - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*
- - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*
  - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred
+ - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*
+ - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*
 
 === End SHACL ===
 

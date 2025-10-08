@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise6 - 06 - Import and extend
-Generated 2025-10-07T10:49:04.316598+00:00
+Generated 2025-10-07T13:02:29.838777+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===

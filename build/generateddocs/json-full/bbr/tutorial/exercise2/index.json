@@ -35,7 +35,7 @@
   "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise2/",
-  "description": "## Exercise 2\n\nGoal: Semantically annotate a JSON schema\n\n### Steps\n- rename `context.example` to `context.jsonld` \n- run build\n- run viewer\n- navigate to \"Exercise 2\"/Examples\n- choose \"RDF/Turtle\" to see generated RDF\n- view \"semantic uplift\" \n- view validation results at [build-local/...](/register/build-local/tests/bbr/template/exercise2/_report.json)",
+  "description": "## Exercise 2\n\nGoal: Semantically annotate a JSON schema\n\n### Steps\n- rename [context.example](context.example) to [context.jsonld](context.jsonld)\n- run build\n- run viewer\n- navigate to \"Exercise 2\"/Examples\n- choose \"RDF/Turtle\" to see generated RDF\n- view \"semantic uplift\" \n- view validation results at [build-local/...](/register/build-local/tests/bbr/template/exercise2/_report.json)",
   "examples": [
     {
       "title": "Reference a local file for examples",

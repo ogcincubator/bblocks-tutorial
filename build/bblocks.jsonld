@@ -112,7 +112,7 @@
   "name": "Building Blocks - OGC Building Blocks tutorial examples repository",
   "abstract": "A set of building blocks introducing capabilities, as a sequence of exercises.\n",
   "description": "Follow the instructions in the \"About section\" of each building block, starting with the Overview to orient yourself.\n",
-  "modified": "2025-10-07T10:49:02.421391",
+  "modified": "2025-10-07T13:02:28.446895",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
