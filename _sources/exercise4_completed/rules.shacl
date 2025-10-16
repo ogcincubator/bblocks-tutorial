@@ -8,7 +8,7 @@
 
 <#testValues>
     a              sh:NodeShape ;
-#    sh:targetClass mynamespace:aThing ;
+    sh:targetClass mynamespace:aThing ;
     sh:message     "B must not be less than 5" ;
     sh:property    [ sh:path        ns1:b ;
                      sh:minInclusive  5 ]

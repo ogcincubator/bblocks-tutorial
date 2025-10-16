@@ -4,5 +4,5 @@ allOf:
   - $ref: bblocks://ogc.geo.features.feature
   - properties:
      properties:
-        $ref: ../exercise4/schema.yaml
+        $ref: ../exercise4_completed/schema.yaml
 
