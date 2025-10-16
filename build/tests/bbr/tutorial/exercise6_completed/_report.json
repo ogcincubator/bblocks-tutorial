@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.bbr.tutorial.exercise6_completed - 06 - Import/Extend (completed)",
   "bblockName": "06 - Import/Extend (completed)",
   "bblockId": "ogc.bbr.tutorial.exercise6_completed",
-  "generated": "2025-10-08T07:04:31.908159+00:00",
+  "generated": "2025-10-16T19:31:00.959031+00:00",
   "result": true,
   "items": [
     {
@@ -68,6 +68,32 @@
               "message": "ValidationError: ['P1', 'P2', 'P3'] is too long\n\nFailed validating 'maxItems' in schema['allOf'][1]['properties']['topology']['properties']['references']:\n    {'maxItems': 2, 'minItems': 2}\n\nOn instance['topology']['references']:\n    ['P1', 'P2', 'P3']"
             }
           ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+              "focusNodes": {
+                "_:nbc63e8df8f3d4b8c83b4011c368af62eb3": {
+                  "nodes": []
+                },
+                "_:nbc63e8df8f3d4b8c83b4011c368af62eb1": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:\n - Shape _:nbc63e8df8f3d4b8c83b4011c368af62eb3: *none*\n - Shape _:nbc63e8df8f3d4b8c83b4011c368af62eb1: *none*\n"
+            }
+          ]
         }
       ]
     },
@@ -121,6 +147,32 @@
               "result": true,
               "isError": false,
               "message": "Validation passed"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+              "focusNodes": {
+                "_:nbc63e8df8f3d4b8c83b4011c368af62eb3": {
+                  "nodes": []
+                },
+                "_:nbc63e8df8f3d4b8c83b4011c368af62eb1": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:\n - Shape _:nbc63e8df8f3d4b8c83b4011c368af62eb3: *none*\n - Shape _:nbc63e8df8f3d4b8c83b4011c368af62eb1: *none*\n"
             }
           ]
         }

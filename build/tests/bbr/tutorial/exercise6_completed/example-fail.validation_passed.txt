@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise6_completed - 06 - Import/Extend (completed)
-Generated 2025-10-08T07:04:31.904118+00:00
+Generated 2025-10-16T19:31:00.952960+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -22,4 +22,15 @@ Failed validating 'maxItems' in schema['allOf'][1]['properties']['topology']['pr
 On instance['topology']['references']:
     ['P1', 'P2', 'P3']
 === End JSON Schema ===
+
+=== SHACL ===
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:nbc63e8df8f3d4b8c83b4011c368af62eb3: *none*
+ - Shape _:nbc63e8df8f3d4b8c83b4011c368af62eb1: *none*
+
+=== End SHACL ===
 

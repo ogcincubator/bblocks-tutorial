@@ -1,0 +1,46 @@
+Validation report for ogc.bbr.tutorial.exercise5_completed - 05 - Features (completed)
+Generated 2025-10-16T19:30:58.259298+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using feature-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD feature-fail.jsonld created
+Output Turtle feature-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+
+** Validation error **
+ValidationError: 'a' is a required property
+
+Failed validating 'required' in schema['allOf'][1]['properties']['properties']:
+    {'$schema': 'https://json-schema.org/draft/2020-12/schema',
+     'description': 'My example schema',
+     'properties': {'a': {'format': 'uri',
+                          'type': 'string',
+                          'x-jsonld-id': '@type'},
+                    'b': {'type': 'number',
+                          'x-jsonld-id': 'https://example.org/my-bb-model/b'},
+                    'c': {'type': 'number',
+                          'x-jsonld-id': 'https://example.org/my-bb-model/c'}},
+     'required': ['a', 'b'],
+     'type': 'object',
+     'x-jsonld-prefixes': {'mynamespace': 'http://example.org/ns1/'}}
+
+On instance['properties']:
+    {'notMyProp': 'Mandatory property not present example'}
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/exercise4_completed/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise4_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: *none*
+
+=== End SHACL ===
+

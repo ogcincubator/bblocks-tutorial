@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.bbr.tutorial.exercise5_completed - 05 - Features (completed)",
   "bblockName": "05 - Features (completed)",
   "bblockId": "ogc.bbr.tutorial.exercise5_completed",
-  "generated": "2025-10-08T07:04:30.474104+00:00",
-  "result": false,
+  "generated": "2025-10-16T19:30:58.266339+00:00",
+  "result": true,
   "items": [
     {
       "source": {
@@ -13,7 +13,7 @@
         "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/tests/feature-fail.json",
         "language": "json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "GENERAL",
@@ -21,8 +21,8 @@
           "entries": [
             {
               "op": "require-fail",
-              "isError": true,
-              "message": "Test was expected to fail but it did not."
+              "isError": false,
+              "message": "Test was expected to fail and it did."
             }
           ]
         },
@@ -61,9 +61,11 @@
           "entries": [
             {
               "op": "validation",
-              "result": true,
-              "isError": false,
-              "message": "Validation passed"
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "'a' is a required property",
+              "isError": true,
+              "message": "ValidationError: 'a' is a required property\n\nFailed validating 'required' in schema['allOf'][1]['properties']['properties']:\n    {'$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'description': 'My example schema',\n     'properties': {'a': {'format': 'uri',\n                          'type': 'string',\n                          'x-jsonld-id': '@type'},\n                    'b': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/b'},\n                    'c': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/c'}},\n     'required': ['a', 'b'],\n     'type': 'object',\n     'x-jsonld-prefixes': {'mynamespace': 'http://example.org/ns1/'}}\n\nOn instance['properties']:\n    {'notMyProp': 'Mandatory property not present example'}"
             }
           ]
         },
@@ -73,20 +75,20 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise4/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise4/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise4/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/rules.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
+              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
             }
           ]
         }
@@ -127,7 +129,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 16,
+              "size": 19,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -151,20 +153,22 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise4/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/rules.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise4/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise4/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/rules.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": []
+                  "nodes": [
+                    "<http://example.com/features/f1>"
+                  ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
+              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
             }
           ]
         }
@@ -210,7 +214,7 @@
   "globalErrors": {},
   "counts": {
     "total": 3,
-    "passed": 2,
-    "failed": 1
+    "passed": 3,
+    "failed": 0
   }
 }

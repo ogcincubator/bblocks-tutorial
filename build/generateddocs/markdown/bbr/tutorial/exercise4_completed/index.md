@@ -72,7 +72,7 @@ Note this illustrates how to use examples to test rules fail when expected. This
 
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
-$ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3/schema.yaml
+$ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/schema.yaml
 
 ```
 

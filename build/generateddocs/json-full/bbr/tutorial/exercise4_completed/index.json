@@ -11,7 +11,7 @@
   "itemClass": "model",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-08",
+  "dateOfLastChange": "2025-10-16",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -29,12 +29,12 @@
     "ogc.bbr.tutorial.exercise4_completed": [
       "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/rules.shacl"
     ],
-    "ogc.bbr.tutorial.exercise3": [
-      "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise3/rules.shacl"
+    "ogc.bbr.tutorial.exercise3_completed": [
+      "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise3_completed/rules.shacl"
     ]
   },
   "dependsOn": [
-    "ogc.bbr.tutorial.exercise3"
+    "ogc.bbr.tutorial.exercise3_completed"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml",
@@ -76,7 +76,7 @@
   "examplePrefixes": {
     "mynamespace": "http://example.org/ns1/"
   },
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3/schema.yaml\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/schema.yaml\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-tutorial",
   "gitPath": "_sources/exercise4_completed"
 }

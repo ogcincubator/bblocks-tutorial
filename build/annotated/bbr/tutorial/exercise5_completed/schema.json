@@ -8,7 +8,7 @@
     {
       "properties": {
         "properties": {
-          "$ref": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4/schema.json"
+          "$ref": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.json"
         }
       }
     }

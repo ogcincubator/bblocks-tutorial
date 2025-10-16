@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise9_completed - 09 - RDF BB (completed) 
-Generated 2025-10-08T07:04:29.889484+00:00
+Generated 2025-10-16T19:30:57.707590+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===

@@ -1,0 +1,37 @@
+Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Profiling (completed)
+Generated 2025-10-16T19:30:58.024113+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using example_b_lt_5-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD example_b_lt_5-fail.jsonld created
+Output Turtle example_b_lt_5-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+
+** Validation error **
+Validation result for _sources/exercise4_completed/rules.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in MinInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MinInclusiveConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:minInclusive Literal("5", datatype=xsd:integer) ; sh:path ns1:b ]
+  	Focus Node: [ ns1:b Literal("4", datatype=xsd:integer) ; ns1:c Literal("1", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]
+  	Value Node: Literal("4", datatype=xsd:integer)
+  	Result Path: ns1:b
+  	Message: Value is not >= Literal("5", datatype=xsd:integer)
+  
+Focus nodes for _sources/exercise4_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: _:N399a323c9f4a4d278e1f6faf44f7fe4c
+
+=== End SHACL ===
+

@@ -111,10 +111,15 @@ properties:
 #### ttl
 ```ttl
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix mynamespace: <http://example.org/ns1/> .
+@prefix ns1: <https://example.org/my-bb-model/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.com/features/f1> a geojson:Feature ;
+<http://example.com/features/f1> a mynamespace:aThing,
+        geojson:Feature ;
+    ns1:b 23 ;
+    ns1:c 1e-01 ;
     geojson:geometry [ a geojson:LineString ;
             geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.1171e+02 4.015671e+01 ) ) ] .
 
@@ -130,7 +135,7 @@ allOf:
 - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
 - properties:
     properties:
-      $ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4/schema.yaml
+      $ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml
 
 ```
 
@@ -194,10 +199,14 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
+    "a": "@type",
+    "b": "https://example.org/my-bb-model/b",
+    "c": "https://example.org/my-bb-model/c",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
+    "mynamespace": "http://example.org/ns1/",
     "@version": 1.1
   }
 }

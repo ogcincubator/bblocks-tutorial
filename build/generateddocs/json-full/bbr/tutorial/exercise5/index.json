@@ -9,7 +9,7 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "1.0",
-  "dateOfLastChange": "2025-10-08",
+  "dateOfLastChange": "2025-10-16",
   "sources": [
     {
       "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
