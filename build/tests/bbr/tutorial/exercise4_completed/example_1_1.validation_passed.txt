@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Profiling (completed)
-Generated 2025-10-16T19:30:58.031123+00:00
+Generated 2025-10-17T10:48:55.809332+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -17,7 +17,14 @@ Validation result for _sources/exercise4_completed/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/exercise4_completed/rules.shacl:
- - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nd44460df76d043308afcba469f8c6b7f
+ - Shape <https://www.ogc.org/rules/template/#testValues>: _:N91375590191247ac98ec347ecaafcdca
+
+Validation result for _sources/exercise3_completed/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise3_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: _:N91375590191247ac98ec347ecaafcdca
 
 === End SHACL ===
 

@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise5_completed - 05 - Features (completed)
-Generated 2025-10-16T19:30:58.259298+00:00
+Generated 2025-10-17T10:48:56.167157+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -40,6 +40,13 @@ Validation result for _sources/exercise4_completed/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/exercise4_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: *none*
+
+Validation result for _sources/exercise3_completed/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise3_completed/rules.shacl:
  - Shape <https://www.ogc.org/rules/template/#testValues>: *none*
 
 === End SHACL ===

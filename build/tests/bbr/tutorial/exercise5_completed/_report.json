@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.bbr.tutorial.exercise5_completed - 05 - Features (completed)",
   "bblockName": "05 - Features (completed)",
   "bblockId": "ogc.bbr.tutorial.exercise5_completed",
-  "generated": "2025-10-16T19:30:58.266339+00:00",
+  "generated": "2025-10-17T10:48:56.176199+00:00",
   "result": true,
   "items": [
     {
@@ -89,6 +89,23 @@
               },
               "isError": false,
               "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/exercise3_completed/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/exercise3_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/exercise3_completed/rules.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/template/#testValues>": {
+                  "nodes": []
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
             }
           ]
         }
@@ -169,6 +186,25 @@
               },
               "isError": false,
               "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/exercise3_completed/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/exercise3_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/exercise3_completed/rules.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/template/#testValues>": {
+                  "nodes": [
+                    "<http://example.com/features/f1>"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
             }
           ]
         }

@@ -1,0 +1,44 @@
+Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Profiling (completed)
+Generated 2025-10-17T10:48:55.804121+00:00
+=== General ===
+Test was expected to fail and it did.
+=== End General ===
+
+=== Files ===
+Using example_b_lt_c-fail.json from test resources
+JSON-LD context is present - uplifting
+Output JSON-LD example_b_lt_c-fail.jsonld created
+Output Turtle example_b_lt_c-fail.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Validation result for _sources/exercise4_completed/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise4_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: _:N4f3821a153024730bace1f00edf36237
+
+
+** Validation error **
+Validation result for _sources/exercise3_completed/rules.shacl:
+  Validation Report
+  Conforms: False
+  Results (1):
+  Constraint Violation in LessThanConstraintComponent (http://www.w3.org/ns/shacl#LessThanConstraintComponent):
+  	Severity: sh:Violation
+  	Source Shape: [ sh:lessThan ns1:b ; sh:path ns1:c ]
+  	Focus Node: [ ns1:b Literal("6", datatype=xsd:integer) ; ns1:c Literal("10", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]
+  	Value Node: Literal("10", datatype=xsd:integer)
+  	Result Path: ns1:c
+  	Message: Value of [ ns1:b Literal("6", datatype=xsd:integer) ; ns1:c Literal("10", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal("10", datatype=xsd:integer)
+  
+Focus nodes for _sources/exercise3_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: _:N4f3821a153024730bace1f00edf36237
+
+=== End SHACL ===
+

@@ -44,7 +44,7 @@
   "ldContext": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/",
   "rdfData": [],
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise4_completed/",
   "description": "## Exercise 4\n\nGoal: Profile a building block with additional rules, with tests\n\nNote this illustrates how to use examples to test rules fail when expected. This is a critical capability for complex systems.\n\n### Steps\n- uncomment import from schema.yaml\n- uncomment line #11 in rules.shacl and examine the additional profile constraint (B<5))\n- run build\n- run viewer\n- navigate to \"Exercise 4\"/Validation\n- view validation results on \"about tab\"\n- move `examples/*-fail` to `tests`\n- run build\n- run viewer\n- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)",
   "examples": [

@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise5_completed - 05 - Features (completed)
-Generated 2025-10-16T19:30:58.265244+00:00
+Generated 2025-10-17T10:48:56.175230+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -17,6 +17,13 @@ Validation result for _sources/exercise4_completed/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/exercise4_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>
+
+Validation result for _sources/exercise3_completed/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise3_completed/rules.shacl:
  - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>
 
 === End SHACL ===

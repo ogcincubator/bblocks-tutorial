@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise9 - 09 - RDF BB
-Generated 2025-10-16T19:30:57.998033+00:00
+Generated 2025-10-17T10:48:55.765773+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl created
