@@ -28,7 +28,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise1/",
   "rdfData": [],
   "validationPassed": true,
-  "description": "## Exercise 1\n\nGoal: take a simple JSON schema and test with an example\n\nAn example of the end result is available [here](/bblock/ogc.bbr.tutorial.exercise1_completed)\n\n### Steps\n- un-comment the reference to a local file in [examples.yaml](examples.yaml)\n- run build\n- run viewer\n- navigate to [Exercise 1]((/bblock/ogc.bbr.tutorial.exercise1)\n- navigate to [Examples]((/bblock/ogc.bbr.tutorial.exercise1/examples) tab\n- view validation results at [build-local/...](/register/build-local/tests/report.html#bblock-ogc.bbr.tutorial.exercise1)",
+  "description": "## Exercise 1\n\nGoal: take a simple JSON schema and test with an example\n\nAn example of the end result is available [here](/bblock/ogc.bbr.tutorial.exercise1_completed)\n\n### Steps\n- un-comment the reference to a local file in [examples.yaml](examples.yaml)\n- run build\n- run viewer\n- navigate to [Exercise 1](/bblock/ogc.bbr.tutorial.exercise1)\n- navigate to [Examples](/bblock/ogc.bbr.tutorial.exercise1/examples) tab\n- view validation results at [build-local/...](/register/build-local/tests/report.html#bblock-ogc.bbr.tutorial.exercise1)",
   "examples": [
     {
       "title": "Reference a local file for examples",

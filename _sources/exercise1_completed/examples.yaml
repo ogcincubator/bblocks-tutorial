@@ -4,7 +4,7 @@ $schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/re
 examples:
 - title: Reference a local file for examples
   content: |-
-    [Example from Exercise  1](/bblock/ogc.bbr.tutorial.exercise1/example)
+    [Example from Exercise  1](bblocks://ogc.bbr.tutorial.exercise1/example)
     
     In **Markdown** format.
 
