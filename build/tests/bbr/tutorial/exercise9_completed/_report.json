@@ -2,67 +2,9 @@
   "title": "Validation report for ogc.bbr.tutorial.exercise9_completed - 09 - RDF BB (completed) ",
   "bblockName": "09 - RDF BB (completed) ",
   "bblockId": "ogc.bbr.tutorial.exercise9_completed",
-  "generated": "2025-10-17T10:48:55.467611+00:00",
+  "generated": "2025-10-30T09:47:04.245624+00:00",
   "result": true,
   "items": [
-    {
-      "source": {
-        "type": "TEST_RESOURCE",
-        "requireFail": true,
-        "filename": "_sources/exercise9_completed/tests/example-fail.ttl",
-        "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise9_completed/tests/example-fail.ttl",
-        "language": "ttl"
-      },
-      "result": true,
-      "sections": [
-        {
-          "name": "GENERAL",
-          "title": "General",
-          "entries": [
-            {
-              "op": "require-fail",
-              "isError": false,
-              "message": "Test was expected to fail and it did."
-            }
-          ]
-        },
-        {
-          "name": "FILES",
-          "title": "Files",
-          "entries": [
-            {
-              "isError": false,
-              "message": "Using example-fail.ttl from test resources"
-            }
-          ]
-        },
-        {
-          "name": "SHACL",
-          "title": "SHACL",
-          "entries": [
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/exercise9_completed/rules.shacl",
-              "graph": "@prefix : <https://w3id.org/example#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/example-data#Fred> ;\n            sh:resultMessage \"Less than 1 values on eg:Fred->:partOf\" ;\n            sh:resultPath :partOf ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:class :Organization ;\n                    sh:minCount 1 ;\n                    sh:path :partOf ] ] .\n\n",
-              "isError": true,
-              "message": "Validation result for _sources/exercise9_completed/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:class :Organization ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path :partOf ]\n  \tFocus Node: eg:Fred\n  \tResult Path: :partOf\n  \tMessage: Less than 1 values on eg:Fred->:partOf\n  "
-            },
-            {
-              "shaclFile": "_sources/exercise9_completed/rules.shacl",
-              "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": [
-                    "eg:Fred"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/exercise9_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
-            }
-          ]
-        }
-      ]
-    },
     {
       "source": {
         "type": "EXAMPLE",
@@ -133,8 +75,8 @@
   ],
   "globalErrors": {},
   "counts": {
-    "total": 2,
-    "passed": 2,
+    "total": 1,
+    "passed": 1,
     "failed": 0
   }
 }

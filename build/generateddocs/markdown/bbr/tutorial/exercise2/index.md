@@ -25,14 +25,14 @@ Enter the OGC Building Blocks!  The (only, currently) tool that will combine sim
 - rename [context.example](context.example) to [context.jsonld](context.jsonld)
 - run build
 - run viewer
-- navigate to [Examples](/bblock/ogc.bbr.tutorial.exercise2/examples) tab
+- navigate to [Examples](bblocks://ogc.bbr.tutorial.exercise2/examples) tab
 - choose "RDF/Turtle" to see generated RDF
-- navigate to [Semantic Uplift](/bblock/ogc.bbr.tutorial.exercise2/semantic-uplift) tab (present in completed example)
+- navigate to [Semantic Uplift](bblocks://ogc.bbr.tutorial.exercise2/semantic-uplift) tab (present in completed example)
 - view validation results at [build-local/...](/register/build-local/tests/bbr/template/exercise2/_report.json)
 ## Examples
 
 ### Reference a local file for examples
-[Example from Exercise  1](/bblock/ogc.bbr.tutorial.exercise1/example)
+[Example from Exercise  1](bblocks://ogc.bbr.tutorial.exercise1/example)
 
 In **Markdown** format.
 #### json

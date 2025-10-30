@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-16",
+  "dateOfLastChange": "2025-10-30",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [],
   "maturity": "mature",
@@ -28,11 +28,11 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise1/",
   "rdfData": [],
   "validationPassed": true,
-  "description": "## Exercise 1\n\nGoal: take a simple JSON schema and test with an example\n\nAn example of the end result is available [here](/bblock/ogc.bbr.tutorial.exercise1_completed)\n\n### Steps\n- un-comment the reference to a local file in [examples.yaml](examples.yaml)\n- run build\n- run viewer\n- navigate to [Exercise 1](/bblock/ogc.bbr.tutorial.exercise1)\n- navigate to [Examples](/bblock/ogc.bbr.tutorial.exercise1/examples) tab\n- view validation results at [build-local/...](/register/build-local/tests/report.html#bblock-ogc.bbr.tutorial.exercise1)",
+  "description": "## Exercise 1\n\nGoal: take a simple JSON schema and test with an example\n\nAn example of the end result is available [here](bblocks://ogc.bbr.tutorial.exercise1_completed)\n\n### Steps\n- un-comment the reference to a local file in [examples.yaml](examples.yaml)\n- run build\n- run viewer\n- navigate to [Exercise 1](bblocks://ogc.bbr.tutorial.exercise1)\n- navigate to [Examples](bblocks://ogc.bbr.tutorial.exercise1/examples) tab\n- view validation results at [build-local/...](/register/build-local/tests/report.html#bblock-ogc.bbr.tutorial.exercise1)",
   "examples": [
     {
       "title": "Reference a local file for examples",
-      "content": "[Example from Exercise  1](/bblock/ogc.bbr.tutorial.exercise1/example)\n\nIn **Markdown** format."
+      "content": "[Example from Exercise  1](bblocks://ogc.bbr.tutorial.exercise1/example)\n\nIn **Markdown** format."
     }
   ],
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: My example schema\ntype: object\nproperties:\n  a:\n    type: string\n    format: uri\n  b:\n    type: number\n  c:\n    type: number\nrequired:\n- a\n- b\n",

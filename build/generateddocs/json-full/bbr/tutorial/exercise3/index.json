@@ -11,7 +11,7 @@
   "itemClass": "model",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-16",
+  "dateOfLastChange": "2025-10-30",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -45,7 +45,7 @@
   "examples": [
     {
       "title": "Reference a local file for examples",
-      "content": "[Example from Exercise  1](/bblock/ogc.bbr.tutorial.exercise1/example)\n\nIn **Markdown** format.",
+      "content": "[Example from Exercise  1](bblocks://ogc.bbr.tutorial.exercise1/example)\n\nIn **Markdown** format.",
       "snippets": [
         {
           "language": "json",

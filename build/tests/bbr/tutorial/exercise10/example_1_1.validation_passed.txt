@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise10 - 10 - Profiling an Ontology
-Generated 2025-10-17T10:48:55.783355+00:00
+Generated 2025-10-30T09:47:04.562781+00:00
 === Files ===
 Using example_1_1.ttl from examples
 Output Turtle example_1_1.ttl created

@@ -17,12 +17,12 @@ Goal: take a simple JSON schema and test with an example
 - un-comment the reference to a local file in [examples.yaml](examples.yaml)
 - run build
 - run viewer
-- navigate to [Exercise 1](/bblock/ogc.bbr.tutorial.exercise1_completed)
+- navigate to [Exercise 1](bblocks://ogc.bbr.tutorial.exercise1_completed)
 - view validation results at [build-local/...](/register/build-local/tests/report.html#bblock-ogc.bbr.tutorial.exercise1_completed)
 ## Examples
 
 ### Reference a local file for examples
-[Example from Exercise  1](/bblock/ogc.bbr.tutorial.exercise1/example)
+[Example from Exercise  1](bblocks://ogc.bbr.tutorial.exercise1/example)
 
 In **Markdown** format.
 #### json

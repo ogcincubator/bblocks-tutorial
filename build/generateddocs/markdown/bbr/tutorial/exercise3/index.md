@@ -25,7 +25,7 @@ This will be a basic example that uses the JSON-LD bindings and simple rules.  N
 ## Examples
 
 ### Reference a local file for examples
-[Example from Exercise  1](/bblock/ogc.bbr.tutorial.exercise1/example)
+[Example from Exercise  1](bblocks://ogc.bbr.tutorial.exercise1/example)
 
 In **Markdown** format.
 #### json

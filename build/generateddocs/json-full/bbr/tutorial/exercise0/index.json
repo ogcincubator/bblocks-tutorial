@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-10-16",
+  "dateOfLastChange": "2025-10-30",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [],
   "maturity": "mature",
@@ -32,7 +32,7 @@
   "examples": [
     {
       "title": "Reference a local file for examples",
-      "content": "[Example from Exercise  1](/bblock/ogc.bbr.tutorial.exercise1/example)\n\nIn **Markdown** format."
+      "content": "[Example from Exercise  1](bblocks://ogc.bbr.tutorial.exercise1/example)\n\nIn **Markdown** format."
     }
   ],
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: My example schema\ntype: object\nproperties:\n  a:\n    type: string\n    format: uri\n  b:\n    type: number\n  c:\n    type: number\nrequired:\n- a\n- b\n",

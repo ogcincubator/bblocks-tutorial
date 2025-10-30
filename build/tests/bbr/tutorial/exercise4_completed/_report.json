@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Profiling (completed)",
   "bblockName": "04 - Profiling (completed)",
   "bblockId": "ogc.bbr.tutorial.exercise4_completed",
-  "generated": "2025-10-17T10:48:55.809396+00:00",
+  "generated": "2025-10-30T09:47:04.589072+00:00",
   "result": true,
   "items": [
     {
@@ -83,12 +83,12 @@
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N586143d61d2948fe8d18e60d4c5984cc"
+                    "_:Na78237d14ae1493aa2b3ceae2c7af0ba"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N586143d61d2948fe8d18e60d4c5984cc\n"
+              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Na78237d14ae1493aa2b3ceae2c7af0ba\n"
             },
             {
               "op": "shacl-report",
@@ -102,12 +102,12 @@
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N586143d61d2948fe8d18e60d4c5984cc"
+                    "_:Na78237d14ae1493aa2b3ceae2c7af0ba"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N586143d61d2948fe8d18e60d4c5984cc\n"
+              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Na78237d14ae1493aa2b3ceae2c7af0ba\n"
             }
           ]
         }
@@ -191,12 +191,12 @@
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N4f3821a153024730bace1f00edf36237"
+                    "_:Nbe93da43ae534b538ba2ba4d025db2ab"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N4f3821a153024730bace1f00edf36237\n"
+              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nbe93da43ae534b538ba2ba4d025db2ab\n"
             },
             {
               "op": "shacl-report",
@@ -210,12 +210,12 @@
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N4f3821a153024730bace1f00edf36237"
+                    "_:Nbe93da43ae534b538ba2ba4d025db2ab"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N4f3821a153024730bace1f00edf36237\n"
+              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nbe93da43ae534b538ba2ba4d025db2ab\n"
             }
           ]
         }
@@ -290,12 +290,12 @@
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N91375590191247ac98ec347ecaafcdca"
+                    "_:Ndfb9af5e0e304d71ac8e34ad9d0bfcfb"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N91375590191247ac98ec347ecaafcdca\n"
+              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ndfb9af5e0e304d71ac8e34ad9d0bfcfb\n"
             },
             {
               "op": "shacl-report",
@@ -309,12 +309,12 @@
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N91375590191247ac98ec347ecaafcdca"
+                    "_:Ndfb9af5e0e304d71ac8e34ad9d0bfcfb"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N91375590191247ac98ec347ecaafcdca\n"
+              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ndfb9af5e0e304d71ac8e34ad9d0bfcfb\n"
             }
           ]
         }

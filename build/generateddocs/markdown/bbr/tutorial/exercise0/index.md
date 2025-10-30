@@ -51,7 +51,7 @@ Make sure you have a  strategy to define test cases and examples - then follow t
 ## Examples
 
 ### Reference a local file for examples
-[Example from Exercise  1](/bblock/ogc.bbr.tutorial.exercise1/example)
+[Example from Exercise  1](bblocks://ogc.bbr.tutorial.exercise1/example)
 
 In **Markdown** format.
 ## Schema
