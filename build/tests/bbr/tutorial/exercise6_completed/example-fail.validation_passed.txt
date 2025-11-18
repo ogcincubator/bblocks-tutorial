@@ -1,5 +1,5 @@
 Validation report for ogc.bbr.tutorial.exercise6_completed - 06 - Import/Extend (completed)
-Generated 2025-10-30T09:47:06.686313+00:00
+Generated 2025-11-18T03:34:50.975291+00:00
 === General ===
 Test was expected to fail and it did.
 === End General ===
@@ -163,8 +163,8 @@ Validation result for https://ogcincubator.github.io/topo-feature/_sources/featu
   Conforms: True
   
 Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
- - Shape _:n17eb5e743669479ea3e112735f5fd85db1: *none*
- - Shape _:n17eb5e743669479ea3e112735f5fd85db3: *none*
+ - Shape _:ncb87c461688442ce982e447aa52d8120b1: *none*
+ - Shape _:ncb87c461688442ce982e447aa52d8120b3: *none*
 
 === End SHACL ===
 
