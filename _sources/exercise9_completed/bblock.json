@@ -9,7 +9,6 @@
   "register": "building-blocks-tutorial",
   "version": "0.1",
   "dateOfLastChange": "2023-04-05",
-  "ontology": "ontology.ttl",
   "sources": [
     {
       "title": "Sample source document",
