@@ -9,10 +9,10 @@ Note: User Experience for FAIR transform publishing is a work in progress - feel
 - rename [transforms.example](context.example) to [transforms.yaml](context.jsonld)
 - run build
 - run viewer
-- navigate to [Transforms](bblocks://ogc.bbr.tutorial.exercise8/transforms) Tab
+- navigate to [Transforms](bblocks://ogc.bbr.tutorial.exercise8_completed/transforms) Tab
 - examine transforms available
 - note how each transform supports specific input formats - e.g. an XSLT transform will be applied to XML
-- navigate to [Examples](bblocks://ogc.bbr.tutorial.exercise8/examples) Tab
+- navigate to [Examples](bblocks://ogc.bbr.tutorial.exercise8_completed/examples) Tab
 - click on `Transform Results` button
 - Select the transform (drop down list) and view results
 
@@ -21,4 +21,3 @@ Note: User Experience for FAIR transform publishing is a work in progress - feel
 In future there is expected to be a finer-grained binding of transforms to input and output profiles for data conformance, and integrated validation.
 
 Also a "plug-in" custom transform capability is planned - allowing CI/CT of multiple transformation testing as part of specification development or augmentation of resources supporting implementations.
-

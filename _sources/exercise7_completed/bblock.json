@@ -1,10 +1,22 @@
 {
-  "name": "07 - Transforms (completed)",
-  "abstract": "schema and graph transforms",
+  "name": "07 - Import/Extend (completed)",
+  "abstract": "Profiling a BBlock from another register",
   "status": "under-development",
-  "dateTimeAddition": "2024-10-03T11:31:00+02:00",
+  "dateTimeAddition": "2023-05-19T00:00:00Z",
   "itemClass": "schema",
-  "version": "0.1",
-  "dateOfLastChange": "2024-10-03",
+  "register": "building-blocks-tutorial",
+  "version": "1.0",
+  "dateOfLastChange": "2023-05-19",
+  "sources": [
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "dependsOn": [
+  ],
+  "tags": ["building-blocks-tutorial",
+    "feature",
+    "examples"
+  ],
+  "group": "Examples",
   "highlighted": true
 }

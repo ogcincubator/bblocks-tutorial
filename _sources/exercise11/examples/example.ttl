@@ -5,9 +5,13 @@
 
 eg:Fred
     a          :Researcher ;
-    :partOf    eg:GnomesInc ;
+    :partOf    eg:GnomesInc, eg:GardenersUnited ;
     rdfs:label "Fred the Gardener" .
 
 eg:GnomesInc
     a          :Organization ;
     rdfs:label "Gnomes Inc. Gardeners to the Stars" .
+
+eg:GardenersUnited
+    a          :Organization , :Association ;
+    rdfs:label "United Scientific Gardeners Association" .

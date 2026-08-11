@@ -1,12 +1,10 @@
-$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml
-## Prefixes for examples
-prefixes:
-  mynamespace: http://example.org/ns1/
-## List of examples
 examples:
-- title: Example
+  - title: CityJSON Cube
+    snippets:
+      - language: json
+        ref: examples/cube.city.json
 
-  snippets:
-    - language: ttl
-      ref: examples/example.ttl
-
+  - title: CityJSON Two Buildings
+    snippets:
+      - language: json
+        ref: examples/twobuildings.city.json

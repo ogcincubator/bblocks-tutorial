@@ -9,7 +9,7 @@
 <#testValues>
     a              sh:NodeShape ;
     sh:targetClass mynamespace:aThing ;
-    sh:message     "B must not be less than 5" ;
-    sh:property    [ sh:path        ns1:b ;
-                     sh:minInclusive  5 ]
+    sh:message     "C must be greater than B" ;
+    sh:property    [ sh:path        ns1:c ;
+                     sh:lessThan ns1:b ]
 .

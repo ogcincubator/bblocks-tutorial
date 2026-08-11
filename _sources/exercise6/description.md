@@ -1,17 +1,17 @@
-## Importing and profiling from an external register
+## Using a standard container
 
-Importing from another Building Block register allows grouping of related Building Blocks into single governance environments using GIT.
+This is an **interoperable** approach to packaging a data model in a standardised structure.
 
-This forces **transparency of reuse**, i.e. FAIR principles. 
+i.e. the attributes (properties) are managed independently of the packaging container (Feature) 
 
-It also means maintenance is relatively simple for static Building Blocks - such as those defining published standards.
+In this case we use the schema from the previous examples.
 
+This building block **inherits** reusable semantic annotations from a common library, simplifying implementation.
 
 ### Steps
-- review the docs on [imports](https://ogcincubator.github.io/bblocks-docs/create/imports)
-- view the import in line 17 of [bblocks-config.yaml](../../bblocks-config.yaml)
-- uncomment the reference to `topo-line` in [schema.yaml](schema.yaml)
-- build and view
-- examine the examples and validation reports.
+- uncomment the reference to the previous exercise schema in schema.yaml
+- run build, view etc
+- examine "Semantic Uplift" and note that event though no `context.jsonld` is present the building block inherits and combines the two building blocks semantic annotations.
+
 
 

@@ -1,19 +1,22 @@
 {
   "$schema": "metaschema.yaml",
-  "name": "03 - Rules (completed)",
+  "name": "03 - Override a JSON-LD Binding (completed)",
   "highlighted": true,
-  "abstract": "Add logical rules using SHACL to exploit semantic annotations",
+  "abstract": "Profile a block and redeclare one of its inherited JSON-LD bindings so your own mapping wins",
   "status": "under-development",
-  "dateTimeAddition": "2023-04-05T00:00:00Z",
-  "itemClass": "model",
+  "dateTimeAddition": "2026-08-11T00:00:00Z",
+  "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2023-04-05",
+  "dateOfLastChange": "2026-08-11",
   "link": "https://github.com/opengeospatial/bblock-template",
+  "isProfileOf": [
+    "bblocks://ogc.bbr.tutorial.exercise2_completed"
+  ],
   "sources": [
     {
-      "title": "Sample source document",
-      "link": "https://example.com/sources/1"
+      "title": "OGC Blocks docs: Overriding an inherited binding",
+      "link": "https://ogcincubator.github.io/bblocks-docs/create/semantic-uplift#overriding-an-inherited-binding"
     }
   ],
   "maturity": "mature",

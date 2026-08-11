@@ -1,10 +1,10 @@
-## Exercise 9
+## Exercise 10
 
 Goal: Define a Building Block for a semantic data model using OWL and SHACL
 
 This supports **transparent dependency relationships** between modules of an model composed of multiple ontologies.
 
-It also support CI/CT of SHACL rules including testing against _pass_ and _fail_ tests, as per [Excercise 4](../exercise4_completed) - this is extremely important since SHACL rules are hard to debug.
+It also support CI/CT of SHACL rules including testing against _pass_ and _fail_ tests, as per [Excercise 4](../exercise5_completed) - this is extremely important since SHACL rules are hard to debug.
 
 Note also this approach is appropriate where a given schema is **one of many possible schemas** for the same underlying semantic model, and allows defining the model and logical constraints independently, with re-usable validation rules and unit testing advantages.
 
@@ -16,6 +16,6 @@ Note also this approach is appropriate where a given schema is **one of many pos
 - rename to **ontology.ttl**
 - run build
 - run viewer
-- navigate to "Exercise 9"/Ontology and examine `Classes` and `Properties`
+- navigate to "Exercise 10"/Ontology and examine `Classes` and `Properties`
 - view validation results on "About
 - view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)

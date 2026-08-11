@@ -1,14 +1,8 @@
 $schema: https://json-schema.org/draft/2020-12/schema
-description: My example schema
-type: object
-properties:
-  a:
-    type: string
-    format: uri
-  b:
-    type: number
-  c:
-    type: number
-required:
-  - a
-  - b
+description: Profile of Exercise 2 that overrides its inherited "b" binding
+allOf:
+  - $ref: bblocks://ogc.bbr.tutorial.exercise2_completed
+  - type: object
+    properties:
+      b:
+        type: number

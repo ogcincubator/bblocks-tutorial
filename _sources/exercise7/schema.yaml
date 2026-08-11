@@ -1,8 +1,10 @@
-type: object
-properties:
-  one:
-    type: number
-  two:
-    type: number
-  string:
-    type: string
+description: Line with only two points
+allOf:
+#  - $ref: bblocks://ogc.geo.topo.features.topo-line
+  - properties:
+      topology:
+        properties:
+          references:
+            minItems: 2
+            maxItems: 2
+

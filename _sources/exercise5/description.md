@@ -1,17 +1,17 @@
-## Using a standard container
+## Exercise 5
 
-This is an **interoperable** approach to packaging a data model in a standardised structure.
+Goal: Profile a building block with additional rules, with tests
 
-i.e. the attributes (properties) are managed independently of the packaging container (Feature) 
-
-In this case we use the schema from the previous examples.
-
-This building block **inherits** reusable semantic annotations from a common library, simplifying implementation.
+Note this illustrates how to use examples to test rules fail when expected. This is a critical capability for complex systems.
 
 ### Steps
-- uncomment the reference to the previous exercise schema in schema.yaml
-- run build, view etc
-- examine "Semantic Uplift" and note that event though no `context.jsonld` is present the building block inherits and combines the two building blocks semantic annotations.
-
-
-
+- uncomment import from schema.yaml
+- uncomment line #11 in rules.shacl and examine the additional profile constraint (B<5))
+- run build
+- run viewer
+- navigate to "Exercise 5"/Validation
+- view validation results on "about tab"
+- move `examples/*-fail` to `tests`
+- run build
+- run viewer
+- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)

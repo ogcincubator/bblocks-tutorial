@@ -1,12 +1,37 @@
 ## Exercise 3
 
-Goal: Define logical rules to exploit semantic annotation
+Goal: Redeclare (override) a JSON-LD binding inherited from another block
 
-This will be a basic example that uses the JSON-LD bindings and simple rules.  Note that richer rules can be defined that use referenced semantic models and advanced reasoning, however significant extra functionality is provided simply by being able to identify and operate on schema elements with richer logic languages like SHACL.
+A block whose schema composes another via `allOf`/`$ref` — as this exercise does with [Exercise 2](../exercise2)
+— can redeclare a term's mapping in its own `context.jsonld` and have it win over the inherited one. This is
+useful for a profile that needs to specialise an inherited term without forking the base schema or context.
+
+This exercise's [schema.yaml](schema.yaml) already composes Exercise 2's schema via `allOf`/`$ref` and adds no
+new properties of its own — it just redeclares `b`, ready for its context to override the mapping. As with the
+earlier exercises that build on one another, this only shows the full picture once Exercise 2 itself has had its
+own `context.jsonld` rename step done too — if you skipped ahead, go back and finish Exercise 2 first.
 
 ### Steps
-- uncomment line 11 in [rules.shacl](rules.shacl) 
+- rename [context.example](context.example) to [context.jsonld](context.jsonld) — it redeclares `b`, which
+  [Exercise 2](../exercise2)'s own context already maps to `https://example.org/my-bb-model/b`
 - run build
 - run viewer
-- navigate to "Exercise 3"/Validation
-- view validation results on "about tab" 
+- navigate to [Semantic Uplift](bblocks://ogc.bbr.tutorial.exercise3/semantic-uplift) tab and compare the
+  assembled context here to [Exercise 2](../exercise2)'s: `b` should now resolve to this block's own mapping,
+  not Exercise 2's, while `a` and `c` are still inherited unchanged
+- choose "RDF/Turtle" on the [Examples](bblocks://ogc.bbr.tutorial.exercise3/examples) tab to see the effect on
+  an actual instance
+
+### Why this works
+
+Each block is annotated from its own context in isolation, then the final context is assembled by walking the
+compiled schema's `allOf` branches in order — Exercise 2's branch first, this block's own branch last — so for a
+property mapped on both sides, the *later* branch wins.
+
+**There's no opt-in for this** — redeclaring a term overrides it whether you meant to or not. See
+[Overriding an inherited binding](https://ogcincubator.github.io/bblocks-docs/create/semantic-uplift#overriding-an-inherited-binding)
+in the OGC Blocks docs for the full mechanism, including a nuance this exercise doesn't show: Exercise 2 never
+sets `@type` on `b`, so there's nothing here to inherit alongside the overridden `@id`. For a worked example that
+does show a partial override (only `@id` redeclared, `@type` still inherited) alongside a full one, see the
+[`base`](https://ogcincubator.github.io/bblocks-viewer/#/bblock/ogc.bbr.examples.semantic-uplift.override-binding.base?register=https://ogcincubator.github.io/bblocks-examples/build/register.json)/[`child`](https://ogcincubator.github.io/bblocks-viewer/#/bblock/ogc.bbr.examples.semantic-uplift.override-binding.child?register=https://ogcincubator.github.io/bblocks-examples/build/register.json)
+pair in `bblocks-examples`.

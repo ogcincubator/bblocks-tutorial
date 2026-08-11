@@ -1,10 +1,8 @@
-description: Line with only two points
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml
+description: Example of a simple GeoJSON Feature specialisation
 allOf:
-#  - $ref: bblocks://ogc.geo.topo.features.topo-line
-  - properties:
-      topology:
-        properties:
-          references:
-            minItems: 2
-            maxItems: 2
+  - $ref: bblocks://ogc.geo.features.feature
+#  - properties:
+#     properties:
+#        $ref: ../exercise5/schema.yaml
 
