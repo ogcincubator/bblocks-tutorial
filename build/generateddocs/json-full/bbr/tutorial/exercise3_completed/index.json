@@ -3,20 +3,23 @@
 {
   "itemIdentifier": "ogc.bbr.tutorial.exercise3_completed",
   "$schema": "metaschema.yaml",
-  "name": "03 - Rules (completed)",
+  "name": "03 - Override a JSON-LD Binding (completed)",
   "highlighted": true,
-  "abstract": "Add logical rules using SHACL to exploit semantic annotations",
+  "abstract": "Profile a block and redeclare one of its inherited JSON-LD bindings so your own mapping wins",
   "status": "under-development",
-  "dateTimeAddition": "2023-04-05T00:00:00Z",
-  "itemClass": "model",
+  "dateTimeAddition": "2026-08-11T00:00:00Z",
+  "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-11-18",
+  "dateOfLastChange": "2026-08-11",
   "link": "https://github.com/opengeospatial/bblock-template",
+  "isProfileOf": [
+    "ogc.bbr.tutorial.exercise2_completed"
+  ],
   "sources": [
     {
-      "title": "Sample source document",
-      "link": "https://example.com/sources/1"
+      "title": "OGC Blocks docs: Overriding an inherited binding",
+      "link": "https://ogcincubator.github.io/bblocks-docs/create/semantic-uplift#overriding-an-inherited-binding"
     }
   ],
   "maturity": "mature",
@@ -25,11 +28,10 @@
     "building-blocks-tutorial",
     "templates"
   ],
-  "shaclShapes": {
-    "ogc.bbr.tutorial.exercise3_completed": [
-      "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise3_completed/rules.shacl"
-    ]
-  },
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.bbr.tutorial.exercise2_completed"
+  ],
   "ldContext": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/context.jsonld",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/schema.yaml",
@@ -37,42 +39,37 @@
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise3_completed/schema.yaml",
   "sourceLdContext": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise3_completed/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise3_completed/",
-  "rdfData": [],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise3_completed/",
-  "description": "## Exercise 3\n\nGoal: Define logical rules to exploit semantic annotation\n\nThis will be a basic example that uses the JSON-LD bindings and simple rules.  Note that richer rules can be defined that use referenced semantic models and advanced reasoning, however significant extra functionality is provided simply by being able to identify and operate on schema elements with richer logic languages like SHACL.\n\n### Steps\n- uncomment line 11 in [rules.shacl](rules.shacl) \n- run build\n- run viewer\n- navigate to \"Exercise 3\"/Validation\n- view validation results on \"about tab\" \n",
+  "description": "## Exercise 3\n\nGoal: Redeclare (override) a JSON-LD binding inherited from another block\n\nA block whose schema composes another via `allOf`/`$ref` \u2014 as this exercise does with\n[Exercise 2 (completed)](../exercise2_completed) \u2014 can redeclare a term's mapping in its own `context.jsonld`\nand have it win over the inherited one. This is useful for a profile that needs to specialise an inherited term\nwithout forking the base schema or context.\n\nThis exercise's [schema.yaml](schema.yaml) composes Exercise 2 (completed)'s schema via `allOf`/`$ref` and adds\nno new properties of its own \u2014 it just redeclares `b`, and [context.jsonld](context.jsonld) overrides its\nmapping. It depends on the *completed* Exercise 2 rather than plain Exercise 2 so this reference block is\nself-sufficient regardless of your progress on Exercise 2 itself.\n\n### Steps\n- navigate to [Semantic Uplift](bblocks://ogc.bbr.tutorial.exercise3_completed/semantic-uplift) tab and compare\n  the assembled context here to [Exercise 2 (completed)](../exercise2_completed)'s: `b` resolves to this block's\n  own mapping, not Exercise 2's, while `a` and `c` are still inherited unchanged\n- choose \"RDF/Turtle\" on the [Examples](bblocks://ogc.bbr.tutorial.exercise3_completed/examples) tab to see the\n  effect on an actual instance\n\n### Why this works\n\nEach block is annotated from its own context in isolation, then the final context is assembled by walking the\ncompiled schema's `allOf` branches in order \u2014 Exercise 2 (completed)'s branch first, this block's own branch\nlast \u2014 so for a property mapped on both sides, the *later* branch wins.\n\n**There's no opt-in for this** \u2014 redeclaring a term overrides it whether you meant to or not. See\n[Overriding an inherited binding](https://ogcincubator.github.io/bblocks-docs/create/semantic-uplift#overriding-an-inherited-binding)\nin the OGC Blocks docs for the full mechanism, including a nuance this exercise doesn't show: Exercise 2 never\nsets `@type` on `b`, so there's nothing here to inherit alongside the overridden `@id`. For a worked example that\ndoes show a partial override (only `@id` redeclared, `@type` still inherited) alongside a full one, see the\n[`base`](https://ogcincubator.github.io/bblocks-viewer/#/bblock/ogc.bbr.examples.semantic-uplift.override-binding.base?register=https://ogcincubator.github.io/bblocks-examples/build/register.json)/[`child`](https://ogcincubator.github.io/bblocks-viewer/#/bblock/ogc.bbr.examples.semantic-uplift.override-binding.child?register=https://ogcincubator.github.io/bblocks-examples/build/register.json)\npair in `bblocks-examples`.\n",
   "examples": [
     {
-      "title": "Reference a local file for examples",
-      "content": "[Example from Exercise  1](bblocks://ogc.bbr.tutorial.exercise1/example)\n\nIn **Markdown** format.",
+      "title": "Example instance",
       "snippets": [
         {
           "language": "json",
-          "ref": "../exercise1/example.json",
-          "code": "{\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}\n\n",
-          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3_completed/example_1_1.json"
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3_completed/example_1_1.json",
+          "sizeBytes": 64,
+          "code": "{\n  \"a\": \"https://example.com/my-a-value\",\n  \"b\": 42,\n  \"c\": 7\n}"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.org/ns1/\"\n    },\n    \"https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/context.jsonld\"\n  ],\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}",
-          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3_completed/example_1_1.jsonld"
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3_completed/example_1_1.jsonld",
+          "sizeBytes": 193,
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/context.jsonld\",\n  \"a\": \"https://example.com/my-a-value\",\n  \"b\": 42,\n  \"c\": 7\n}"
         },
         {
           "language": "ttl",
-          "code": "@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a mynamespace:aThing ;\n    ns1:b 23 ;\n    ns1:c 1 .\n\n",
-          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3_completed/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3_completed/example_1_1.ttl",
+          "sizeBytes": 186,
+          "code": "@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a <https://example.com/my-a-value> ;\n    ns1:c 7 ;\n    ns1:more-specific-b 42 .\n\n"
         }
-      ],
-      "prefixes": {
-        "mynamespace": "http://example.org/ns1/"
-      }
+      ]
     }
   ],
-  "examplePrefixes": {
-    "mynamespace": "http://example.org/ns1/"
-  },
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: My example schema\ntype: object\nproperties:\n  a:\n    type: string\n    format: uri\n    x-jsonld-id: '@type'\n  b:\n    type: number\n    x-jsonld-id: https://example.org/my-bb-model/b\n  c:\n    type: number\n    x-jsonld-id: https://example.org/my-bb-model/c\nrequired:\n- a\n- b\nx-jsonld-prefixes:\n  mynamespace: http://example.org/ns1/\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Profile of Exercise 2 that overrides its inherited \"b\" binding\nallOf:\n- $ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2_completed/schema.yaml\n- type: object\n  properties:\n    b:\n      type: number\n      x-jsonld-id: https://example.org/my-bb-model/more-specific-b\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-tutorial",
   "gitPath": "_sources/exercise3_completed"
 }

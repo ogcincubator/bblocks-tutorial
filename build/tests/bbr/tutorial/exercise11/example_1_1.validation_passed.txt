@@ -1,0 +1,29 @@
+Validation report for ogc.bbr.tutorial.exercise11 - 11 - Profiling an Ontology
+Generated 2026-08-11T10:19:45.394473+00:00
+=== Files ===
+Using examples/example.ttl from examples
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== Turtle ===
+Prefixes are defined for mynamespace
+=== End Turtle ===
+
+=== SHACL ===
+Validation result for _sources/exercise11/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise11/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*
+ - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred
+
+Validation result for _sources/exercise10_completed/rules.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for _sources/exercise10_completed/rules.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred
+
+=== End SHACL ===
+

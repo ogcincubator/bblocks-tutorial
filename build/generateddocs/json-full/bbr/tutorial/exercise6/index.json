@@ -2,18 +2,25 @@
 
 {
   "itemIdentifier": "ogc.bbr.tutorial.exercise6",
-  "name": "06 - Import/Extend",
-  "abstract": "Profiling a BBlock from another register",
+  "name": "06 - Features",
+  "abstract": "This example shows a simple customisation for OGC API Feature schemas",
   "status": "under-development",
   "dateTimeAddition": "2023-05-19T00:00:00Z",
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "1.0",
-  "dateOfLastChange": "2025-11-18",
-  "sources": [],
+  "dateOfLastChange": "2026-08-11",
+  "sources": [
+    {
+      "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
+      "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
+    }
+  ],
   "maturity": "development",
   "scope": "unstable",
-  "dependsOn": [],
+  "dependsOn": [
+    "ogc.geo.features.feature"
+  ],
   "tags": [
     "building-blocks-tutorial",
     "feature",
@@ -21,31 +28,63 @@
   ],
   "group": "Examples",
   "highlighted": true,
-  "shaclShapes": {},
+  "shaclShapes": {
+    "ogc.geo.features.feature": [
+      "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
+    ]
+  },
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise6/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6/context.jsonld",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise6/",
-  "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise6/",
-  "description": "## Importing and profiling from an external register\n\nImporting from another Building Block register allows grouping of related Building Blocks into single governance environments using GIT.\n\nThis forces **transparency of reuse**, i.e. FAIR principles. \n\nIt also means maintenance is relatively simple for static Building Blocks - such as those defining published standards.\n\n\n### Steps\n- review the docs on [imports](https://ogcincubator.github.io/bblocks-docs/create/imports)\n- view the import in line 17 of [bblocks-config.yaml](../../bblocks-config.yaml)\n- uncomment the reference to `topo-line` in [schema.yaml](schema.yaml)\n- build and view\n- examine the examples and validation reports.\n\n\n",
+  "description": "## Using a standard container\n\nThis is an **interoperable** approach to packaging a data model in a standardised structure.\n\ni.e. the attributes (properties) are managed independently of the packaging container (Feature) \n\nIn this case we use the schema from the previous examples.\n\nThis building block **inherits** reusable semantic annotations from a common library, simplifying implementation.\n\n### Steps\n- uncomment the reference to the previous exercise schema in schema.yaml\n- run build, view etc\n- examine \"Semantic Uplift\" and note that event though no `context.jsonld` is present the building block inherits and combines the two building blocks semantic annotations.\n\n\n\n",
   "examples": [
     {
-      "title": "Line with 2 points",
+      "title": "GeoJSON - specialisation example.",
+      "content": "This examples shows how to define a customised schema based on an existing building block - in this case the *OGC API Features* basic GeoJSON Feature response",
+      "base-uri": "http://example.com/features/",
       "snippets": [
         {
           "language": "json",
-          "ref": "examples/example.json",
-          "code": "{\n  \"type\": \"Feature\",\n  \"id\": \"LineP1P2\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"LineString\",\n    \"references\": [\n      \"P1\",\n      \"P2\"\n    ]\n  },\n  \"properties\": null\n}",
-          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6/example_1_1.json"
+          "ref": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise6/examples/feature.json",
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6/example_1_1.json",
+          "sizeBytes": 391,
+          "code": "{\n  \"@context\": {\n    \"mynamespace\": \"http://example.org/ns1/\"\n  },\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862874\n      ]\n    ]\n  },\n  \"properties\": {\n    \"a\": \"mynamespace:aThing\",\n    \"b\": 23,\n    \"c\": 0.1\n  }\n}\n"
+        },
+        {
+          "language": "yaml",
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6/example_1_2.yaml",
+          "sizeBytes": 89,
+          "code": "id: 16\ntype: Feature\ngeometry: null\nproperties:\n  a: mynamespace:aThing\n  b: 23\n  c: 0.1\n"
+        },
+        {
+          "language": "jsonld",
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6/example_1_1.jsonld",
+          "sizeBytes": 578,
+          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.com/mythings/\"\n    },\n    \"https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6/context.jsonld\",\n    {\n      \"mynamespace\": \"http://example.org/ns1/\"\n    }\n  ],\n  \"id\": \"f1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        -111.67183507997295,\n        40.056709946862874\n      ],\n      [\n        -111.71,\n        40.156709946862875\n      ]\n    ]\n  },\n  \"properties\": {\n    \"a\": \"mynamespace:aThing\",\n    \"b\": 23,\n    \"c\": 0.1\n  }\n}"
+        },
+        {
+          "language": "ttl",
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6/example_1_1.ttl",
+          "sizeBytes": 366,
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<http://example.com/features/f1> a geojson:Feature ;\n    geojson:geometry [ a geojson:LineString ;\n            geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.1171e+02 4.015671e+01 ) ) ] .\n\n"
         }
-      ]
+      ],
+      "prefixes": {
+        "mynamespace": "http://example.com/mythings/"
+      }
     }
   ],
-  "annotatedSchema": "description: Line with only two points\nallOf:\n- properties:\n    topology:\n      properties:\n        references:\n          minItems: 2\n          maxItems: 2\n",
+  "examplePrefixes": {
+    "mynamespace": "http://example.com/mythings/"
+  },
+  "annotatedSchema": "$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml\ndescription: Example of a simple GeoJSON Feature specialisation\nallOf:\n- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-tutorial",
   "gitPath": "_sources/exercise6"
 }

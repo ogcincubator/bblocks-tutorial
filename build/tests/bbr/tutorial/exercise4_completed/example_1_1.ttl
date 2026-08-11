@@ -3,6 +3,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 [] a mynamespace:aThing ;
-    ns1:b 6 ;
+    ns1:b 23 ;
     ns1:c 1 .
 

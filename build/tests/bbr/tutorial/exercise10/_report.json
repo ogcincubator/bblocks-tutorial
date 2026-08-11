@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.bbr.tutorial.exercise10 - 10 - Profiling an Ontology",
-  "bblockName": "10 - Profiling an Ontology",
+  "title": "Validation report for ogc.bbr.tutorial.exercise10 - 10 - RDF BB",
+  "bblockName": "10 - RDF BB",
   "bblockId": "ogc.bbr.tutorial.exercise10",
-  "generated": "2025-11-18T03:34:48.271516+00:00",
+  "generated": "2026-08-11T10:19:45.267408+00:00",
   "result": true,
   "items": [
     {
@@ -23,13 +23,13 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.ttl from examples"
+              "message": "Using examples/example.ttl from examples"
             },
             {
               "op": "ttl-create",
               "empty": false,
               "filename": "example_1_1.ttl",
-              "size": 9,
+              "size": 5,
               "isError": false,
               "message": "Output Turtle example_1_1.ttl created"
             }
@@ -63,32 +63,10 @@
                   "nodes": [
                     "eg:Fred"
                   ]
-                },
-                "<https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape": {
-                  "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise10/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n"
-            },
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/exercise9_completed/rules.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for _sources/exercise9_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "_sources/exercise9_completed/rules.shacl",
-              "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": [
-                    "eg:Fred"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/exercise9_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+              "message": "Focus nodes for _sources/exercise10/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
             }
           ]
         }

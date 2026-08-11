@@ -1,69 +1,127 @@
 
-# 06 - Import/Extend (completed) (Schema)
+# 06 - Features (completed) (Schema)
 
 `ogc.bbr.tutorial.exercise6_completed` *v1.0*
 
-Profiling a BBlock from another register
+This example shows a simple customisation for OGC API Feature schemas
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 
-## Importing and profiling from an external register
+## Using a standard container
+
+This is an **interoperable** approach to packaging a data model in a standardised structure.
+
+i.e. the attributes (properties) are managed independently of the packaging container (Feature) 
+
+In this case we use the schema from the previous examples.
+
+This building block **inherits** reusable semantic annotations from a common library, simplifying implementation.
 
 ### Steps
-- uncomment the import in [bblocks-config.yaml](../../bblocks-config.yaml)
-- uncomment the reference to `topo-line` in [schema.yaml](schema.yaml)
-- examine the examples and validation reports.
+- uncomment the reference to the previous exercise schema in schema.yaml
+- run build, view etc
+- examine "Semantic Uplift" and note that event though no `context.jsonld` is present the building block inherits and combines the two building blocks semantic annotations.
+
 
 
 
 ## Examples
 
-### Line with 2 points
+### GeoJSON - specialisation example.
+This examples shows how to define a customised schema based on an existing building block - in this case the *OGC API Features* basic GeoJSON Feature response
 #### json
 ```json
 {
+  "@context": {
+    "mynamespace": "http://example.org/ns1/"
+  },
+  "id": "f1",
   "type": "Feature",
-  "id": "LineP1P2",
-  "geometry": null,
-  "topology": {
+  "geometry": {
     "type": "LineString",
-    "references": [
-      "P1",
-      "P2"
+    "coordinates": [
+      [
+        -111.67183507997295,
+        40.056709946862874
+      ],
+      [
+        -111.71,
+        40.156709946862874
+      ]
     ]
   },
-  "properties": null
+  "properties": {
+    "a": "mynamespace:aThing",
+    "b": 23,
+    "c": 0.1
+  }
 }
+
+```
+
+#### yaml
+```yaml
+id: 16
+type: Feature
+geometry: null
+properties:
+  a: mynamespace:aThing
+  b: 23
+  c: 0.1
+
 ```
 
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6_completed/context.jsonld",
+  "@context": [
+    {
+      "mynamespace": "http://example.com/mythings/"
+    },
+    "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6_completed/context.jsonld",
+    {
+      "mynamespace": "http://example.org/ns1/"
+    }
+  ],
+  "id": "f1",
   "type": "Feature",
-  "id": "LineP1P2",
-  "geometry": null,
-  "topology": {
+  "geometry": {
     "type": "LineString",
-    "references": [
-      "P1",
-      "P2"
+    "coordinates": [
+      [
+        -111.67183507997295,
+        40.056709946862874
+      ],
+      [
+        -111.71,
+        40.156709946862875
+      ]
     ]
   },
-  "properties": null
+  "properties": {
+    "a": "mynamespace:aThing",
+    "b": 23,
+    "c": 0.1
+  }
 }
 ```
 
 #### ttl
 ```ttl
 @prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix mynamespace: <http://example.org/ns1/> .
+@prefix ns1: <https://example.org/my-bb-model/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<file:///github/workspace/LineP1P2> a geojson:Feature ;
-    geojson:topology [ a geojson:LineString ;
-            geojson:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> ) ] .
+<http://example.com/features/f1> a mynamespace:aThing,
+        geojson:Feature ;
+    ns1:b 23 ;
+    ns1:c 1e-01 ;
+    geojson:geometry [ a geojson:LineString ;
+            geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.1171e+02 4.015671e+01 ) ) ] .
 
 
 ```
@@ -71,15 +129,13 @@ Profiling a BBlock from another register
 ## Schema
 
 ```yaml
-description: Line with only two points
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml
+description: Example of a simple GeoJSON Feature specialisation
 allOf:
-- $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml
+- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
 - properties:
-    topology:
-      properties:
-        references:
-          minItems: 2
-          maxItems: 2
+    properties:
+      $ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/schema.yaml
 
 ```
 
@@ -110,7 +166,15 @@ Links to the schema:
     "type": "@type",
     "id": "@id",
     "properties": "@nest",
-    "geometry": "geojson:geometry",
+    "geometry": {
+      "@context": {
+        "coordinates": {
+          "@container": "@list",
+          "@id": "geojson:coordinates"
+        }
+      },
+      "@id": "geojson:geometry"
+    },
     "bbox": {
       "@container": "@list",
       "@id": "geojson:bbox"
@@ -135,75 +199,14 @@ Links to the schema:
       },
       "@id": "rdfs:seeAlso"
     },
-    "featureType": "@type",
-    "time": {
-      "@context": {
-        "date": {
-          "@id": "owlTime:hasTime",
-          "@type": "xsd:date"
-        },
-        "timestamp": {
-          "@id": "owlTime:hasTime",
-          "@type": "xsd:dateTime"
-        },
-        "interval": {
-          "@id": "owlTime:hasTime",
-          "@container": "@list"
-        }
-      },
-      "@id": "dct:time"
-    },
-    "coordRefSys": "http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS",
-    "place": "dct:spatial",
-    "Polyhedron": "geojson:Polyhedron",
-    "MultiPolyhedron": "geojson:MultiPolyhedron",
-    "Prism": {
-      "@id": "geojson:Prism",
-      "@context": {
-        "base": "geojson:prismBase",
-        "lower": "geojson:prismLower",
-        "upper": "geojson:prismUpper"
-      }
-    },
-    "MultiPrism": {
-      "@id": "geojson:MultiPrism",
-      "@context": {
-        "prisms": "geojson:prisms"
-      }
-    },
-    "coordinates": {
-      "@container": "@list",
-      "@id": "geojson:coordinates"
-    },
-    "geometries": {
-      "@id": "geojson:geometry",
-      "@container": "@list"
-    },
-    "topology": {
-      "@type": "@id",
-      "@id": "geojson:topology"
-    },
-    "references": {
-      "@id": "geojson:relatedFeatures",
-      "@type": "@id",
-      "@container": "@list"
-    },
-    "Arc": "geojson:Arc",
-    "ArcWithCenter": "geojson:ArcWithCenter",
-    "ArcByChord": "geojson:ArcByChord",
-    "CircleByCenter": "geojson:CircleByCenter",
-    "CubicSpline": "geojson:CubicSpline",
-    "radius": "geojson:radius",
-    "arcLength": "geojson:arcLength",
-    "startTangentVector": "geojson:startTangentVector",
-    "endTangentVector": "geojson:endTangentVector",
+    "a": "@type",
+    "b": "https://example.org/my-bb-model/b",
+    "c": "https://example.org/my-bb-model/c",
     "geojson": "https://purl.org/geojson/vocab#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "oa": "http://www.w3.org/ns/oa#",
     "dct": "http://purl.org/dc/terms/",
-    "owlTime": "http://www.w3.org/2006/time#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "csdm": "https://linked.data.gov.au/def/csdm/",
+    "mynamespace": "http://example.org/ns1/",
     "@version": 1.1
   }
 }
@@ -212,6 +215,9 @@ Links to the schema:
 You can find the full JSON-LD context here:
 [context.jsonld](https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6_completed/context.jsonld)
 
+## Sources
+
+* [OGC API - Features, Part 1, 7.16.2: Feature Response](https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7)
 
 # For developers
 

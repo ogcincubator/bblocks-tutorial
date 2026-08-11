@@ -1,17 +1,9 @@
 {
-  "description": "Line with only two points",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml",
+  "description": "Example of a simple GeoJSON Feature specialisation",
   "allOf": [
     {
-      "properties": {
-        "topology": {
-          "properties": {
-            "references": {
-              "minItems": 2,
-              "maxItems": 2
-            }
-          }
-        }
-      }
+      "$ref": "https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.json"
     }
   ]
 }

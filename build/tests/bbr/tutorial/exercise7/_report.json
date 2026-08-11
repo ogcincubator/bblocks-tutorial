@@ -1,10 +1,57 @@
 {
-  "title": "Validation report for ogc.bbr.tutorial.exercise7 - 07 - Transforms",
-  "bblockName": "07 - Transforms",
+  "title": "Validation report for ogc.bbr.tutorial.exercise7 - 07 - Import/Extend",
+  "bblockName": "07 - Import/Extend",
   "bblockId": "ogc.bbr.tutorial.exercise7",
-  "generated": "2025-11-18T03:34:48.026852+00:00",
+  "generated": "2026-08-11T10:19:45.331283+00:00",
   "result": true,
   "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/exercise7/tests/example-fail.json",
+        "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise7/tests/example-fail.json",
+        "language": "json"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example-fail.json from test resources"
+            }
+          ]
+        },
+        {
+          "name": "JSON_SCHEMA",
+          "title": "JSON Schema",
+          "entries": [
+            {
+              "op": "validation",
+              "result": false,
+              "exception": "ValidationError",
+              "errorMessage": "['P1', 'P2', 'P3'] is too long",
+              "isError": true,
+              "message": "ValidationError: ['P1', 'P2', 'P3'] is too long\n\nFailed validating 'maxItems' in schema['allOf'][0]['properties']['topology']['properties']['references']:\n    {'maxItems': 2, 'minItems': 2}\n\nOn instance['topology']['references']:\n    ['P1', 'P2', 'P3']"
+            }
+          ]
+        }
+      ]
+    },
     {
       "source": {
         "type": "EXAMPLE",
@@ -23,26 +70,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.json from examples"
-            },
-            {
-              "op": "jsonld-uplift",
-              "isError": false,
-              "message": "JSON-LD context is present - uplifting"
-            },
-            {
-              "op": "jsonld-create",
-              "filename": "example_1_1.jsonld",
-              "isError": false,
-              "message": "Output JSON-LD example_1_1.jsonld created"
-            },
-            {
-              "op": "ttl-create",
-              "empty": false,
-              "filename": "example_1_1.ttl",
-              "size": 3,
-              "isError": false,
-              "message": "Output Turtle example_1_1.ttl created"
+              "message": "Using examples/example.json from examples"
             }
           ]
         },
@@ -63,8 +91,8 @@
   ],
   "globalErrors": {},
   "counts": {
-    "total": 1,
-    "passed": 1,
+    "total": 2,
+    "passed": 2,
     "failed": 0
   }
 }

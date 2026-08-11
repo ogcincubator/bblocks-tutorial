@@ -1,5 +1,5 @@
-Validation report for ogc.bbr.tutorial.exercise3_completed - 03 - Rules (completed)
-Generated 2025-11-18T03:34:48.003679+00:00
+Validation report for ogc.bbr.tutorial.exercise3_completed - 03 - Override a JSON-LD Binding (completed)
+Generated 2026-08-11T10:19:45.408338+00:00
 === Files ===
 Using example_1_1.json from examples
 JSON-LD context is present - uplifting
@@ -10,14 +10,4 @@ Output Turtle example_1_1.ttl created
 === JSON Schema ===
 Validation passed
 === End JSON Schema ===
-
-=== SHACL ===
-Validation result for _sources/exercise3_completed/rules.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for _sources/exercise3_completed/rules.shacl:
- - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nbfe80bbeacfa4b1eb9718e799839d058
-
-=== End SHACL ===
 

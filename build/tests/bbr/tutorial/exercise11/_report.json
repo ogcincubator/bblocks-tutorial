@@ -1,0 +1,104 @@
+{
+  "title": "Validation report for ogc.bbr.tutorial.exercise11 - 11 - Profiling an Ontology",
+  "bblockName": "11 - Profiling an Ontology",
+  "bblockId": "ogc.bbr.tutorial.exercise11",
+  "generated": "2026-08-11T10:19:45.394528+00:00",
+  "result": true,
+  "items": [
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/bbr/tutorial/exercise11/example_1_1.ttl",
+        "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise11/example_1_1.ttl",
+        "exampleIndex": 1,
+        "snippetIndex": 1,
+        "language": "text/turtle"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using examples/example.ttl from examples"
+            },
+            {
+              "op": "ttl-create",
+              "empty": false,
+              "filename": "example_1_1.ttl",
+              "size": 9,
+              "isError": false,
+              "message": "Output Turtle example_1_1.ttl created"
+            }
+          ]
+        },
+        {
+          "name": "TURTLE",
+          "title": "Turtle",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Prefixes are defined for mynamespace"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/exercise11/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/exercise11/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/exercise11/rules.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape": {
+                  "nodes": []
+                },
+                "<https://www.ogc.org/rules/template/#testValues>": {
+                  "nodes": [
+                    "eg:Fred"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/exercise11/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+            },
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/exercise10_completed/rules.shacl",
+              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+              "isError": false,
+              "message": "Validation result for _sources/exercise10_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+            },
+            {
+              "shaclFile": "_sources/exercise10_completed/rules.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/template/#testValues>": {
+                  "nodes": [
+                    "eg:Fred"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/exercise10_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "globalErrors": {},
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0
+  }
+}

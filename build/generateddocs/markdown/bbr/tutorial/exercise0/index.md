@@ -37,9 +37,9 @@ This tutorial is **much easier** to follow if you have the source code in one wi
 ### Use Cases: Schema or model?
 
 Schemas express data models in a specific structure - Building Blocks can combine or separate these different aspects:
-- Exercises 1-8 show how **JSON schemas** can be packaged as reusable semantically annotated resources.
-- Exercise 9 shows an **ontology-only** based building block with no defined schema that can be reused by multiple alternative schemas. 
-- Exercise 10 shows how an ontology may be **profiled** (constrained) for use in a particular context, to document assumptions that may be relevant, for example a subset expressible in a particular schema.
+- Exercises 1-9 show how **JSON schemas** can be packaged as reusable semantically annotated resources.
+- Exercise 10 shows an **ontology-only** based building block with no defined schema that can be reused by multiple alternative schemas. 
+- Exercise 11 shows how an ontology may be **profiled** (constrained) for use in a particular context, to document assumptions that may be relevant, for example a subset expressible in a particular schema.
 
 ### Use Case: Contribute to existing BBlocks
 

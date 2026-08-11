@@ -1,0 +1,65 @@
+
+
+{
+  "itemIdentifier": "ogc.bbr.tutorial.exercise11",
+  "$schema": "metaschema.yaml",
+  "name": "11 - Profiling an Ontology",
+  "highlighted": true,
+  "abstract": "Often data models and schemas are re-used with specific constraints - i.e. as a profile. This example shows how using building blocks allows inheritance of rules from a base ontology and addition of such constraints using SHACL.",
+  "status": "under-development",
+  "dateTimeAddition": "2023-04-05T00:00:00Z",
+  "itemClass": "model",
+  "register": "building-blocks-tutorial",
+  "version": "0.1",
+  "dateOfLastChange": "2026-08-11",
+  "dependsOn": [
+    "ogc.bbr.tutorial.exercise10_completed"
+  ],
+  "sources": [
+    {
+      "title": "Sample source document",
+      "link": "https://example.com/sources/1"
+    }
+  ],
+  "maturity": "mature",
+  "scope": "unstable",
+  "tags": [
+    "building-blocks-tutorial",
+    "templates"
+  ],
+  "shaclShapes": {
+    "ogc.bbr.tutorial.exercise11": [
+      "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise11/rules.shacl"
+    ],
+    "ogc.bbr.tutorial.exercise10_completed": [
+      "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10_completed/rules.shacl"
+    ]
+  },
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise11/",
+  "validationPassed": true,
+  "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise11/",
+  "description": "## Exercise 11\n\nGoal: Profile a BB by adding additional SHACL Rules\n\nInheritance of simple, unit-tested SHACL rules is a powerful convenience of the Building Blocks framework. \n\n### Steps\n- run build\n- run viewer\n- navigate to [validation](validation) tab and see inheritance of rules from Exercise 10\n- view validation results on \"about tab\"\n- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)",
+  "examples": [
+    {
+      "title": "Example",
+      "snippets": [
+        {
+          "language": "ttl",
+          "ref": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise11/examples/example.ttl",
+          "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise11/example_1_1.ttl",
+          "sizeBytes": 559,
+          "code": "@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n@prefix :     <https://w3id.org/example#> .\n@prefix eg:   <https://w3id.org/example-data#> .\n\neg:Fred\n    a          :Researcher ;\n    :partOf    eg:GnomesInc, eg:GardenersUnited ;\n    rdfs:label \"Fred the Gardener\" .\n\neg:GnomesInc\n    a          :Organization ;\n    rdfs:label \"Gnomes Inc. Gardeners to the Stars\" .\n\neg:GardenersUnited\n    a          :Organization , :Association ;\n    rdfs:label \"United Scientific Gardeners Association\" ."
+        }
+      ],
+      "prefixes": {
+        "mynamespace": "http://example.org/ns1/"
+      }
+    }
+  ],
+  "examplePrefixes": {
+    "mynamespace": "http://example.org/ns1/"
+  },
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/bblocks-tutorial",
+  "gitPath": "_sources/exercise11"
+}

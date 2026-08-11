@@ -1,13 +1,9 @@
-type: object
-properties:
-  one:
-    type: number
-    x-jsonld-id: http://example.com/hasOne
-  two:
-    type: number
-    x-jsonld-id: http://example.com/hasTwo
-  string:
-    type: string
-    x-jsonld-id: http://example.com/hasString
-x-jsonld-prefixes:
-  ex: http://example.com/
+description: Line with only two points
+allOf:
+- $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml
+- properties:
+    topology:
+      properties:
+        references:
+          minItems: 2
+          maxItems: 2

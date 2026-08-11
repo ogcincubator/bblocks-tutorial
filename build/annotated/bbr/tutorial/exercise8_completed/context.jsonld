@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "one": "ex:hasOne",
+    "two": "ex:hasTwo",
+    "string": "ex:hasString",
+    "ex": "http://example.com/",
+    "@version": 1.1
+  }
+}

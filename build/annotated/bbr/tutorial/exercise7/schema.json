@@ -1,20 +1,17 @@
 {
-  "type": "object",
-  "properties": {
-    "one": {
-      "type": "number",
-      "x-jsonld-id": "http://example.com/hasOne"
-    },
-    "two": {
-      "type": "number",
-      "x-jsonld-id": "http://example.com/hasTwo"
-    },
-    "string": {
-      "type": "string",
-      "x-jsonld-id": "http://example.com/hasString"
+  "description": "Line with only two points",
+  "allOf": [
+    {
+      "properties": {
+        "topology": {
+          "properties": {
+            "references": {
+              "minItems": 2,
+              "maxItems": 2
+            }
+          }
+        }
+      }
     }
-  },
-  "x-jsonld-prefixes": {
-    "ex": "http://example.com/"
-  }
+  ]
 }

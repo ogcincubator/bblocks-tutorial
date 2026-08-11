@@ -1,53 +1,56 @@
-path	@id
-/type	@type
-/id	@id
-/properties	@nest
-/geometry	https://purl.org/geojson/vocab#geometry
-/geometry/type	@type
-/geometry/coordinates	https://purl.org/geojson/vocab#coordinates
-/geometry/bbox	https://purl.org/geojson/vocab#bbox
-/geometry/geometries	
-/geometry/geometries/type	@type
-/geometry/geometries/coordinates	https://purl.org/geojson/vocab#coordinates
-/geometry/geometries/bbox	https://purl.org/geojson/vocab#bbox
-/bbox	https://purl.org/geojson/vocab#bbox
-/links	http://www.w3.org/2000/01/rdf-schema#seeAlso
-/links/href	http://www.w3.org/ns/oa#hasTarget
-/links/rel	http://www.iana.org/assignments/relation
-/links/anchor	
-/links/type	http://purl.org/dc/terms/type
-/links/hreflang	http://purl.org/dc/terms/language
-/links/title	http://www.w3.org/2000/01/rdf-schema#label
-/links/length	http://purl.org/dc/terms/extent
-/featureType	@type
-/time	http://purl.org/dc/terms/time
-/time/date	http://www.w3.org/2006/time#hasTime
-/time/timestamp	http://www.w3.org/2006/time#hasTime
-/time/interval	http://www.w3.org/2006/time#hasTime
-/coordRefSys	http://www.opengis.net/def/glossary/term/CoordinateReferenceSystemCRS
-/coordRefSys/type	
-/coordRefSys/href	
-/coordRefSys/epoch	
-/place	http://purl.org/dc/terms/spatial
-/place/type	
-/place/coordRefSys	
-/place/measures	
-/place/measures/enabled	
-/place/measures/unit	
-/place/measures/description	
-/place/coordinates	
-/place/bbox	
-/place/geometries	
-/place/base	
-/place/lower	
-/place/upper	
-/place/prisms	
-/place/geometries/type	
-/geometry/coordRefSys	
-/geometry/measures	
-/geometry/measures/enabled	
-/geometry/measures/unit	
-/geometry/measures/description	
-/topology	https://purl.org/geojson/vocab#topology
-/topology/type	@type
-/topology/references	https://purl.org/geojson/vocab#relatedFeatures
+path	@id	schema
+/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
+/id	@id	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/properties	@nest	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry	https://purl.org/geojson/vocab#geometry	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/6/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/6/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/6/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries		https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/0/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/0/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/0/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/1/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/1/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/1/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/2/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/2/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/2/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/3/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/3/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/3/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/4/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/4/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/4/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/5/type	@type	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/5/coordinates	https://purl.org/geojson/vocab#coordinates	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/geometries/_oneOf/5/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/geometry/_oneOf/7/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/bbox	https://purl.org/geojson/vocab#bbox	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml
+/links	http://www.w3.org/2000/01/rdf-schema#seeAlso	https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
+/links/href	http://www.w3.org/ns/oa#hasTarget	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/rel	http://www.iana.org/assignments/relation	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/anchor		https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/type	http://purl.org/dc/terms/type	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/hreflang	http://purl.org/dc/terms/language	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/title	http://www.w3.org/2000/01/rdf-schema#label	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/links/length	http://purl.org/dc/terms/extent	https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
+/properties/a	@type	https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml
+/properties/b	https://example.org/my-bb-model/b	https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml
+/properties/c	https://example.org/my-bb-model/c	https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml

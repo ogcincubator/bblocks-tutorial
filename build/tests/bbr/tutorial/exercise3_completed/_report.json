@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.bbr.tutorial.exercise3_completed - 03 - Rules (completed)",
-  "bblockName": "03 - Rules (completed)",
+  "title": "Validation report for ogc.bbr.tutorial.exercise3_completed - 03 - Override a JSON-LD Binding (completed)",
+  "bblockName": "03 - Override a JSON-LD Binding (completed)",
   "bblockId": "ogc.bbr.tutorial.exercise3_completed",
-  "generated": "2025-11-18T03:34:48.003729+00:00",
+  "generated": "2026-08-11T10:19:45.408383+00:00",
   "result": true,
   "items": [
     {
@@ -55,31 +55,6 @@
               "result": true,
               "isError": false,
               "message": "Validation passed"
-            }
-          ]
-        },
-        {
-          "name": "SHACL",
-          "title": "SHACL",
-          "entries": [
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/exercise3_completed/rules.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for _sources/exercise3_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "_sources/exercise3_completed/rules.shacl",
-              "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": [
-                    "_:Nbfe80bbeacfa4b1eb9718e799839d058"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nbfe80bbeacfa4b1eb9718e799839d058\n"
             }
           ]
         }

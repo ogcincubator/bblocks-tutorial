@@ -1,20 +1,20 @@
 {
-  "type": "object",
-  "properties": {
-    "one": {
-      "type": "number",
-      "x-jsonld-id": "http://example.com/hasOne"
+  "description": "Line with only two points",
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.json"
     },
-    "two": {
-      "type": "number",
-      "x-jsonld-id": "http://example.com/hasTwo"
-    },
-    "string": {
-      "type": "string",
-      "x-jsonld-id": "http://example.com/hasString"
+    {
+      "properties": {
+        "topology": {
+          "properties": {
+            "references": {
+              "minItems": 2,
+              "maxItems": 2
+            }
+          }
+        }
+      }
     }
-  },
-  "x-jsonld-prefixes": {
-    "ex": "http://example.com/"
-  }
+  ]
 }

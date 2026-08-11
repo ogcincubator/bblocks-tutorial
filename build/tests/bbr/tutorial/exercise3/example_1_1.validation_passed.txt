@@ -1,23 +1,10 @@
-Validation report for ogc.bbr.tutorial.exercise3 - 03 - Add Semantic Rules
-Generated 2025-11-18T03:34:47.992582+00:00
+Validation report for ogc.bbr.tutorial.exercise3 - 03 - Override a JSON-LD Binding
+Generated 2026-08-11T10:19:45.401001+00:00
 === Files ===
 Using example_1_1.json from examples
-JSON-LD context is present - uplifting
-Output JSON-LD example_1_1.jsonld created
-Output Turtle example_1_1.ttl created
 === End Files ===
 
 === JSON Schema ===
 Validation passed
 === End JSON Schema ===
-
-=== SHACL ===
-Validation result for _sources/exercise3/rules.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for _sources/exercise3/rules.shacl:
- - Shape <https://www.ogc.org/rules/template/#testValues>: *none*
-
-=== End SHACL ===
 

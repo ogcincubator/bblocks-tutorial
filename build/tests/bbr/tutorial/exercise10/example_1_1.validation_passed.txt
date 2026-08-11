@@ -1,7 +1,7 @@
-Validation report for ogc.bbr.tutorial.exercise10 - 10 - Profiling an Ontology
-Generated 2025-11-18T03:34:48.271462+00:00
+Validation report for ogc.bbr.tutorial.exercise10 - 10 - RDF BB
+Generated 2026-08-11T10:19:45.267352+00:00
 === Files ===
-Using example_1_1.ttl from examples
+Using examples/example.ttl from examples
 Output Turtle example_1_1.ttl created
 === End Files ===
 
@@ -15,14 +15,6 @@ Validation result for _sources/exercise10/rules.shacl:
   Conforms: True
   
 Focus nodes for _sources/exercise10/rules.shacl:
- - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred
- - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*
-
-Validation result for _sources/exercise9_completed/rules.shacl:
-  Validation Report
-  Conforms: True
-  
-Focus nodes for _sources/exercise9_completed/rules.shacl:
  - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred
 
 === End SHACL ===

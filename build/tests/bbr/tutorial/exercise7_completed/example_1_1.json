@@ -1,5 +1,13 @@
 {
-  "one": 1,
-  "two": 2,
-  "string": "value"
+  "type": "Feature",
+  "id": "LineP1P2",
+  "geometry": null,
+  "topology": {
+    "type": "LineString",
+    "references": [
+      "P1",
+      "P2"
+    ]
+  },
+  "properties": null
 }

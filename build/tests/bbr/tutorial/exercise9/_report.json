@@ -1,19 +1,19 @@
 {
-  "title": "Validation report for ogc.bbr.tutorial.exercise9 - 09 - RDF BB",
-  "bblockName": "09 - RDF BB",
+  "title": "Validation report for ogc.bbr.tutorial.exercise9 - 09 - Advanced Transform Example",
+  "bblockName": "09 - Advanced Transform Example",
   "bblockId": "ogc.bbr.tutorial.exercise9",
-  "generated": "2025-11-18T03:34:48.254298+00:00",
+  "generated": "2026-08-11T10:19:45.366807+00:00",
   "result": true,
   "items": [
     {
       "source": {
         "type": "EXAMPLE",
         "requireFail": false,
-        "filename": "build/tests/bbr/tutorial/exercise9/example_1_1.ttl",
-        "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise9/example_1_1.ttl",
+        "filename": "build/tests/bbr/tutorial/exercise9/example_1_1.json",
+        "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise9/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
-        "language": "text/turtle"
+        "language": "application/json"
       },
       "result": true,
       "sections": [
@@ -23,50 +23,31 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.ttl from examples"
-            },
-            {
-              "op": "ttl-create",
-              "empty": false,
-              "filename": "example_1_1.ttl",
-              "size": 5,
-              "isError": false,
-              "message": "Output Turtle example_1_1.ttl created"
+              "message": "Using examples/cube.city.json from examples"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": {
+        "type": "EXAMPLE",
+        "requireFail": false,
+        "filename": "build/tests/bbr/tutorial/exercise9/example_2_1.json",
+        "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise9/example_2_1.json",
+        "exampleIndex": 2,
+        "snippetIndex": 1,
+        "language": "application/json"
+      },
+      "result": true,
+      "sections": [
         {
-          "name": "TURTLE",
-          "title": "Turtle",
+          "name": "FILES",
+          "title": "Files",
           "entries": [
             {
               "isError": false,
-              "message": "Prefixes are defined for mynamespace"
-            }
-          ]
-        },
-        {
-          "name": "SHACL",
-          "title": "SHACL",
-          "entries": [
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/exercise9/rules.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for _sources/exercise9/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "_sources/exercise9/rules.shacl",
-              "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": [
-                    "eg:Fred"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/exercise9/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+              "message": "Using examples/twobuildings.city.json from examples"
             }
           ]
         }
@@ -75,8 +56,8 @@
   ],
   "globalErrors": {},
   "counts": {
-    "total": 1,
-    "passed": 1,
+    "total": 2,
+    "passed": 2,
     "failed": 0
   }
 }

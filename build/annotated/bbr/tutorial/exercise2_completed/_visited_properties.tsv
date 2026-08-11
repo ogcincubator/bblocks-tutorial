@@ -1,4 +1,4 @@
-path	@id
-/a	@type
-/b	https://example.org/my-bb-model/b
-/c	https://example.org/my-bb-model/c
+path	@id	schema
+/a	@type	/github/workspace/build/annotated/bbr/tutorial/exercise2_completed/schema.yaml
+/b	https://example.org/my-bb-model/b	/github/workspace/build/annotated/bbr/tutorial/exercise2_completed/schema.yaml
+/c	https://example.org/my-bb-model/c	/github/workspace/build/annotated/bbr/tutorial/exercise2_completed/schema.yaml

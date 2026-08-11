@@ -1,75 +1,42 @@
 
-# 05 - Features (completed) (Schema)
+# 05 - Profiling (completed) (Model)
 
-`ogc.bbr.tutorial.exercise5_completed` *v1.0*
+`ogc.bbr.tutorial.exercise5_completed` *v0.1*
 
-This example shows a simple customisation for OGC API Feature schemas
+Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases.
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
 ## Description
 
-## Using a standard container
+## Exercise 5
 
-This is an **interoperable** approach to packaging a data model in a standardised structure.
+Goal: Profile a building block with additional rules, with tests
 
-i.e. the attributes (properties) are managed independently of the packaging container (Feature) 
-
-In this case we use the schema from the previous examples.
-
-This building block **inherits** reusable semantic annotations from a common library, simplifying implementation.
+Note this illustrates how to use examples to test rules fail when expected. This is a critical capability for complex systems.
 
 ### Steps
-- uncomment the reference to the previous exercise schema in schema.yaml
-- run build, view etc
-- examine "Semantic Uplift" and note that event though no `context.jsonld` is present the building block inherits and combines the two building blocks semantic annotations.
-
-
-
-
+- uncomment import from schema.yaml
+- uncomment line #11 in rules.shacl and examine the additional profile constraint (B<5))
+- run build
+- run viewer
+- navigate to "Exercise 5"/Validation
+- view validation results on "about tab"
+- move `examples/*-fail` to `tests`
+- run build
+- run viewer
+- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)
 ## Examples
 
-### GeoJSON - specialisation example.
-This examples shows how to define a customised schema based on an existing building block - in this case the *OGC API Features* basic GeoJSON Feature response
+### Valid under new rule
 #### json
 ```json
 {
-  "@context": {
-    "mynamespace": "http://example.org/ns1/"
-  },
-  "id": "f1",
-  "type": "Feature",
-  "geometry": {
-    "type": "LineString",
-    "coordinates": [
-      [
-        -111.67183507997295,
-        40.056709946862874
-      ],
-      [
-        -111.71,
-        40.156709946862874
-      ]
-    ]
-  },
-  "properties": {
-    "a": "mynamespace:aThing",
-    "b": 23,
-    "c": 0.1
-  }
+  "a": "mynamespace:aThing",
+  "b": 6,
+  "c": 1
 }
 
-```
-
-#### yaml
-```yaml
-id: 16
-type: Feature
-geometry: null
-properties:
-  a: mynamespace:aThing
-  b: 23
-  c: 0.1
 
 ```
 
@@ -78,50 +45,25 @@ properties:
 {
   "@context": [
     {
-      "mynamespace": "http://example.com/mythings/"
-    },
-    "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/context.jsonld",
-    {
       "mynamespace": "http://example.org/ns1/"
-    }
+    },
+    "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/context.jsonld"
   ],
-  "id": "f1",
-  "type": "Feature",
-  "geometry": {
-    "type": "LineString",
-    "coordinates": [
-      [
-        -111.67183507997295,
-        40.056709946862874
-      ],
-      [
-        -111.71,
-        40.156709946862875
-      ]
-    ]
-  },
-  "properties": {
-    "a": "mynamespace:aThing",
-    "b": 23,
-    "c": 0.1
-  }
+  "a": "mynamespace:aThing",
+  "b": 6,
+  "c": 1
 }
 ```
 
 #### ttl
 ```ttl
-@prefix geojson: <https://purl.org/geojson/vocab#> .
 @prefix mynamespace: <http://example.org/ns1/> .
 @prefix ns1: <https://example.org/my-bb-model/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.com/features/f1> a mynamespace:aThing,
-        geojson:Feature ;
-    ns1:b 23 ;
-    ns1:c 1e-01 ;
-    geojson:geometry [ a geojson:LineString ;
-            geojson:coordinates ( ( -1.116718e+02 4.005671e+01 ) ( -1.1171e+02 4.015671e+01 ) ) ] .
+[] a mynamespace:aThing ;
+    ns1:b 6 ;
+    ns1:c 1 .
 
 
 ```
@@ -129,13 +71,8 @@ properties:
 ## Schema
 
 ```yaml
-$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml
-description: Example of a simple GeoJSON Feature specialisation
-allOf:
-- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
-- properties:
-    properties:
-      $ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml
+$schema: https://json-schema.org/draft/2020-12/schema
+$ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml
 
 ```
 
@@ -150,62 +87,9 @@ Links to the schema:
 ```jsonld
 {
   "@context": {
-    "Feature": "geojson:Feature",
-    "FeatureCollection": "geojson:FeatureCollection",
-    "GeometryCollection": "geojson:GeometryCollection",
-    "LineString": "geojson:LineString",
-    "MultiLineString": "geojson:MultiLineString",
-    "MultiPoint": "geojson:MultiPoint",
-    "MultiPolygon": "geojson:MultiPolygon",
-    "Point": "geojson:Point",
-    "Polygon": "geojson:Polygon",
-    "features": {
-      "@container": "@set",
-      "@id": "geojson:features"
-    },
-    "type": "@type",
-    "id": "@id",
-    "properties": "@nest",
-    "geometry": {
-      "@context": {
-        "coordinates": {
-          "@container": "@list",
-          "@id": "geojson:coordinates"
-        }
-      },
-      "@id": "geojson:geometry"
-    },
-    "bbox": {
-      "@container": "@list",
-      "@id": "geojson:bbox"
-    },
-    "links": {
-      "@context": {
-        "href": {
-          "@type": "@id",
-          "@id": "oa:hasTarget"
-        },
-        "rel": {
-          "@context": {
-            "@base": "http://www.iana.org/assignments/relation/"
-          },
-          "@id": "http://www.iana.org/assignments/relation",
-          "@type": "@id"
-        },
-        "type": "dct:type",
-        "hreflang": "dct:language",
-        "title": "rdfs:label",
-        "length": "dct:extent"
-      },
-      "@id": "rdfs:seeAlso"
-    },
     "a": "@type",
     "b": "https://example.org/my-bb-model/b",
     "c": "https://example.org/my-bb-model/c",
-    "geojson": "https://purl.org/geojson/vocab#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "oa": "http://www.w3.org/ns/oa#",
-    "dct": "http://purl.org/dc/terms/",
     "mynamespace": "http://example.org/ns1/",
     "@version": 1.1
   }
@@ -217,7 +101,7 @@ You can find the full JSON-LD context here:
 
 ## Sources
 
-* [OGC API - Features, Part 1, 7.16.2: Feature Response](https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7)
+* [Sample source document](https://example.com/sources/1)
 
 # For developers
 

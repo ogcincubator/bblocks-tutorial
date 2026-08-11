@@ -1,226 +1,10 @@
 {
-  "title": "Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Profiling (completed)",
-  "bblockName": "04 - Profiling (completed)",
+  "title": "Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Rules (completed)",
+  "bblockName": "04 - Rules (completed)",
   "bblockId": "ogc.bbr.tutorial.exercise4_completed",
-  "generated": "2025-11-18T03:34:48.297764+00:00",
+  "generated": "2026-08-11T10:19:45.318406+00:00",
   "result": true,
   "items": [
-    {
-      "source": {
-        "type": "TEST_RESOURCE",
-        "requireFail": true,
-        "filename": "_sources/exercise4_completed/tests/example_b_lt_5-fail.json",
-        "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/tests/example_b_lt_5-fail.json",
-        "language": "json"
-      },
-      "result": true,
-      "sections": [
-        {
-          "name": "GENERAL",
-          "title": "General",
-          "entries": [
-            {
-              "op": "require-fail",
-              "isError": false,
-              "message": "Test was expected to fail and it did."
-            }
-          ]
-        },
-        {
-          "name": "FILES",
-          "title": "Files",
-          "entries": [
-            {
-              "isError": false,
-              "message": "Using example_b_lt_5-fail.json from test resources"
-            },
-            {
-              "op": "jsonld-uplift",
-              "isError": false,
-              "message": "JSON-LD context is present - uplifting"
-            },
-            {
-              "op": "jsonld-create",
-              "filename": "example_b_lt_5-fail.jsonld",
-              "isError": false,
-              "message": "Output JSON-LD example_b_lt_5-fail.jsonld created"
-            },
-            {
-              "op": "ttl-create",
-              "empty": false,
-              "filename": "example_b_lt_5-fail.ttl",
-              "size": 3,
-              "isError": false,
-              "message": "Output Turtle example_b_lt_5-fail.ttl created"
-            }
-          ]
-        },
-        {
-          "name": "JSON_SCHEMA",
-          "title": "JSON Schema",
-          "entries": [
-            {
-              "op": "validation",
-              "result": true,
-              "isError": false,
-              "message": "Validation passed"
-            }
-          ]
-        },
-        {
-          "name": "SHACL",
-          "title": "SHACL",
-          "entries": [
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
-              "graph": "@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ a mynamespace:aThing ;\n                    ns1:b 4 ;\n                    ns1:c 1 ] ;\n            sh:resultMessage \"Value is not >= Literal(\\\"5\\\", datatype=xsd:integer)\" ;\n            sh:resultPath ns1:b ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;\n            sh:sourceShape [ sh:minInclusive 5 ;\n                    sh:path ns1:b ] ;\n            sh:value 4 ] .\n\n",
-              "isError": true,
-              "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MinInclusiveConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:minInclusive Literal(\"5\", datatype=xsd:integer) ; sh:path ns1:b ]\n  \tFocus Node: [ ns1:b Literal(\"4\", datatype=xsd:integer) ; ns1:c Literal(\"1\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"4\", datatype=xsd:integer)\n  \tResult Path: ns1:b\n  \tMessage: Value is not >= Literal(\"5\", datatype=xsd:integer)\n  "
-            },
-            {
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
-              "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": [
-                    "_:N1158bc82c6b2462b8598b45214aec51e"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N1158bc82c6b2462b8598b45214aec51e\n"
-            },
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/exercise3_completed/rules.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for _sources/exercise3_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "_sources/exercise3_completed/rules.shacl",
-              "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": [
-                    "_:N1158bc82c6b2462b8598b45214aec51e"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N1158bc82c6b2462b8598b45214aec51e\n"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": {
-        "type": "TEST_RESOURCE",
-        "requireFail": true,
-        "filename": "_sources/exercise4_completed/tests/example_b_lt_c-fail.json",
-        "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/tests/example_b_lt_c-fail.json",
-        "language": "json"
-      },
-      "result": true,
-      "sections": [
-        {
-          "name": "GENERAL",
-          "title": "General",
-          "entries": [
-            {
-              "op": "require-fail",
-              "isError": false,
-              "message": "Test was expected to fail and it did."
-            }
-          ]
-        },
-        {
-          "name": "FILES",
-          "title": "Files",
-          "entries": [
-            {
-              "isError": false,
-              "message": "Using example_b_lt_c-fail.json from test resources"
-            },
-            {
-              "op": "jsonld-uplift",
-              "isError": false,
-              "message": "JSON-LD context is present - uplifting"
-            },
-            {
-              "op": "jsonld-create",
-              "filename": "example_b_lt_c-fail.jsonld",
-              "isError": false,
-              "message": "Output JSON-LD example_b_lt_c-fail.jsonld created"
-            },
-            {
-              "op": "ttl-create",
-              "empty": false,
-              "filename": "example_b_lt_c-fail.ttl",
-              "size": 3,
-              "isError": false,
-              "message": "Output Turtle example_b_lt_c-fail.ttl created"
-            }
-          ]
-        },
-        {
-          "name": "JSON_SCHEMA",
-          "title": "JSON Schema",
-          "entries": [
-            {
-              "op": "validation",
-              "result": true,
-              "isError": false,
-              "message": "Validation passed"
-            }
-          ]
-        },
-        {
-          "name": "SHACL",
-          "title": "SHACL",
-          "entries": [
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
-              "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": [
-                    "_:N4c2453d411ca4a75be960941a16f8337"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N4c2453d411ca4a75be960941a16f8337\n"
-            },
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/exercise3_completed/rules.shacl",
-              "graph": "@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ a mynamespace:aThing ;\n                    ns1:b 6 ;\n                    ns1:c 10 ] ;\n            sh:resultMessage \"Value of [ ns1:b Literal(\\\"6\\\", datatype=xsd:integer) ; ns1:c Literal(\\\"10\\\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal(\\\"10\\\", datatype=xsd:integer)\" ;\n            sh:resultPath ns1:c ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:LessThanConstraintComponent ;\n            sh:sourceShape [ sh:lessThan ns1:b ;\n                    sh:path ns1:c ] ;\n            sh:value 10 ] .\n\n",
-              "isError": true,
-              "message": "Validation result for _sources/exercise3_completed/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in LessThanConstraintComponent (http://www.w3.org/ns/shacl#LessThanConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:lessThan ns1:b ; sh:path ns1:c ]\n  \tFocus Node: [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"10\", datatype=xsd:integer)\n  \tResult Path: ns1:c\n  \tMessage: Value of [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal(\"10\", datatype=xsd:integer)\n  "
-            },
-            {
-              "shaclFile": "_sources/exercise3_completed/rules.shacl",
-              "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": [
-                    "_:N4c2453d411ca4a75be960941a16f8337"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N4c2453d411ca4a75be960941a16f8337\n"
-            }
-          ]
-        }
-      ]
-    },
     {
       "source": {
         "type": "EXAMPLE",
@@ -239,7 +23,7 @@
           "entries": [
             {
               "isError": false,
-              "message": "Using example_1_1.json from examples"
+              "message": "Using ../exercise1/example.json from examples"
             },
             {
               "op": "jsonld-uplift",
@@ -290,31 +74,12 @@
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N0c57e96986eb41728165165e602f8eaa"
+                    "_:N18d8dc14e6c14bbb8687ee4c0f31cc4f"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N0c57e96986eb41728165165e602f8eaa\n"
-            },
-            {
-              "op": "shacl-report",
-              "shaclFile": "_sources/exercise3_completed/rules.shacl",
-              "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-              "isError": false,
-              "message": "Validation result for _sources/exercise3_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-            },
-            {
-              "shaclFile": "_sources/exercise3_completed/rules.shacl",
-              "focusNodes": {
-                "<https://www.ogc.org/rules/template/#testValues>": {
-                  "nodes": [
-                    "_:N0c57e96986eb41728165165e602f8eaa"
-                  ]
-                }
-              },
-              "isError": false,
-              "message": "Focus nodes for _sources/exercise3_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N0c57e96986eb41728165165e602f8eaa\n"
+              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N18d8dc14e6c14bbb8687ee4c0f31cc4f\n"
             }
           ]
         }
@@ -323,8 +88,8 @@
   ],
   "globalErrors": {},
   "counts": {
-    "total": 3,
-    "passed": 3,
+    "total": 1,
+    "passed": 1,
     "failed": 0
   }
 }

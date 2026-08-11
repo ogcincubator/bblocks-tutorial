@@ -1,5 +1,5 @@
 {
-  "a": "mynamespace:aThing",
-  "b": 23,
-  "c": 1
+  "a": "https://example.com/my-a-value",
+  "b": 42,
+  "c": 7
 }

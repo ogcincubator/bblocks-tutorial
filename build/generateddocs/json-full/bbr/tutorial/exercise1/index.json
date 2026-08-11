@@ -11,7 +11,7 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2025-11-18",
+  "dateOfLastChange": "2026-08-11",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [],
   "maturity": "mature",
@@ -25,8 +25,8 @@
     "application/json": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise1/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise1/schema.yaml",
+  "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise1/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise1/",
-  "rdfData": [],
   "validationPassed": true,
   "description": "## Exercise 1\n\nGoal: take a simple JSON schema and test with an example\n\nAn example of the end result is available [here](bblocks://ogc.bbr.tutorial.exercise1_completed)\n\n### Steps\n- un-comment the reference to a local file in [examples.yaml](examples.yaml)\n- run build\n- run viewer\n- navigate to [Exercise 1](bblocks://ogc.bbr.tutorial.exercise1)\n- navigate to [Examples](bblocks://ogc.bbr.tutorial.exercise1/examples) tab\n- view validation results at [build-local/...](/register/build-local/tests/report.html#bblock-ogc.bbr.tutorial.exercise1)",
   "examples": [

@@ -3,9 +3,9 @@
     {
       "mynamespace": "http://example.org/ns1/"
     },
-    {}
+    "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4/context.jsonld"
   ],
   "a": "mynamespace:aThing",
-  "b": 6,
+  "b": 23,
   "c": 1
 }
