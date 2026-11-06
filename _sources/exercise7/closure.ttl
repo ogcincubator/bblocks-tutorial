@@ -1,0 +1,22 @@
+# SHACL closure for Exercise 7.
+#
+# The topo-line block imported from the topo-feature register carries rules (topo-refs-exist.shacl)
+# requiring every feature a topology references to exist in the graph being validated, and to have a
+# Point geometry. The example line references P1 and P2 by id but - being a minimal example - does not
+# define them.
+#
+# This file supplies them. It is merged into the example's RDF graph before SHACL validation runs, but
+# is not part of the example data itself. Each stub carries only what the imported rules check: a Point
+# geometry, with the coordinates that topo-feature's geometry rules require of every Point.
+#
+# The IRIs must match the example's `base-uri` in examples.yaml, which the relative ids "P1" and "P2"
+# resolve against during semantic uplift. They are deliberately specific to this exercise, so they
+# cannot collide with ids defined by other examples.
+
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+
+<https://example.org/bblocks-tutorial/exercise7/P1> a geojson:Feature ;
+    geojson:geometry [ a geojson:Point ; geojson:coordinates ( 0 0 ) ] .
+
+<https://example.org/bblocks-tutorial/exercise7/P2> a geojson:Feature ;
+    geojson:geometry [ a geojson:Point ; geojson:coordinates ( 1 1 ) ] .

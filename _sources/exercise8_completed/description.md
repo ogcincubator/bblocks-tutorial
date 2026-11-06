@@ -6,7 +6,7 @@ Note: User Experience for FAIR transform publishing is a work in progress - feel
 
 ### Steps
 - See the documentation on [transform support](https://ogcincubator.github.io/bblocks-docs/create/transforms)
-- rename [transforms.example](context.example) to [transforms.yaml](context.jsonld)
+- rename [transforms.example](transforms.example) to [transforms.yaml](transforms.yaml)
 - run build
 - run viewer
 - navigate to [Transforms](bblocks://ogc.bbr.tutorial.exercise8_completed/transforms) Tab

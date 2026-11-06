@@ -1,10 +1,15 @@
 {
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/schemas/bblock.schema.yaml",
   "name": "08 - Transforms",
   "abstract": "schema and graph transforms",
   "status": "under-development",
   "dateTimeAddition": "2024-10-03T11:31:00+02:00",
   "itemClass": "schema",
   "version": "0.1",
-  "dateOfLastChange": "2024-10-03",
-  "highlighted": true
+  "highlighted": true,
+  "register": "building-blocks-tutorial",
+  "tags": [
+    "building-blocks-tutorial"
+  ],
+  "group": "5 · Transforms"
 }

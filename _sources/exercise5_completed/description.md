@@ -6,7 +6,7 @@ Note this illustrates how to use examples to test rules fail when expected. This
 
 ### Steps
 - uncomment import from schema.yaml
-- uncomment line #11 in rules.shacl and examine the additional profile constraint (B<5))
+- uncomment line #11 in [shapes.shacl](shapes.shacl) and examine the additional profile constraint (B<5))
 - run build
 - run viewer
 - navigate to "Exercise 5"/Validation
@@ -14,4 +14,4 @@ Note this illustrates how to use examples to test rules fail when expected. This
 - move `examples/*-fail` to `tests`
 - run build
 - run viewer
-- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)
+- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/tutorial/exercise5_completed/_report.json)

@@ -1,5 +1,5 @@
 {
-  "$schema": "metaschema.yaml",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/schemas/bblock.schema.yaml",
   "name": "11 - Profiling an Ontology",
   "highlighted": true,
   "abstract": "Often data models and schemas are re-used with specific constraints - i.e. as a profile. This example shows how using building blocks allows inheritance of rules from a base ontology and addition of such constraints using SHACL.",
@@ -8,20 +8,11 @@
   "itemClass": "model",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2023-04-05",
-  "dependsOn": [
-    "ogc.bbr.tutorial.exercise10_completed"
-  ],
-  "sources": [
-    {
-      "title": "Sample source document",
-      "link": "https://example.com/sources/1"
-    }
-  ],
-  "maturity": "mature",
-  "scope": "unstable",
   "tags": [
-    "building-blocks-tutorial",
-    "templates"
-  ]
+    "building-blocks-tutorial"
+  ],
+  "isProfileOf": [
+    "bblocks://ogc.bbr.tutorial.exercise10_completed"
+  ],
+  "group": "6 · Ontology blocks (RDF-only)"
 }

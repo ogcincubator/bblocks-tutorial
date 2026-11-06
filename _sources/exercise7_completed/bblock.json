@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/schemas/bblock.schema.yaml",
   "name": "07 - Import/Extend (completed)",
   "abstract": "Profiling a BBlock from another register",
   "status": "under-development",
@@ -6,17 +7,14 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "1.0",
-  "dateOfLastChange": "2023-05-19",
-  "sources": [
-  ],
-  "maturity": "development",
-  "scope": "unstable",
-  "dependsOn": [
-  ],
-  "tags": ["building-blocks-tutorial",
+  "tags": [
+    "building-blocks-tutorial",
     "feature",
     "examples"
   ],
-  "group": "Examples",
-  "highlighted": true
+  "highlighted": true,
+  "isProfileOf": [
+    "bblocks://ogc.geo.topo.features.topo-line"
+  ],
+  "group": "4 · Composition & reuse"
 }

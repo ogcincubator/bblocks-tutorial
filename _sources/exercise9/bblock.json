@@ -1,4 +1,5 @@
 {
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/schemas/bblock.schema.yaml",
   "name": "09 - Advanced Transform Example",
   "highlighted": true,
   "abstract": "This example highlights an advanced transform from CityJSON to TopoFeature, showing a range of features interacting to support this complex task.",
@@ -7,12 +8,12 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2024-10-18",
   "tags": [
     "building-blocks-tutorial",
     "3D",
     "geometry",
     "topology",
     "cityjson"
-  ]
+  ],
+  "group": "5 · Transforms"
 }

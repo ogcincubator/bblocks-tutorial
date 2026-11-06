@@ -9,4 +9,4 @@ Inheritance of simple, unit-tested SHACL rules is a powerful convenience of the 
 - run viewer
 - navigate to [validation](validation) tab and see inheritance of rules from Exercise 10
 - view validation results on "about tab"
-- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)
+- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/tutorial/exercise11/_report.json)

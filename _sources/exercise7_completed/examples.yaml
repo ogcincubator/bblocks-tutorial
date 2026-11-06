@@ -4,8 +4,12 @@ $schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/re
 ## List of examples
 examples:
   - title: Line with 2 points
-
+    # Relative ids ("P1", "P2") resolve against this base during semantic uplift - must match closure.ttl
+    base-uri: https://example.org/bblocks-tutorial/exercise7/
     snippets:
       - language: json
         # Reference to file
         ref: examples/example.json
+        # Adds the referenced points to the graph used for SHACL validation
+        shacl-closure:
+          - closure.ttl

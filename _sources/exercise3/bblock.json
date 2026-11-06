@@ -1,5 +1,5 @@
 {
-  "$schema": "metaschema.yaml",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/schemas/bblock.schema.yaml",
   "name": "03 - Override a JSON-LD Binding",
   "highlighted": true,
   "abstract": "Profile a block and redeclare one of its inherited JSON-LD bindings so your own mapping wins",
@@ -8,8 +8,6 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2026-08-11",
-  "link": "https://github.com/opengeospatial/bblock-template",
   "isProfileOf": [
     "bblocks://ogc.bbr.tutorial.exercise2"
   ],
@@ -19,9 +17,8 @@
       "link": "https://ogcincubator.github.io/bblocks-docs/create/semantic-uplift#overriding-an-inherited-binding"
     }
   ],
-  "maturity": "mature",
-  "scope": "unstable",
-  "tags": ["building-blocks-tutorial",
-    "templates"
-  ]
+  "tags": [
+    "building-blocks-tutorial"
+  ],
+  "group": "2 · Semantic annotation (JSON-LD)"
 }

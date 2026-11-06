@@ -3,7 +3,7 @@
 Goal: Redeclare (override) a JSON-LD binding inherited from another block
 
 A block whose schema composes another via `allOf`/`$ref` — as this exercise does with
-[Exercise 2 (completed)](../exercise2_completed) — can redeclare a term's mapping in its own `context.jsonld`
+[Exercise 2 (completed)](bblocks://ogc.bbr.tutorial.exercise2_completed) — can redeclare a term's mapping in its own `context.jsonld`
 and have it win over the inherited one. This is useful for a profile that needs to specialise an inherited term
 without forking the base schema or context.
 
@@ -14,7 +14,7 @@ self-sufficient regardless of your progress on Exercise 2 itself.
 
 ### Steps
 - navigate to [Semantic Uplift](bblocks://ogc.bbr.tutorial.exercise3_completed/semantic-uplift) tab and compare
-  the assembled context here to [Exercise 2 (completed)](../exercise2_completed)'s: `b` resolves to this block's
+  the assembled context here to [Exercise 2 (completed)](bblocks://ogc.bbr.tutorial.exercise2_completed)'s: `b` resolves to this block's
   own mapping, not Exercise 2's, while `a` and `c` are still inherited unchanged
 - choose "RDF/Turtle" on the [Examples](bblocks://ogc.bbr.tutorial.exercise3_completed/examples) tab to see the
   effect on an actual instance

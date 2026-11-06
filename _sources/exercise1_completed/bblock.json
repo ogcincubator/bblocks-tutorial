@@ -1,5 +1,5 @@
 {
-  "$schema": "metaschema.yaml",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/schemas/bblock.schema.yaml",
   "name": "01 - JSON schema (completed)",
   "highlighted": true,
   "abstract": "Shows what Exercise 1 looks like when finished",
@@ -8,13 +8,8 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2023-04-05",
-  "link": "https://github.com/opengeospatial/bblock-template",
-  "sources": [
-  ],
-  "maturity": "mature",
-  "scope": "unstable",
   "tags": [
     "building-blocks-tutorial"
-  ]
+  ],
+  "group": "1 · JSON Schema & examples"
 }

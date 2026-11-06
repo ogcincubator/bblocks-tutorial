@@ -1,4 +1,4 @@
-## Using a standard container
+## Exercise 6 - Using a standard container
 
 This is an **interoperable** approach to packaging a data model in a standardised structure.
 
