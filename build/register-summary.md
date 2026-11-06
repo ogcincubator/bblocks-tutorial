@@ -26,7 +26,7 @@ Provide and validate an example JSON file.  Shows how the examples management co
 
 A building block defining a building block for a data model described in ontology standards OWL and SHACL.  Such a building block allows logical constraints to be inherited by multiple implementation schemas using semantic annotations (such as JSON-LD)
 
-### `ogc.bbr.tutorial.exercise10_completed` — 10 - RDF BB (completed) 
+### `ogc.bbr.tutorial.exercise10_completed` — 10 - RDF BB (completed)
 
 **Type:** model
 
@@ -52,27 +52,15 @@ Semantically annotate a schema by adding a simple JSON-LD context
 
 ### `ogc.bbr.tutorial.exercise4` — 04 - Add Semantic Rules
 
-**Type:** model
+**Type:** schema
 
 Add logical rules using SHACL to exploit semantic annotations
 
-### `ogc.bbr.tutorial.exercise4_completed` — 04 - Rules (completed)
-
-**Type:** model
-
-Add logical rules using SHACL to exploit semantic annotations
-
-### `ogc.bbr.tutorial.exercise5` — 05 - Profile a BB (using rules)
-
-**Type:** model
-
-Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases.
-
-### `ogc.bbr.tutorial.exercise7` — 07 - Import/Extend
+### `ogc.bbr.tutorial.exercise4_completed` — 04 - Add Semantic Rules (completed)
 
 **Type:** schema
 
-Profiling a BBlock from another register
+Add logical rules using SHACL to exploit semantic annotations
 
 ### `ogc.bbr.tutorial.exercise8` — 08 - Transforms
 
@@ -110,9 +98,15 @@ Profile a block and redeclare one of its inherited JSON-LD bindings so your own 
 
 Profile a block and redeclare one of its inherited JSON-LD bindings so your own mapping wins
 
-### `ogc.bbr.tutorial.exercise5_completed` — 05 - Profiling (completed)
+### `ogc.bbr.tutorial.exercise5` — 05 - Profile a BB (using rules)
 
-**Type:** model
+**Type:** schema
+
+Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases.
+
+### `ogc.bbr.tutorial.exercise5_completed` — 05 - Profile a BB (using rules) (completed)
+
+**Type:** schema
 
 Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases.
 
@@ -127,6 +121,12 @@ This example shows a simple customisation for OGC API Feature schemas
 **Type:** schema
 
 This example shows a simple customisation for OGC API Feature schemas
+
+### `ogc.bbr.tutorial.exercise7` — 07 - Import/Extend
+
+**Type:** schema
+
+Profiling a BBlock from another register
 
 ### `ogc.bbr.tutorial.exercise7_completed` — 07 - Import/Extend (completed)
 

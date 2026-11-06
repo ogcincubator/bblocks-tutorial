@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.bbr.tutorial.exercise5_completed - 05 - Profiling (completed)",
-  "bblockName": "05 - Profiling (completed)",
+  "title": "Validation report for ogc.bbr.tutorial.exercise5_completed - 05 - Profile a BB (using rules) (completed)",
+  "bblockName": "05 - Profile a BB (using rules) (completed)",
   "bblockId": "ogc.bbr.tutorial.exercise5_completed",
-  "generated": "2026-08-11T10:19:45.432114+00:00",
+  "generated": "2026-11-06T04:22:10.680641+00:00",
   "result": true,
   "items": [
     {
@@ -73,41 +73,41 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "graph": "@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ a mynamespace:aThing ;\n                    ns1:b 4 ;\n                    ns1:c 1 ] ;\n            sh:resultMessage \"Value is not >= Literal(\\\"5\\\", datatype=xsd:integer)\" ;\n            sh:resultPath ns1:b ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;\n            sh:sourceShape [ sh:minInclusive 5 ;\n                    sh:path ns1:b ] ;\n            sh:value 4 ] .\n\n",
               "isError": true,
-              "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MinInclusiveConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:minInclusive Literal(\"5\", datatype=xsd:integer) ; sh:path ns1:b ]\n  \tFocus Node: [ ns1:b Literal(\"4\", datatype=xsd:integer) ; ns1:c Literal(\"1\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"4\", datatype=xsd:integer)\n  \tResult Path: ns1:b\n  \tMessage: Value is not >= Literal(\"5\", datatype=xsd:integer)\n  "
+              "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MinInclusiveConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:minInclusive Literal(\"5\", datatype=xsd:integer) ; sh:path ns1:b ]\n  \tFocus Node: [ ns1:b Literal(\"4\", datatype=xsd:integer) ; ns1:c Literal(\"1\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"4\", datatype=xsd:integer)\n  \tResult Path: ns1:b\n  \tMessage: Value is not >= Literal(\"5\", datatype=xsd:integer)\n  "
             },
             {
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N3d2ceb7826f34102909ff4ba789f42c0"
+                    "_:Ndab4640e9ac64609bacfa5c0a2d09465"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N3d2ceb7826f34102909ff4ba789f42c0\n"
+              "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ndab4640e9ac64609bacfa5c0a2d09465\n"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N3d2ceb7826f34102909ff4ba789f42c0"
+                    "_:Ndab4640e9ac64609bacfa5c0a2d09465"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N3d2ceb7826f34102909ff4ba789f42c0\n"
+              "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ndab4640e9ac64609bacfa5c0a2d09465\n"
             }
           ]
         }
@@ -181,41 +181,41 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N6dc9c772e8d846f595f9f24af5e5d686"
+                    "_:Ne302a373385840e28931430ed8ece6ec"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N6dc9c772e8d846f595f9f24af5e5d686\n"
+              "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ne302a373385840e28931430ed8ece6ec\n"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "graph": "@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ a mynamespace:aThing ;\n                    ns1:b 6 ;\n                    ns1:c 10 ] ;\n            sh:resultMessage \"Value of [ ns1:b Literal(\\\"6\\\", datatype=xsd:integer) ; ns1:c Literal(\\\"10\\\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal(\\\"10\\\", datatype=xsd:integer)\" ;\n            sh:resultPath ns1:c ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:LessThanConstraintComponent ;\n            sh:sourceShape [ sh:lessThan ns1:b ;\n                    sh:path ns1:c ] ;\n            sh:value 10 ] .\n\n",
               "isError": true,
-              "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in LessThanConstraintComponent (http://www.w3.org/ns/shacl#LessThanConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:lessThan ns1:b ; sh:path ns1:c ]\n  \tFocus Node: [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"10\", datatype=xsd:integer)\n  \tResult Path: ns1:c\n  \tMessage: Value of [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal(\"10\", datatype=xsd:integer)\n  "
+              "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in LessThanConstraintComponent (http://www.w3.org/ns/shacl#LessThanConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:lessThan ns1:b ; sh:path ns1:c ]\n  \tFocus Node: [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"10\", datatype=xsd:integer)\n  \tResult Path: ns1:c\n  \tMessage: Value of [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal(\"10\", datatype=xsd:integer)\n  "
             },
             {
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N6dc9c772e8d846f595f9f24af5e5d686"
+                    "_:Ne302a373385840e28931430ed8ece6ec"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N6dc9c772e8d846f595f9f24af5e5d686\n"
+              "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ne302a373385840e28931430ed8ece6ec\n"
             }
           ]
         }
@@ -280,41 +280,41 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N753b29b093d546dfbb8281dc0dd8fe7d"
+                    "_:Nbb1495a4db7d43b7bab65a6302a2eeb1"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N753b29b093d546dfbb8281dc0dd8fe7d\n"
+              "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nbb1495a4db7d43b7bab65a6302a2eeb1\n"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:N753b29b093d546dfbb8281dc0dd8fe7d"
+                    "_:Nbb1495a4db7d43b7bab65a6302a2eeb1"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N753b29b093d546dfbb8281dc0dd8fe7d\n"
+              "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nbb1495a4db7d43b7bab65a6302a2eeb1\n"
             }
           ]
         }

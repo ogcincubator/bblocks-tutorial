@@ -71,6 +71,11 @@ properties:
 required:
 - a
 - b
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise0
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2023-04-05'
 
 ```
 

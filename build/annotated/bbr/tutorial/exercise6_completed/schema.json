@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "Example of a simple GeoJSON Feature specialisation",
   "allOf": [
     {
@@ -12,5 +12,11 @@
         }
       }
     }
-  ]
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.bbr.tutorial.exercise6_completed",
+    "register": "https://ogcincubator.github.io/bblocks-tutorial/build/register.json",
+    "version": "1.0",
+    "dateOfLastChange": "2023-05-19"
+  }
 }

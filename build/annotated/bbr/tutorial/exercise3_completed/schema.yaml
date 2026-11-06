@@ -7,3 +7,8 @@ allOf:
     b:
       type: number
       x-jsonld-id: https://example.org/my-bb-model/more-specific-b
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise3_completed
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-08-11'

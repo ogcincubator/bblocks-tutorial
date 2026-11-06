@@ -11,3 +11,8 @@ properties:
     x-jsonld-id: http://example.com/hasString
 x-jsonld-prefixes:
   ex: http://example.com/
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise8_completed
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2024-10-03'

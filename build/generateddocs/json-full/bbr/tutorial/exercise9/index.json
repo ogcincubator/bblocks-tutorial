@@ -2,6 +2,7 @@
 
 {
   "itemIdentifier": "ogc.bbr.tutorial.exercise9",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/schemas/bblock.schema.yaml",
   "name": "09 - Advanced Transform Example",
   "highlighted": true,
   "abstract": "This example highlights an advanced transform from CityJSON to TopoFeature, showing a range of features interacting to support this complex task.",
@@ -10,7 +11,6 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2026-08-11",
   "tags": [
     "building-blocks-tutorial",
     "3D",
@@ -18,7 +18,9 @@
     "topology",
     "cityjson"
   ],
+  "group": "5 \u00b7 Transforms",
   "shaclShapes": {},
+  "dateOfLastChange": "2026-11-06",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise9/",
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise9/",
@@ -57,7 +59,7 @@
       }
     }
   ],
-  "description": "## Exercise a transform\n\nThis exercise shows how a source data structure can be heavily manipulated to support transformation to a data structure with more explicit semantics.\n\n### Steps\n- simply view the result of the generated transformation.\n\n",
+  "description": "## Exercise 9 - An advanced transform\n\nThis exercise shows how a source data structure can be heavily manipulated to support transformation to a data structure with more explicit semantics.\n\n### Steps\n- simply view the result of the generated transformation.\n\n",
   "examples": [
     {
       "title": "CityJSON Cube",

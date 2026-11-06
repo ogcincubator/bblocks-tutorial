@@ -1,8 +1,8 @@
 {
   "summary": {
     "total": 21,
-    "passed": 18,
-    "failed": 3,
+    "passed": 19,
+    "failed": 2,
     "result": false
   },
   "bblocks": {
@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.bbr.tutorial.exercise0 - 00 - Orientation",
       "bblockName": "00 - Orientation",
       "bblockId": "ogc.bbr.tutorial.exercise0",
-      "generated": "2026-08-11T10:19:45.251623+00:00",
+      "generated": "2026-11-06T04:22:10.471829+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -24,7 +24,7 @@
       "title": "Validation report for ogc.bbr.tutorial.exercise1 - 01 - JSON schema",
       "bblockName": "01 - JSON schema",
       "bblockId": "ogc.bbr.tutorial.exercise1",
-      "generated": "2026-08-11T10:19:45.256493+00:00",
+      "generated": "2026-11-06T04:22:10.476989+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -38,9 +38,67 @@
       "title": "Validation report for ogc.bbr.tutorial.exercise10 - 10 - RDF BB",
       "bblockName": "10 - RDF BB",
       "bblockId": "ogc.bbr.tutorial.exercise10",
-      "generated": "2026-08-11T10:19:45.267408+00:00",
+      "generated": "2026-11-06T04:22:10.489089+00:00",
       "result": true,
       "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "_sources/exercise10/tests/example-fail.ttl",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10/tests/example-fail.ttl",
+            "language": "ttl"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example-fail.ttl from test resources"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise10/shapes.shacl",
+                  "graph": "@prefix : <https://w3id.org/example#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/example-data#Fred> ;\n            sh:resultMessage \"Less than 1 values on eg:Fred->:partOf\" ;\n            sh:resultPath :partOf ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:class :Organization ;\n                    sh:minCount 1 ;\n                    sh:path :partOf ] ] .\n\n",
+                  "isError": true,
+                  "message": "Validation result for _sources/exercise10/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:class :Organization ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path :partOf ]\n  \tFocus Node: eg:Fred\n  \tResult Path: :partOf\n  \tMessage: Less than 1 values on eg:Fred->:partOf\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise10/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "eg:Fred"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise10/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+                }
+              ]
+            }
+          ]
+        },
         {
           "source": {
             "type": "EXAMPLE",
@@ -87,13 +145,13 @@
               "entries": [
                 {
                   "op": "shacl-report",
-                  "shaclFile": "_sources/exercise10/rules.shacl",
+                  "shaclFile": "_sources/exercise10/shapes.shacl",
                   "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
                   "isError": false,
-                  "message": "Validation result for _sources/exercise10/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+                  "message": "Validation result for _sources/exercise10/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
                 },
                 {
-                  "shaclFile": "_sources/exercise10/rules.shacl",
+                  "shaclFile": "_sources/exercise10/shapes.shacl",
                   "focusNodes": {
                     "<https://www.ogc.org/rules/template/#testValues>": {
                       "nodes": [
@@ -102,7 +160,7 @@
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/exercise10/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+                  "message": "Focus nodes for _sources/exercise10/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
                 }
               ]
             }
@@ -111,18 +169,80 @@
       ],
       "globalErrors": {},
       "counts": {
-        "total": 1,
-        "passed": 1,
+        "total": 2,
+        "passed": 2,
         "failed": 0
       }
     },
     "ogc.bbr.tutorial.exercise10_completed": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise10_completed - 10 - RDF BB (completed) ",
-      "bblockName": "10 - RDF BB (completed) ",
+      "title": "Validation report for ogc.bbr.tutorial.exercise10_completed - 10 - RDF BB (completed)",
+      "bblockName": "10 - RDF BB (completed)",
       "bblockId": "ogc.bbr.tutorial.exercise10_completed",
-      "generated": "2026-08-11T10:19:45.278124+00:00",
+      "generated": "2026-11-06T04:22:10.505601+00:00",
       "result": true,
       "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "_sources/exercise10_completed/tests/example-fail.ttl",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10_completed/tests/example-fail.ttl",
+            "language": "ttl"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example-fail.ttl from test resources"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/exercise10_completed/ontology.ttl"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise10_completed/shapes.shacl",
+                  "graph": "@prefix : <https://w3id.org/example#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/example-data#Fred> ;\n            sh:resultMessage \"Less than 1 values on eg:Fred->:partOf\" ;\n            sh:resultPath :partOf ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:class :Organization ;\n                    sh:minCount 1 ;\n                    sh:path :partOf ] ] .\n\n",
+                  "isError": true,
+                  "message": "Validation result for _sources/exercise10_completed/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:class :Organization ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path :partOf ]\n  \tFocus Node: eg:Fred\n  \tResult Path: :partOf\n  \tMessage: Less than 1 values on eg:Fred->:partOf\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise10_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "eg:Fred"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise10_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+                }
+              ]
+            }
+          ]
+        },
         {
           "source": {
             "type": "EXAMPLE",
@@ -168,14 +288,18 @@
               "title": "SHACL",
               "entries": [
                 {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise10_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
                   "isError": false,
-                  "message": "Validation result for _sources/exercise10_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/exercise10_completed/ontology.ttl"
                 },
                 {
-                  "shaclFile": "_sources/exercise10_completed/rules.shacl",
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise10_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise10_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise10_completed/shapes.shacl",
                   "focusNodes": {
                     "<https://www.ogc.org/rules/template/#testValues>": {
                       "nodes": [
@@ -184,7 +308,7 @@
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/exercise10_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+                  "message": "Focus nodes for _sources/exercise10_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
                 }
               ]
             }
@@ -193,8 +317,8 @@
       ],
       "globalErrors": {},
       "counts": {
-        "total": 1,
-        "passed": 1,
+        "total": 2,
+        "passed": 2,
         "failed": 0
       }
     },
@@ -202,7 +326,7 @@
       "title": "Validation report for ogc.bbr.tutorial.exercise1_completed - 01 - JSON schema (completed)",
       "bblockName": "01 - JSON schema (completed)",
       "bblockId": "ogc.bbr.tutorial.exercise1_completed",
-      "generated": "2026-08-11T10:19:45.283906+00:00",
+      "generated": "2026-11-06T04:22:10.511997+00:00",
       "result": true,
       "items": [
         {
@@ -253,7 +377,7 @@
       "title": "Validation report for ogc.bbr.tutorial.exercise2 - 02 - JSON-LD",
       "bblockName": "02 - JSON-LD",
       "bblockId": "ogc.bbr.tutorial.exercise2",
-      "generated": "2026-08-11T10:19:45.289329+00:00",
+      "generated": "2026-11-06T04:22:10.518054+00:00",
       "result": true,
       "items": [
         {
@@ -304,7 +428,7 @@
       "title": "Validation report for ogc.bbr.tutorial.exercise2_completed - 02 - JSON-LD (completed)",
       "bblockName": "02 - JSON-LD (completed)",
       "bblockId": "ogc.bbr.tutorial.exercise2_completed",
-      "generated": "2026-08-11T10:19:45.297962+00:00",
+      "generated": "2026-11-06T04:22:10.528188+00:00",
       "result": true,
       "items": [
         {
@@ -374,7 +498,7 @@
       "title": "Validation report for ogc.bbr.tutorial.exercise4 - 04 - Add Semantic Rules",
       "bblockName": "04 - Add Semantic Rules",
       "bblockId": "ogc.bbr.tutorial.exercise4",
-      "generated": "2026-08-11T10:19:45.307829+00:00",
+      "generated": "2026-11-06T04:22:10.538967+00:00",
       "result": true,
       "items": [
         {
@@ -436,20 +560,20 @@
               "entries": [
                 {
                   "op": "shacl-report",
-                  "shaclFile": "_sources/exercise4/rules.shacl",
+                  "shaclFile": "_sources/exercise4/shapes.shacl",
                   "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
                   "isError": false,
-                  "message": "Validation result for _sources/exercise4/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+                  "message": "Validation result for _sources/exercise4/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
                 },
                 {
-                  "shaclFile": "_sources/exercise4/rules.shacl",
+                  "shaclFile": "_sources/exercise4/shapes.shacl",
                   "focusNodes": {
                     "<https://www.ogc.org/rules/template/#testValues>": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/exercise4/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
+                  "message": "Focus nodes for _sources/exercise4/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
                 }
               ]
             }
@@ -464,10 +588,10 @@
       }
     },
     "ogc.bbr.tutorial.exercise4_completed": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Rules (completed)",
-      "bblockName": "04 - Rules (completed)",
+      "title": "Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Add Semantic Rules (completed)",
+      "bblockName": "04 - Add Semantic Rules (completed)",
       "bblockId": "ogc.bbr.tutorial.exercise4_completed",
-      "generated": "2026-08-11T10:19:45.318406+00:00",
+      "generated": "2026-11-06T04:22:10.549736+00:00",
       "result": true,
       "items": [
         {
@@ -529,22 +653,538 @@
               "entries": [
                 {
                   "op": "shacl-report",
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
                   "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
                   "isError": false,
-                  "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+                  "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
                 },
                 {
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
                   "focusNodes": {
                     "<https://www.ogc.org/rules/template/#testValues>": {
                       "nodes": [
-                        "_:N18d8dc14e6c14bbb8687ee4c0f31cc4f"
+                        "_:N21f6ae5f582f4c2fa9e4d23d01f658e1"
                       ]
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N18d8dc14e6c14bbb8687ee4c0f31cc4f\n"
+                  "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N21f6ae5f582f4c2fa9e4d23d01f658e1\n"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "ogc.bbr.tutorial.exercise8": {
+      "title": "Validation report for ogc.bbr.tutorial.exercise8 - 08 - Transforms",
+      "bblockName": "08 - Transforms",
+      "bblockId": "ogc.bbr.tutorial.exercise8",
+      "generated": "2026-11-06T04:22:10.557696+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise8/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise8/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "ogc.bbr.tutorial.exercise8_completed": {
+      "title": "Validation report for ogc.bbr.tutorial.exercise8_completed - 08 - Transforms (completed)",
+      "bblockName": "08 - Transforms (completed)",
+      "bblockId": "ogc.bbr.tutorial.exercise8_completed",
+      "generated": "2026-11-06T04:22:10.566404+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise8_completed/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise8_completed/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "ogc.bbr.tutorial.exercise9": {
+      "title": "Validation report for ogc.bbr.tutorial.exercise9 - 09 - Advanced Transform Example",
+      "bblockName": "09 - Advanced Transform Example",
+      "bblockId": "ogc.bbr.tutorial.exercise9",
+      "generated": "2026-11-06T04:22:10.588265+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise9/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise9/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/cube.city.json from examples"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise9/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise9/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/twobuildings.city.json from examples"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
+    "ogc.bbr.tutorial.exercise11": {
+      "title": "Validation report for ogc.bbr.tutorial.exercise11 - 11 - Profiling an Ontology",
+      "bblockName": "11 - Profiling an Ontology",
+      "bblockId": "ogc.bbr.tutorial.exercise11",
+      "generated": "2026-11-06T04:22:10.623158+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "_sources/exercise11/tests/example-fail.ttl",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise11/tests/example-fail.ttl",
+            "language": "ttl"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example-fail.ttl from test resources"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/exercise10_completed/ontology.ttl"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise11/shapes.shacl",
+                  "graph": "@prefix : <https://w3id.org/example#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/example-data#Fred> ;\n            sh:resultPath :partOf ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:QualifiedMinCountConstraintComponent ;\n            sh:sourceShape [ sh:path :partOf ;\n                    sh:qualifiedMinCount 1 ;\n                    sh:qualifiedValueShape [ sh:class :Association ] ] ] .\n\n",
+                  "isError": true,
+                  "message": "Validation result for _sources/exercise11/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in QualifiedValueShapeConstraintComponent (http://www.w3.org/ns/shacl#QualifiedMinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:path :partOf ; sh:qualifiedMinCount Literal(\"1\", datatype=xsd:integer) ; sh:qualifiedValueShape [ sh:class :Association ] ]\n  \tFocus Node: eg:Fred\n  \tResult Path: :partOf\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise11/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "eg:Fred"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise11/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise10_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise10_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise10_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "eg:Fred"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise10_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise11/example_1_1.ttl",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise11/example_1_1.ttl",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "text/turtle"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/example.ttl from examples"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 9,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "TURTLE",
+              "title": "Turtle",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Prefixes are defined for mynamespace"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - /github/workspace/_sources/exercise10_completed/ontology.ttl"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise11/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise11/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise11/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "eg:Fred"
+                      ]
+                    },
+                    "<https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise11/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise10_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise10_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise10_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "eg:Fred"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise10_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    },
+    "ogc.bbr.tutorial.exercise3": {
+      "title": "Validation report for ogc.bbr.tutorial.exercise3 - 03 - Override a JSON-LD Binding",
+      "bblockName": "03 - Override a JSON-LD Binding",
+      "bblockId": "ogc.bbr.tutorial.exercise3",
+      "generated": "2026-11-06T04:22:10.630210+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise3/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0
+      }
+    },
+    "ogc.bbr.tutorial.exercise3_completed": {
+      "title": "Validation report for ogc.bbr.tutorial.exercise3_completed - 03 - Override a JSON-LD Binding (completed)",
+      "bblockName": "03 - Override a JSON-LD Binding (completed)",
+      "bblockId": "ogc.bbr.tutorial.exercise3_completed",
+      "generated": "2026-11-06T04:22:10.638395+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise3_completed/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3_completed/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
                 }
               ]
             }
@@ -562,7 +1202,7 @@
       "title": "Validation report for ogc.bbr.tutorial.exercise5 - 05 - Profile a BB (using rules)",
       "bblockName": "05 - Profile a BB (using rules)",
       "bblockId": "ogc.bbr.tutorial.exercise5",
-      "generated": "2026-08-11T10:19:45.325135+00:00",
+      "generated": "2026-11-06T04:22:10.648797+00:00",
       "result": false,
       "items": [
         {
@@ -628,11 +1268,903 @@
         "failed": 1
       }
     },
+    "ogc.bbr.tutorial.exercise5_completed": {
+      "title": "Validation report for ogc.bbr.tutorial.exercise5_completed - 05 - Profile a BB (using rules) (completed)",
+      "bblockName": "05 - Profile a BB (using rules) (completed)",
+      "bblockId": "ogc.bbr.tutorial.exercise5_completed",
+      "generated": "2026-11-06T04:22:10.680641+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "_sources/exercise5_completed/tests/example_b_lt_5-fail.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/tests/example_b_lt_5-fail.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_b_lt_5-fail.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_b_lt_5-fail.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_b_lt_5-fail.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_b_lt_5-fail.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_b_lt_5-fail.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "graph": "@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ a mynamespace:aThing ;\n                    ns1:b 4 ;\n                    ns1:c 1 ] ;\n            sh:resultMessage \"Value is not >= Literal(\\\"5\\\", datatype=xsd:integer)\" ;\n            sh:resultPath ns1:b ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;\n            sh:sourceShape [ sh:minInclusive 5 ;\n                    sh:path ns1:b ] ;\n            sh:value 4 ] .\n\n",
+                  "isError": true,
+                  "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MinInclusiveConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:minInclusive Literal(\"5\", datatype=xsd:integer) ; sh:path ns1:b ]\n  \tFocus Node: [ ns1:b Literal(\"4\", datatype=xsd:integer) ; ns1:c Literal(\"1\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"4\", datatype=xsd:integer)\n  \tResult Path: ns1:b\n  \tMessage: Value is not >= Literal(\"5\", datatype=xsd:integer)\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "_:Ndab4640e9ac64609bacfa5c0a2d09465"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ndab4640e9ac64609bacfa5c0a2d09465\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "_:Ndab4640e9ac64609bacfa5c0a2d09465"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ndab4640e9ac64609bacfa5c0a2d09465\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "_sources/exercise5_completed/tests/example_b_lt_c-fail.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/tests/example_b_lt_c-fail.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_b_lt_c-fail.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_b_lt_c-fail.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_b_lt_c-fail.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_b_lt_c-fail.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_b_lt_c-fail.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "_:Ne302a373385840e28931430ed8ece6ec"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ne302a373385840e28931430ed8ece6ec\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "graph": "@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ a mynamespace:aThing ;\n                    ns1:b 6 ;\n                    ns1:c 10 ] ;\n            sh:resultMessage \"Value of [ ns1:b Literal(\\\"6\\\", datatype=xsd:integer) ; ns1:c Literal(\\\"10\\\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal(\\\"10\\\", datatype=xsd:integer)\" ;\n            sh:resultPath ns1:c ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:LessThanConstraintComponent ;\n            sh:sourceShape [ sh:lessThan ns1:b ;\n                    sh:path ns1:c ] ;\n            sh:value 10 ] .\n\n",
+                  "isError": true,
+                  "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in LessThanConstraintComponent (http://www.w3.org/ns/shacl#LessThanConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:lessThan ns1:b ; sh:path ns1:c ]\n  \tFocus Node: [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"10\", datatype=xsd:integer)\n  \tResult Path: ns1:c\n  \tMessage: Value of [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal(\"10\", datatype=xsd:integer)\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "_:Ne302a373385840e28931430ed8ece6ec"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Ne302a373385840e28931430ed8ece6ec\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise5_completed/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise5_completed/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/example_b_lt_5.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 3,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "_:Nbb1495a4db7d43b7bab65a6302a2eeb1"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nbb1495a4db7d43b7bab65a6302a2eeb1\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "_:Nbb1495a4db7d43b7bab65a6302a2eeb1"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nbb1495a4db7d43b7bab65a6302a2eeb1\n"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
+    "ogc.bbr.tutorial.exercise6": {
+      "title": "Validation report for ogc.bbr.tutorial.exercise6 - 06 - Features",
+      "bblockName": "06 - Features",
+      "bblockId": "ogc.bbr.tutorial.exercise6",
+      "generated": "2026-11-06T04:22:10.913230+00:00",
+      "result": false,
+      "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "_sources/exercise6/tests/feature-fail.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise6/tests/feature-fail.json",
+            "language": "json"
+          },
+          "result": false,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": true,
+                  "message": "Test was expected to fail but it did not."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using feature-fail.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "feature-fail.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD feature-fail.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "feature-fail.ttl",
+                  "size": 16,
+                  "isError": false,
+                  "message": "Output Turtle feature-fail.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<file:///github/workspace/f1>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise6/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/feature.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 16,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://example.com/features/f1>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <http://example.com/features/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise6/example_1_2.yaml",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6/example_1_2.yaml",
+            "exampleIndex": 1,
+            "snippetIndex": 2,
+            "language": "application/x-yaml"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_2.yaml from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1
+      }
+    },
+    "ogc.bbr.tutorial.exercise6_completed": {
+      "title": "Validation report for ogc.bbr.tutorial.exercise6_completed - 06 - Features (completed)",
+      "bblockName": "06 - Features (completed)",
+      "bblockId": "ogc.bbr.tutorial.exercise6_completed",
+      "generated": "2026-11-06T04:22:11.020337+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "TEST_RESOURCE",
+            "requireFail": true,
+            "filename": "_sources/exercise6_completed/tests/feature-fail.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise6_completed/tests/feature-fail.json",
+            "language": "json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "GENERAL",
+              "title": "General",
+              "entries": [
+                {
+                  "op": "require-fail",
+                  "isError": false,
+                  "message": "Test was expected to fail and it did."
+                }
+              ]
+            },
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using feature-fail.json from test resources"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "feature-fail.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD feature-fail.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "feature-fail.ttl",
+                  "size": 16,
+                  "isError": false,
+                  "message": "Output Turtle feature-fail.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": false,
+                  "exception": "ValidationError",
+                  "errorMessage": "'a' is a required property",
+                  "isError": true,
+                  "message": "ValidationError: 'a' is a required property\n\nFailed validating 'required' in schema['allOf'][1]['properties']['properties']:\n    {'$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'description': 'My example schema',\n     'properties': {'a': {'format': 'uri',\n                          'type': 'string',\n                          'x-jsonld-id': '@type'},\n                    'b': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/b'},\n                    'c': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/c'}},\n     'required': ['a', 'b'],\n     'type': 'object',\n     'x-bblocks-metadata': {'dateOfLastChange': '2023-04-05',\n                            'itemIdentifier': 'ogc.bbr.tutorial.exercise4_completed',\n                            'register': 'https://ogcincubator.github.io/bblocks-tutorial/build/register.json',\n                            'version': '0.1'},\n     'x-jsonld-prefixes': {'mynamespace': 'http://example.org/ns1/'}}\n\nOn instance['properties']:\n    {'notMyProp': 'Mandatory property not present example'}"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<file:///github/workspace/f1>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise6_completed/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6_completed/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using examples/feature.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 19,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SHACL",
+              "title": "SHACL",
+              "entries": [
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise5_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "<http://example.com/features/f1>"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "_sources/exercise4_completed/shapes.shacl",
+                  "focusNodes": {
+                    "<https://www.ogc.org/rules/template/#testValues>": {
+                      "nodes": [
+                        "<http://example.com/features/f1>"
+                      ]
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
+                  "focusNodes": {
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
+                    "geojson:FeatureShape": {
+                      "nodes": [
+                        "<http://example.com/features/f1>"
+                      ]
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape/sh:or/rdf:first": {
+                      "nodes": []
+                    },
+                    "geojson:GeometryShape": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <http://example.com/features/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/bbr/tutorial/exercise6_completed/example_1_2.yaml",
+            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6_completed/example_1_2.yaml",
+            "exampleIndex": 1,
+            "snippetIndex": 2,
+            "language": "application/x-yaml"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_2.yaml from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0
+      }
+    },
     "ogc.bbr.tutorial.exercise7": {
       "title": "Validation report for ogc.bbr.tutorial.exercise7 - 07 - Import/Extend",
       "bblockName": "07 - Import/Extend",
       "bblockId": "ogc.bbr.tutorial.exercise7",
-      "generated": "2026-08-11T10:19:45.331283+00:00",
+      "generated": "2026-11-06T04:22:11.266929+00:00",
       "result": true,
       "items": [
         {
@@ -726,1332 +2258,12 @@
         "failed": 0
       }
     },
-    "ogc.bbr.tutorial.exercise8": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise8 - 08 - Transforms",
-      "bblockName": "08 - Transforms",
-      "bblockId": "ogc.bbr.tutorial.exercise8",
-      "generated": "2026-08-11T10:19:45.338324+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise8/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise8/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
-    "ogc.bbr.tutorial.exercise8_completed": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise8_completed - 08 - Transforms (completed)",
-      "bblockName": "08 - Transforms (completed)",
-      "bblockId": "ogc.bbr.tutorial.exercise8_completed",
-      "generated": "2026-08-11T10:19:45.345125+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise8_completed/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise8_completed/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
-    "ogc.bbr.tutorial.exercise9": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise9 - 09 - Advanced Transform Example",
-      "bblockName": "09 - Advanced Transform Example",
-      "bblockId": "ogc.bbr.tutorial.exercise9",
-      "generated": "2026-08-11T10:19:45.366807+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise9/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise9/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/cube.city.json from examples"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise9/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise9/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/twobuildings.city.json from examples"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 2,
-        "passed": 2,
-        "failed": 0
-      }
-    },
-    "ogc.bbr.tutorial.exercise11": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise11 - 11 - Profiling an Ontology",
-      "bblockName": "11 - Profiling an Ontology",
-      "bblockId": "ogc.bbr.tutorial.exercise11",
-      "generated": "2026-08-11T10:19:45.394528+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise11/example_1_1.ttl",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise11/example_1_1.ttl",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "text/turtle"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/example.ttl from examples"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 9,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "TURTLE",
-              "title": "Turtle",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Prefixes are defined for mynamespace"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise11/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise11/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise11/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape": {
-                      "nodes": []
-                    },
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "eg:Fred"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise11/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>/sh:property/sh:qualifiedValueShape: *none*\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise10_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise10_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise10_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "eg:Fred"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise10_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
-    "ogc.bbr.tutorial.exercise3": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise3 - 03 - Override a JSON-LD Binding",
-      "bblockName": "03 - Override a JSON-LD Binding",
-      "bblockId": "ogc.bbr.tutorial.exercise3",
-      "generated": "2026-08-11T10:19:45.401047+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise3/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
-    "ogc.bbr.tutorial.exercise3_completed": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise3_completed - 03 - Override a JSON-LD Binding (completed)",
-      "bblockName": "03 - Override a JSON-LD Binding (completed)",
-      "bblockId": "ogc.bbr.tutorial.exercise3_completed",
-      "generated": "2026-08-11T10:19:45.408383+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise3_completed/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise3_completed/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 1,
-        "passed": 1,
-        "failed": 0
-      }
-    },
-    "ogc.bbr.tutorial.exercise5_completed": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise5_completed - 05 - Profiling (completed)",
-      "bblockName": "05 - Profiling (completed)",
-      "bblockId": "ogc.bbr.tutorial.exercise5_completed",
-      "generated": "2026-08-11T10:19:45.432114+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "TEST_RESOURCE",
-            "requireFail": true,
-            "filename": "_sources/exercise5_completed/tests/example_b_lt_5-fail.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/tests/example_b_lt_5-fail.json",
-            "language": "json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "GENERAL",
-              "title": "General",
-              "entries": [
-                {
-                  "op": "require-fail",
-                  "isError": false,
-                  "message": "Test was expected to fail and it did."
-                }
-              ]
-            },
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_b_lt_5-fail.json from test resources"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_b_lt_5-fail.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_b_lt_5-fail.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_b_lt_5-fail.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_b_lt_5-fail.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "graph": "@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ a mynamespace:aThing ;\n                    ns1:b 4 ;\n                    ns1:c 1 ] ;\n            sh:resultMessage \"Value is not >= Literal(\\\"5\\\", datatype=xsd:integer)\" ;\n            sh:resultPath ns1:b ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinInclusiveConstraintComponent ;\n            sh:sourceShape [ sh:minInclusive 5 ;\n                    sh:path ns1:b ] ;\n            sh:value 4 ] .\n\n",
-                  "isError": true,
-                  "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinInclusiveConstraintComponent (http://www.w3.org/ns/shacl#MinInclusiveConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:minInclusive Literal(\"5\", datatype=xsd:integer) ; sh:path ns1:b ]\n  \tFocus Node: [ ns1:b Literal(\"4\", datatype=xsd:integer) ; ns1:c Literal(\"1\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"4\", datatype=xsd:integer)\n  \tResult Path: ns1:b\n  \tMessage: Value is not >= Literal(\"5\", datatype=xsd:integer)\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "_:N3d2ceb7826f34102909ff4ba789f42c0"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N3d2ceb7826f34102909ff4ba789f42c0\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "_:N3d2ceb7826f34102909ff4ba789f42c0"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N3d2ceb7826f34102909ff4ba789f42c0\n"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "TEST_RESOURCE",
-            "requireFail": true,
-            "filename": "_sources/exercise5_completed/tests/example_b_lt_c-fail.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/tests/example_b_lt_c-fail.json",
-            "language": "json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "GENERAL",
-              "title": "General",
-              "entries": [
-                {
-                  "op": "require-fail",
-                  "isError": false,
-                  "message": "Test was expected to fail and it did."
-                }
-              ]
-            },
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_b_lt_c-fail.json from test resources"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_b_lt_c-fail.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_b_lt_c-fail.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_b_lt_c-fail.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_b_lt_c-fail.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "_:N6dc9c772e8d846f595f9f24af5e5d686"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N6dc9c772e8d846f595f9f24af5e5d686\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "graph": "@prefix mynamespace: <http://example.org/ns1/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode [ a mynamespace:aThing ;\n                    ns1:b 6 ;\n                    ns1:c 10 ] ;\n            sh:resultMessage \"Value of [ ns1:b Literal(\\\"6\\\", datatype=xsd:integer) ; ns1:c Literal(\\\"10\\\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal(\\\"10\\\", datatype=xsd:integer)\" ;\n            sh:resultPath ns1:c ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:LessThanConstraintComponent ;\n            sh:sourceShape [ sh:lessThan ns1:b ;\n                    sh:path ns1:c ] ;\n            sh:value 10 ] .\n\n",
-                  "isError": true,
-                  "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in LessThanConstraintComponent (http://www.w3.org/ns/shacl#LessThanConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:lessThan ns1:b ; sh:path ns1:c ]\n  \tFocus Node: [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]\n  \tValue Node: Literal(\"10\", datatype=xsd:integer)\n  \tResult Path: ns1:c\n  \tMessage: Value of [ ns1:b Literal(\"6\", datatype=xsd:integer) ; ns1:c Literal(\"10\", datatype=xsd:integer) ; rdf:type mynamespace:aThing ]->ns1:b <= Literal(\"10\", datatype=xsd:integer)\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "_:N6dc9c772e8d846f595f9f24af5e5d686"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N6dc9c772e8d846f595f9f24af5e5d686\n"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise5_completed/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise5_completed/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/example_b_lt_5.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 3,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "_:N753b29b093d546dfbb8281dc0dd8fe7d"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N753b29b093d546dfbb8281dc0dd8fe7d\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "_:N753b29b093d546dfbb8281dc0dd8fe7d"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:N753b29b093d546dfbb8281dc0dd8fe7d\n"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 3,
-        "passed": 3,
-        "failed": 0
-      }
-    },
-    "ogc.bbr.tutorial.exercise6": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise6 - 06 - Features",
-      "bblockName": "06 - Features",
-      "bblockId": "ogc.bbr.tutorial.exercise6",
-      "generated": "2026-08-11T10:19:45.838322+00:00",
-      "result": false,
-      "items": [
-        {
-          "source": {
-            "type": "TEST_RESOURCE",
-            "requireFail": true,
-            "filename": "_sources/exercise6/tests/feature-fail.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise6/tests/feature-fail.json",
-            "language": "json"
-          },
-          "result": false,
-          "sections": [
-            {
-              "name": "GENERAL",
-              "title": "General",
-              "entries": [
-                {
-                  "op": "require-fail",
-                  "isError": true,
-                  "message": "Test was expected to fail but it did not."
-                }
-              ]
-            },
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using feature-fail.json from test resources"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "feature-fail.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD feature-fail.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "feature-fail.ttl",
-                  "size": 16,
-                  "isError": false,
-                  "message": "Output Turtle feature-fail.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "focusNodes": {
-                    "geojson:FeatureShape": {
-                      "nodes": [
-                        "<file:///github/workspace/f1>"
-                      ]
-                    },
-                    "geojson:GeometryShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:LinkShape": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise6/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/feature.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 16,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "focusNodes": {
-                    "geojson:FeatureShape": {
-                      "nodes": [
-                        "<http://example.com/features/f1>"
-                      ]
-                    },
-                    "geojson:GeometryShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:LinkShape": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://example.com/features/f1>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise6/example_1_2.yaml",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6/example_1_2.yaml",
-            "exampleIndex": 1,
-            "snippetIndex": 2,
-            "language": "application/x-yaml"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_2.yaml from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 3,
-        "passed": 2,
-        "failed": 1
-      }
-    },
-    "ogc.bbr.tutorial.exercise6_completed": {
-      "title": "Validation report for ogc.bbr.tutorial.exercise6_completed - 06 - Features (completed)",
-      "bblockName": "06 - Features (completed)",
-      "bblockId": "ogc.bbr.tutorial.exercise6_completed",
-      "generated": "2026-08-11T10:19:46.097022+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "TEST_RESOURCE",
-            "requireFail": true,
-            "filename": "_sources/exercise6_completed/tests/feature-fail.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise6_completed/tests/feature-fail.json",
-            "language": "json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "GENERAL",
-              "title": "General",
-              "entries": [
-                {
-                  "op": "require-fail",
-                  "isError": false,
-                  "message": "Test was expected to fail and it did."
-                }
-              ]
-            },
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using feature-fail.json from test resources"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "feature-fail.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD feature-fail.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "feature-fail.ttl",
-                  "size": 16,
-                  "isError": false,
-                  "message": "Output Turtle feature-fail.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": false,
-                  "exception": "ValidationError",
-                  "errorMessage": "'a' is a required property",
-                  "isError": true,
-                  "message": "ValidationError: 'a' is a required property\n\nFailed validating 'required' in schema['allOf'][1]['properties']['properties']:\n    {'$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'description': 'My example schema',\n     'properties': {'a': {'format': 'uri',\n                          'type': 'string',\n                          'x-jsonld-id': '@type'},\n                    'b': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/b'},\n                    'c': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/c'}},\n     'required': ['a', 'b'],\n     'type': 'object',\n     'x-jsonld-prefixes': {'mynamespace': 'http://example.org/ns1/'}}\n\nOn instance['properties']:\n    {'notMyProp': 'Mandatory property not present example'}"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "focusNodes": {
-                    "geojson:FeatureShape": {
-                      "nodes": [
-                        "<file:///github/workspace/f1>"
-                      ]
-                    },
-                    "geojson:GeometryShape": {
-                      "nodes": []
-                    },
-                    "geojson:LinkShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise6_completed/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6_completed/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using examples/feature.json from examples"
-                },
-                {
-                  "op": "jsonld-uplift",
-                  "isError": false,
-                  "message": "JSON-LD context is present - uplifting"
-                },
-                {
-                  "op": "jsonld-create",
-                  "filename": "example_1_1.jsonld",
-                  "isError": false,
-                  "message": "Output JSON-LD example_1_1.jsonld created"
-                },
-                {
-                  "op": "ttl-create",
-                  "empty": false,
-                  "filename": "example_1_1.ttl",
-                  "size": 19,
-                  "isError": false,
-                  "message": "Output Turtle example_1_1.ttl created"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            },
-            {
-              "name": "SHACL",
-              "title": "SHACL",
-              "entries": [
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise5_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "<http://example.com/features/f1>"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "_sources/exercise4_completed/rules.shacl",
-                  "focusNodes": {
-                    "<https://www.ogc.org/rules/template/#testValues>": {
-                      "nodes": [
-                        "<http://example.com/features/f1>"
-                      ]
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
-                },
-                {
-                  "op": "shacl-report",
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
-                  "isError": false,
-                  "message": "Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
-                },
-                {
-                  "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
-                  "focusNodes": {
-                    "geojson:FeatureShape": {
-                      "nodes": [
-                        "<http://example.com/features/f1>"
-                      ]
-                    },
-                    "geojson:GeometryShape": {
-                      "nodes": []
-                    },
-                    "geojson:LinkShape": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:first": {
-                      "nodes": []
-                    },
-                    "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
-                      "nodes": []
-                    }
-                  },
-                  "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://example.com/features/f1>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/bbr/tutorial/exercise6_completed/example_1_2.yaml",
-            "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise6_completed/example_1_2.yaml",
-            "exampleIndex": 1,
-            "snippetIndex": 2,
-            "language": "application/x-yaml"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_2.yaml from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 3,
-        "passed": 3,
-        "failed": 0
-      }
-    },
     "ogc.bbr.tutorial.exercise7_completed": {
       "title": "Validation report for ogc.bbr.tutorial.exercise7_completed - 07 - Import/Extend (completed)",
       "bblockName": "07 - Import/Extend (completed)",
       "bblockId": "ogc.bbr.tutorial.exercise7_completed",
-      "generated": "2026-08-11T10:19:49.166024+00:00",
-      "result": false,
+      "generated": "2026-11-06T04:22:13.299568+00:00",
+      "result": true,
       "items": [
         {
           "source": {
@@ -2122,36 +2334,38 @@
               "title": "SHACL",
               "entries": [
                 {
-                  "op": "shacl-report",
-                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-                  "graph": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix topo: <https://purl.org/geojson/topo#> .\n@prefix toporules: <https://www.ogc.org/rules/topo/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode _:N58457d7de1d1499788be614fe6fc0543 ;\n            sh:resultMessage \"Lines topologies must reference points within current graph closure.\" ;\n            sh:resultPath geojson:topology ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b3 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoLinesReferencePoints ;\n            sh:value <file:///github/workspace/P2> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N58457d7de1d1499788be614fe6fc0543 ;\n            sh:resultMessage \"Referenced features must be present within current graph closure for  topological feature.\" ;\n            sh:resultPath topo:relatedFeatures ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b1 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoReferencesExist ;\n            sh:value <file:///github/workspace/P1> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N58457d7de1d1499788be614fe6fc0543 ;\n            sh:resultMessage \"Lines topologies must reference points within current graph closure.\" ;\n            sh:resultPath geojson:topology ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b3 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoLinesReferencePoints ;\n            sh:value <file:///github/workspace/P1> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N58457d7de1d1499788be614fe6fc0543 ;\n            sh:resultMessage \"Referenced features must be present within current graph closure for  topological feature.\" ;\n            sh:resultPath topo:relatedFeatures ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b1 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoReferencesExist ;\n            sh:value <file:///github/workspace/P3> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N58457d7de1d1499788be614fe6fc0543 ;\n            sh:resultMessage \"Referenced features must be present within current graph closure for  topological feature.\" ;\n            sh:resultPath topo:relatedFeatures ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b1 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoReferencesExist ;\n            sh:value <file:///github/workspace/P2> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N58457d7de1d1499788be614fe6fc0543 ;\n            sh:resultMessage \"Lines topologies must reference points within current graph closure.\" ;\n            sh:resultPath geojson:topology ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b3 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoLinesReferencePoints ;\n            sh:value <file:///github/workspace/P3> ] .\n\n_:N57db0d78b8d244059fd4768b9276dc41 rdf:first <file:///github/workspace/P3> ;\n    rdf:rest () .\n\n_:N5805b689bb4148cbb9d1098fd7b29b6e rdf:first <file:///github/workspace/P1> ;\n    rdf:rest ( <file:///github/workspace/P2> <file:///github/workspace/P3> ) .\n\n_:n966277859ee74982bf060f17c29ac5b3b1 sh:message \"Referenced features must be present within current graph closure for  topological feature.\" ;\n    sh:select \"\"\"\n        prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n        PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n        prefix geojson: <https://purl.org/geojson/vocab#>\n        prefix topo: <https://purl.org/geojson/topo#>\n        SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n        WHERE {\n         $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n         $this a ?geomtype .\n         FILTER ( ?geomtype != geojson:Polygon)\n         FILTER NOT EXISTS { ?ref ?p ?o }\n        }\n\"\"\" .\n\n_:n966277859ee74982bf060f17c29ac5b3b3 sh:message \"Lines topologies must reference points within current graph closure.\" ;\n    sh:select \"\"\"\n        prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n        PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n        prefix geojson: <https://purl.org/geojson/vocab#>\n        prefix dct:     <http://purl.org/dc/terms/>\n        PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n        prefix topo: <https://purl.org/geojson/topo#>\n        SELECT $this (geojson:topology as ?path) (?ref as ?value)\n        WHERE {\n         $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n         FILTER NOT EXISTS {\n             ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n        }\n\"\"\" .\n\n_:N58457d7de1d1499788be614fe6fc0543 a geojson:LineString ;\n    topo:relatedFeatures _:N5805b689bb4148cbb9d1098fd7b29b6e .\n\n",
-                  "isError": true,
-                  "message": "Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:\n  Validation Report\n  Conforms: False\n  Results (6):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoReferencesExist\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P1>\n  \tResult Path: topo:relatedFeatures\n  \tSource Constraint: [ sh:message Literal(\"Referenced features must be present within current graph closure for  topological feature.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           $this a ?geomtype .\n           FILTER ( ?geomtype != geojson:Polygon)\n           FILTER NOT EXISTS { ?ref ?p ?o }\n          }\n  \") ]\n  \tMessage: Referenced features must be present within current graph closure for  topological feature.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoReferencesExist\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P2>\n  \tResult Path: topo:relatedFeatures\n  \tSource Constraint: [ sh:message Literal(\"Referenced features must be present within current graph closure for  topological feature.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           $this a ?geomtype .\n           FILTER ( ?geomtype != geojson:Polygon)\n           FILTER NOT EXISTS { ?ref ?p ?o }\n          }\n  \") ]\n  \tMessage: Referenced features must be present within current graph closure for  topological feature.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoReferencesExist\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P3>\n  \tResult Path: topo:relatedFeatures\n  \tSource Constraint: [ sh:message Literal(\"Referenced features must be present within current graph closure for  topological feature.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           $this a ?geomtype .\n           FILTER ( ?geomtype != geojson:Polygon)\n           FILTER NOT EXISTS { ?ref ?p ?o }\n          }\n  \") ]\n  \tMessage: Referenced features must be present within current graph closure for  topological feature.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoLinesReferencePoints\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P1>\n  \tResult Path: geojson:topology\n  \tSource Constraint: [ sh:message Literal(\"Lines topologies must reference points within current graph closure.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix dct:     <http://purl.org/dc/terms/>\n          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (geojson:topology as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           FILTER NOT EXISTS {\n               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n          }\n  \") ]\n  \tMessage: Lines topologies must reference points within current graph closure.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoLinesReferencePoints\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P2>\n  \tResult Path: geojson:topology\n  \tSource Constraint: [ sh:message Literal(\"Lines topologies must reference points within current graph closure.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix dct:     <http://purl.org/dc/terms/>\n          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (geojson:topology as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           FILTER NOT EXISTS {\n               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n          }\n  \") ]\n  \tMessage: Lines topologies must reference points within current graph closure.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoLinesReferencePoints\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P3>\n  \tResult Path: geojson:topology\n  \tSource Constraint: [ sh:message Literal(\"Lines topologies must reference points within current graph closure.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix dct:     <http://purl.org/dc/terms/>\n          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (geojson:topology as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           FILTER NOT EXISTS {\n               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n          }\n  \") ]\n  \tMessage: Lines topologies must reference points within current graph closure.\n  "
+                  "isError": false,
+                  "message": "Error processing closure source ../../examples/referenced-objects-closure.ttl: <urlopen error [Errno 2] No such file or directory: 'examples/referenced-objects-closure.ttl'> - SHACL validation will run against an incomplete closure graph"
                 },
                 {
-                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+                  "isError": false,
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl",
                   "focusNodes": {
-                    "toporules:testTopoReferencesExist": {
-                      "nodes": [
-                        "<file:///github/workspace/LineP1P2P3>/geojson:topology"
-                      ]
-                    },
-                    "toporules:testTopoEdgesReferencePoints": {
-                      "nodes": [
-                        "<file:///github/workspace/LineP1P2P3>/geojson:topology"
-                      ]
-                    },
-                    "toporules:testTopoDirectedReferencesExist": {
+                    ":OrientedReferenceShape": {
                       "nodes": []
                     },
-                    "toporules:testTopoLinesReferencePoints": {
-                      "nodes": [
-                        "<file:///github/workspace/LineP1P2P3>/geojson:topology"
-                      ]
+                    ":RadiusRequiredShape": {
+                      "nodes": []
+                    },
+                    ":DirectedReferencesShape": {
+                      "nodes": []
+                    },
+                    ":OrientedArcShape": {
+                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:\n - Shape toporules:testTopoReferencesExist: <file:///github/workspace/LineP1P2P3>/geojson:topology\n - Shape toporules:testTopoEdgesReferencePoints: <file:///github/workspace/LineP1P2P3>/geojson:topology\n - Shape toporules:testTopoDirectedReferencesExist: *none*\n - Shape toporules:testTopoLinesReferencePoints: <file:///github/workspace/LineP1P2P3>/geojson:topology\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :OrientedReferenceShape: *none*\n - Shape :RadiusRequiredShape: *none*\n - Shape :DirectedReferencesShape: *none*\n - Shape :OrientedArcShape: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -2163,15 +2377,47 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
                   "focusNodes": {
-                    "_:n9fc68b060fb94f4fb1be0f34dcdbad1bb1": {
+                    "_:n2323251abe574022aaef84d7f00780b1b3": {
                       "nodes": []
                     },
-                    "_:n9fc68b060fb94f4fb1be0f34dcdbad1bb3": {
+                    "_:n2323251abe574022aaef84d7f00780b1b1": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:\n - Shape _:n9fc68b060fb94f4fb1be0f34dcdbad1bb1: *none*\n - Shape _:n9fc68b060fb94f4fb1be0f34dcdbad1bb3: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:\n - Shape _:n2323251abe574022aaef84d7f00780b1b3: *none*\n - Shape _:n2323251abe574022aaef84d7f00780b1b1: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+                  "graph": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix topo: <https://purl.org/geojson/topo#> .\n@prefix toporules: <https://www.ogc.org/rules/topo/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode _:N9154b518f5cf444a9912f3ad7a4949fc ;\n            sh:resultMessage \"Lines topologies must reference points within current graph closure.\" ;\n            sh:resultPath geojson:topology ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:nebc43bf9c74f4ebf871a5fc778ad0dcab3 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoLinesReferencePoints ;\n            sh:value <file:///github/workspace/P2> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N9154b518f5cf444a9912f3ad7a4949fc ;\n            sh:resultMessage \"Lines topologies must reference points within current graph closure.\" ;\n            sh:resultPath geojson:topology ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:nebc43bf9c74f4ebf871a5fc778ad0dcab3 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoLinesReferencePoints ;\n            sh:value <file:///github/workspace/P1> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N9154b518f5cf444a9912f3ad7a4949fc ;\n            sh:resultMessage \"Referenced features must be present within current graph closure for  topological feature.\" ;\n            sh:resultPath topo:relatedFeatures ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:nebc43bf9c74f4ebf871a5fc778ad0dcab1 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoReferencesExist ;\n            sh:value <file:///github/workspace/P1> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N9154b518f5cf444a9912f3ad7a4949fc ;\n            sh:resultMessage \"Referenced features must be present within current graph closure for  topological feature.\" ;\n            sh:resultPath topo:relatedFeatures ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:nebc43bf9c74f4ebf871a5fc778ad0dcab1 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoReferencesExist ;\n            sh:value <file:///github/workspace/P3> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N9154b518f5cf444a9912f3ad7a4949fc ;\n            sh:resultMessage \"Lines topologies must reference points within current graph closure.\" ;\n            sh:resultPath geojson:topology ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:nebc43bf9c74f4ebf871a5fc778ad0dcab3 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoLinesReferencePoints ;\n            sh:value <file:///github/workspace/P3> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N9154b518f5cf444a9912f3ad7a4949fc ;\n            sh:resultMessage \"Referenced features must be present within current graph closure for  topological feature.\" ;\n            sh:resultPath topo:relatedFeatures ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:nebc43bf9c74f4ebf871a5fc778ad0dcab1 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoReferencesExist ;\n            sh:value <file:///github/workspace/P2> ] .\n\n_:N37e88e50062441c3966e716f80a5e2e6 rdf:first <file:///github/workspace/P1> ;\n    rdf:rest ( <file:///github/workspace/P2> <file:///github/workspace/P3> ) .\n\n_:nebc43bf9c74f4ebf871a5fc778ad0dcab1 sh:message \"Referenced features must be present within current graph closure for  topological feature.\" ;\n    sh:select \"\"\"\n        prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n        PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n        prefix geojson: <https://purl.org/geojson/vocab#>\n        prefix topo: <https://purl.org/geojson/topo#>\n        SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n        WHERE {\n         $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n         $this a ?geomtype .\n         FILTER ( ?geomtype != geojson:Polygon)\n         FILTER NOT EXISTS { ?ref ?p ?o }\n        }\n\"\"\" .\n\n_:nebc43bf9c74f4ebf871a5fc778ad0dcab3 sh:message \"Lines topologies must reference points within current graph closure.\" ;\n    sh:select \"\"\"\n        prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n        PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n        prefix geojson: <https://purl.org/geojson/vocab#>\n        prefix dct:     <http://purl.org/dc/terms/>\n        PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n        prefix topo: <https://purl.org/geojson/topo#>\n        SELECT $this (geojson:topology as ?path) (?ref as ?value)\n        WHERE {\n         $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n         FILTER NOT EXISTS {\n             ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n        }\n\"\"\" .\n\n_:N9154b518f5cf444a9912f3ad7a4949fc a geojson:LineString ;\n    topo:relatedFeatures _:N37e88e50062441c3966e716f80a5e2e6 .\n\n",
+                  "isError": true,
+                  "message": "Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:\n  Validation Report\n  Conforms: False\n  Results (6):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoLinesReferencePoints\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P1>\n  \tResult Path: geojson:topology\n  \tSource Constraint: [ sh:message Literal(\"Lines topologies must reference points within current graph closure.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix dct:     <http://purl.org/dc/terms/>\n          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (geojson:topology as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           FILTER NOT EXISTS {\n               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n          }\n  \") ]\n  \tMessage: Lines topologies must reference points within current graph closure.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoLinesReferencePoints\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P2>\n  \tResult Path: geojson:topology\n  \tSource Constraint: [ sh:message Literal(\"Lines topologies must reference points within current graph closure.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix dct:     <http://purl.org/dc/terms/>\n          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (geojson:topology as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           FILTER NOT EXISTS {\n               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n          }\n  \") ]\n  \tMessage: Lines topologies must reference points within current graph closure.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoLinesReferencePoints\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P3>\n  \tResult Path: geojson:topology\n  \tSource Constraint: [ sh:message Literal(\"Lines topologies must reference points within current graph closure.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix dct:     <http://purl.org/dc/terms/>\n          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (geojson:topology as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           FILTER NOT EXISTS {\n               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n          }\n  \") ]\n  \tMessage: Lines topologies must reference points within current graph closure.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoReferencesExist\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P1>\n  \tResult Path: topo:relatedFeatures\n  \tSource Constraint: [ sh:message Literal(\"Referenced features must be present within current graph closure for  topological feature.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           $this a ?geomtype .\n           FILTER ( ?geomtype != geojson:Polygon)\n           FILTER NOT EXISTS { ?ref ?p ?o }\n          }\n  \") ]\n  \tMessage: Referenced features must be present within current graph closure for  topological feature.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoReferencesExist\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P2>\n  \tResult Path: topo:relatedFeatures\n  \tSource Constraint: [ sh:message Literal(\"Referenced features must be present within current graph closure for  topological feature.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           $this a ?geomtype .\n           FILTER ( ?geomtype != geojson:Polygon)\n           FILTER NOT EXISTS { ?ref ?p ?o }\n          }\n  \") ]\n  \tMessage: Referenced features must be present within current graph closure for  topological feature.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoReferencesExist\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> <file:///github/workspace/P3> ) ]\n  \tValue Node: <file:///github/workspace/P3>\n  \tResult Path: topo:relatedFeatures\n  \tSource Constraint: [ sh:message Literal(\"Referenced features must be present within current graph closure for  topological feature.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           $this a ?geomtype .\n           FILTER ( ?geomtype != geojson:Polygon)\n           FILTER NOT EXISTS { ?ref ?p ?o }\n          }\n  \") ]\n  \tMessage: Referenced features must be present within current graph closure for  topological feature.\n  "
+                },
+                {
+                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+                  "focusNodes": {
+                    "toporules:testTopoLinesReferencePoints": {
+                      "nodes": [
+                        "<file:///github/workspace/LineP1P2P3>/geojson:topology"
+                      ]
+                    },
+                    "toporules:testTopoEdgesReferencePoints": {
+                      "nodes": [
+                        "<file:///github/workspace/LineP1P2P3>/geojson:topology"
+                      ]
+                    },
+                    "toporules:testTopoReferencesExist": {
+                      "nodes": [
+                        "<file:///github/workspace/LineP1P2P3>/geojson:topology"
+                      ]
+                    },
+                    "toporules:testTopoDirectedReferencesExist": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:\n - Shape toporules:testTopoLinesReferencePoints: <file:///github/workspace/LineP1P2P3>/geojson:topology\n - Shape toporules:testTopoEdgesReferencePoints: <file:///github/workspace/LineP1P2P3>/geojson:topology\n - Shape toporules:testTopoReferencesExist: <file:///github/workspace/LineP1P2P3>/geojson:topology\n - Shape toporules:testTopoDirectedReferencesExist: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -2183,18 +2429,18 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
                   "focusNodes": {
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
                     "geojson:FeatureShape": {
                       "nodes": [
                         "<file:///github/workspace/LineP1P2P3>"
                       ]
                     },
-                    "geojson:GeometryShape": {
-                      "nodes": []
-                    },
                     "geojson:GeometryShape/sh:or/rdf:first": {
                       "nodes": []
                     },
-                    "geojson:LinkShape": {
+                    "geojson:GeometryShape": {
                       "nodes": []
                     },
                     "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
@@ -2202,7 +2448,7 @@
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <file:///github/workspace/LineP1P2P3>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/LineP1P2P3>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -2214,16 +2460,16 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl",
                   "focusNodes": {
-                    "geojson:FeatureCollectionShape": {
+                    "geojson:LinkShape": {
                       "nodes": []
                     },
                     "geojson:FeatureShape": {
                       "nodes": []
                     },
-                    "geojson:GeometryShape": {
+                    "geojson:FeatureCollectionShape": {
                       "nodes": []
                     },
-                    "geojson:LinkShape": {
+                    "geojson:GeometryShape": {
                       "nodes": []
                     },
                     "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
@@ -2234,7 +2480,7 @@
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
                 }
               ]
             }
@@ -2250,7 +2496,7 @@
             "snippetIndex": 1,
             "language": "application/json"
           },
-          "result": false,
+          "result": true,
           "sections": [
             {
               "name": "FILES",
@@ -2298,36 +2544,42 @@
               "title": "SHACL",
               "entries": [
                 {
-                  "op": "shacl-report",
-                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-                  "graph": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix topo: <https://purl.org/geojson/topo#> .\n@prefix toporules: <https://www.ogc.org/rules/topo/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode _:N69bab9e272a4425a9027b82f3e3cfdb1 ;\n            sh:resultMessage \"Lines topologies must reference points within current graph closure.\" ;\n            sh:resultPath geojson:topology ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b3 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoLinesReferencePoints ;\n            sh:value <file:///github/workspace/P2> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N69bab9e272a4425a9027b82f3e3cfdb1 ;\n            sh:resultMessage \"Lines topologies must reference points within current graph closure.\" ;\n            sh:resultPath geojson:topology ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b3 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoLinesReferencePoints ;\n            sh:value <file:///github/workspace/P1> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N69bab9e272a4425a9027b82f3e3cfdb1 ;\n            sh:resultMessage \"Referenced features must be present within current graph closure for  topological feature.\" ;\n            sh:resultPath topo:relatedFeatures ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b1 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoReferencesExist ;\n            sh:value <file:///github/workspace/P2> ],\n        [ a sh:ValidationResult ;\n            sh:focusNode _:N69bab9e272a4425a9027b82f3e3cfdb1 ;\n            sh:resultMessage \"Referenced features must be present within current graph closure for  topological feature.\" ;\n            sh:resultPath topo:relatedFeatures ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraint _:n966277859ee74982bf060f17c29ac5b3b1 ;\n            sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;\n            sh:sourceShape toporules:testTopoReferencesExist ;\n            sh:value <file:///github/workspace/P1> ] .\n\n_:Nebc5606253824673bdcc8db762e4b14c rdf:first <file:///github/workspace/P2> ;\n    rdf:rest () .\n\n_:Nf398fc8c216f4438b9af10afcc708743 rdf:first <file:///github/workspace/P1> ;\n    rdf:rest _:Nebc5606253824673bdcc8db762e4b14c .\n\n_:n966277859ee74982bf060f17c29ac5b3b1 sh:message \"Referenced features must be present within current graph closure for  topological feature.\" ;\n    sh:select \"\"\"\n        prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n        PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n        prefix geojson: <https://purl.org/geojson/vocab#>\n        prefix topo: <https://purl.org/geojson/topo#>\n        SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n        WHERE {\n         $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n         $this a ?geomtype .\n         FILTER ( ?geomtype != geojson:Polygon)\n         FILTER NOT EXISTS { ?ref ?p ?o }\n        }\n\"\"\" .\n\n_:n966277859ee74982bf060f17c29ac5b3b3 sh:message \"Lines topologies must reference points within current graph closure.\" ;\n    sh:select \"\"\"\n        prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n        PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n        prefix geojson: <https://purl.org/geojson/vocab#>\n        prefix dct:     <http://purl.org/dc/terms/>\n        PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n        prefix topo: <https://purl.org/geojson/topo#>\n        SELECT $this (geojson:topology as ?path) (?ref as ?value)\n        WHERE {\n         $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n         FILTER NOT EXISTS {\n             ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n        }\n\"\"\" .\n\n_:N69bab9e272a4425a9027b82f3e3cfdb1 a geojson:LineString ;\n    topo:relatedFeatures _:Nf398fc8c216f4438b9af10afcc708743 .\n\n",
-                  "isError": true,
-                  "message": "Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:\n  Validation Report\n  Conforms: False\n  Results (4):\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoReferencesExist\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> ) ]\n  \tValue Node: <file:///github/workspace/P1>\n  \tResult Path: topo:relatedFeatures\n  \tSource Constraint: [ sh:message Literal(\"Referenced features must be present within current graph closure for  topological feature.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           $this a ?geomtype .\n           FILTER ( ?geomtype != geojson:Polygon)\n           FILTER NOT EXISTS { ?ref ?p ?o }\n          }\n  \") ]\n  \tMessage: Referenced features must be present within current graph closure for  topological feature.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoReferencesExist\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> ) ]\n  \tValue Node: <file:///github/workspace/P2>\n  \tResult Path: topo:relatedFeatures\n  \tSource Constraint: [ sh:message Literal(\"Referenced features must be present within current graph closure for  topological feature.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (topo:relatedFeatures as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           $this a ?geomtype .\n           FILTER ( ?geomtype != geojson:Polygon)\n           FILTER NOT EXISTS { ?ref ?p ?o }\n          }\n  \") ]\n  \tMessage: Referenced features must be present within current graph closure for  topological feature.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoLinesReferencePoints\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> ) ]\n  \tValue Node: <file:///github/workspace/P1>\n  \tResult Path: geojson:topology\n  \tSource Constraint: [ sh:message Literal(\"Lines topologies must reference points within current graph closure.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix dct:     <http://purl.org/dc/terms/>\n          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (geojson:topology as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           FILTER NOT EXISTS {\n               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n          }\n  \") ]\n  \tMessage: Lines topologies must reference points within current graph closure.\n  Constraint Violation in SPARQLConstraintComponent (http://www.w3.org/ns/shacl#SPARQLConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: toporules:testTopoLinesReferencePoints\n  \tFocus Node: [ rdf:type geojson:LineString ; topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> ) ]\n  \tValue Node: <file:///github/workspace/P2>\n  \tResult Path: geojson:topology\n  \tSource Constraint: [ sh:message Literal(\"Lines topologies must reference points within current graph closure.\") ; sh:select Literal(\"\n          prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n          PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>\n          prefix geojson: <https://purl.org/geojson/vocab#>\n          prefix dct:     <http://purl.org/dc/terms/>\n          PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>\n          prefix topo: <https://purl.org/geojson/topo#>\n          SELECT $this (geojson:topology as ?path) (?ref as ?value)\n          WHERE {\n           $this topo:relatedFeatures/rdf:rest*/rdf:first ?ref .\n           FILTER NOT EXISTS {\n               ?ref (geojson:geometry|geosparql:hasGeometry|dct:spatial)/rdf:type geojson:Point }\n          }\n  \") ]\n  \tMessage: Lines topologies must reference points within current graph closure.\n  "
+                  "isError": false,
+                  "message": "Error processing closure source ../../examples/referenced-objects-closure.ttl: <urlopen error [Errno 2] No such file or directory: 'examples/referenced-objects-closure.ttl'> - SHACL validation will run against an incomplete closure graph"
                 },
                 {
-                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+                  "isError": false,
+                  "message": "Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):\n - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl"
+                },
+                {
+                  "isError": false,
+                  "message": "Using snippet SHACL closures:\n - closure.ttl"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl",
                   "focusNodes": {
-                    "toporules:testTopoReferencesExist": {
-                      "nodes": [
-                        "<file:///github/workspace/LineP1P2>/geojson:topology"
-                      ]
-                    },
-                    "toporules:testTopoEdgesReferencePoints": {
-                      "nodes": [
-                        "<file:///github/workspace/LineP1P2>/geojson:topology"
-                      ]
-                    },
-                    "toporules:testTopoDirectedReferencesExist": {
+                    ":OrientedReferenceShape": {
                       "nodes": []
                     },
-                    "toporules:testTopoLinesReferencePoints": {
-                      "nodes": [
-                        "<file:///github/workspace/LineP1P2>/geojson:topology"
-                      ]
+                    ":RadiusRequiredShape": {
+                      "nodes": []
+                    },
+                    ":DirectedReferencesShape": {
+                      "nodes": []
+                    },
+                    ":OrientedArcShape": {
+                      "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:\n - Shape toporules:testTopoReferencesExist: <file:///github/workspace/LineP1P2>/geojson:topology\n - Shape toporules:testTopoEdgesReferencePoints: <file:///github/workspace/LineP1P2>/geojson:topology\n - Shape toporules:testTopoDirectedReferencesExist: *none*\n - Shape toporules:testTopoLinesReferencePoints: <file:///github/workspace/LineP1P2>/geojson:topology\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:\n - Shape :OrientedReferenceShape: *none*\n - Shape :RadiusRequiredShape: *none*\n - Shape :DirectedReferencesShape: *none*\n - Shape :OrientedArcShape: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -2339,15 +2591,47 @@
                 {
                   "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
                   "focusNodes": {
-                    "_:n9fc68b060fb94f4fb1be0f34dcdbad1bb1": {
+                    "_:n2323251abe574022aaef84d7f00780b1b3": {
                       "nodes": []
                     },
-                    "_:n9fc68b060fb94f4fb1be0f34dcdbad1bb3": {
+                    "_:n2323251abe574022aaef84d7f00780b1b1": {
                       "nodes": []
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:\n - Shape _:n9fc68b060fb94f4fb1be0f34dcdbad1bb1: *none*\n - Shape _:n9fc68b060fb94f4fb1be0f34dcdbad1bb3: *none*\n"
+                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:\n - Shape _:n2323251abe574022aaef84d7f00780b1b3: *none*\n - Shape _:n2323251abe574022aaef84d7f00780b1b1: *none*\n"
+                },
+                {
+                  "op": "shacl-report",
+                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+                  "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
+                  "isError": false,
+                  "message": "Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:\n  Validation Report\n  Conforms: True\n  "
+                },
+                {
+                  "shaclFile": "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
+                  "focusNodes": {
+                    "toporules:testTopoLinesReferencePoints": {
+                      "nodes": [
+                        "<https://example.org/bblocks-tutorial/exercise7/LineP1P2>/geojson:topology"
+                      ]
+                    },
+                    "toporules:testTopoEdgesReferencePoints": {
+                      "nodes": [
+                        "<https://example.org/bblocks-tutorial/exercise7/LineP1P2>/geojson:topology"
+                      ]
+                    },
+                    "toporules:testTopoReferencesExist": {
+                      "nodes": [
+                        "<https://example.org/bblocks-tutorial/exercise7/LineP1P2>/geojson:topology"
+                      ]
+                    },
+                    "toporules:testTopoDirectedReferencesExist": {
+                      "nodes": []
+                    }
+                  },
+                  "isError": false,
+                  "message": "Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:\n - Shape toporules:testTopoLinesReferencePoints: <https://example.org/bblocks-tutorial/exercise7/LineP1P2>/geojson:topology\n - Shape toporules:testTopoEdgesReferencePoints: <https://example.org/bblocks-tutorial/exercise7/LineP1P2>/geojson:topology\n - Shape toporules:testTopoReferencesExist: <https://example.org/bblocks-tutorial/exercise7/LineP1P2>/geojson:topology\n - Shape toporules:testTopoDirectedReferencesExist: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -2359,18 +2643,18 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
                   "focusNodes": {
+                    "geojson:LinkShape": {
+                      "nodes": []
+                    },
                     "geojson:FeatureShape": {
                       "nodes": [
-                        "<file:///github/workspace/LineP1P2>"
+                        "<https://example.org/bblocks-tutorial/exercise7/LineP1P2>"
                       ]
-                    },
-                    "geojson:GeometryShape": {
-                      "nodes": []
                     },
                     "geojson:GeometryShape/sh:or/rdf:first": {
                       "nodes": []
                     },
-                    "geojson:LinkShape": {
+                    "geojson:GeometryShape": {
                       "nodes": []
                     },
                     "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
@@ -2378,7 +2662,7 @@
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <file:///github/workspace/LineP1P2>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <https://example.org/bblocks-tutorial/exercise7/LineP1P2>\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
                 },
                 {
                   "op": "shacl-report",
@@ -2390,16 +2674,16 @@
                 {
                   "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl",
                   "focusNodes": {
-                    "geojson:FeatureCollectionShape": {
+                    "geojson:LinkShape": {
                       "nodes": []
                     },
                     "geojson:FeatureShape": {
                       "nodes": []
                     },
-                    "geojson:GeometryShape": {
+                    "geojson:FeatureCollectionShape": {
                       "nodes": []
                     },
-                    "geojson:LinkShape": {
+                    "geojson:GeometryShape": {
                       "nodes": []
                     },
                     "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
@@ -2410,7 +2694,7 @@
                     }
                   },
                   "isError": false,
-                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:FeatureCollectionShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
+                  "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: *none*\n - Shape geojson:FeatureCollectionShape: *none*\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n"
                 }
               ]
             }
@@ -2420,8 +2704,8 @@
       "globalErrors": {},
       "counts": {
         "total": 2,
-        "passed": 1,
-        "failed": 1
+        "passed": 2,
+        "failed": 0
       }
     }
   }

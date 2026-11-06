@@ -6,3 +6,8 @@ allOf:
         references:
           minItems: 2
           maxItems: 2
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise7
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '1.0'
+  dateOfLastChange: '2023-05-19'

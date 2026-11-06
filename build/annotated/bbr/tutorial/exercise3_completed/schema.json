@@ -14,5 +14,11 @@
         }
       }
     }
-  ]
+  ],
+  "x-bblocks-metadata": {
+    "itemIdentifier": "ogc.bbr.tutorial.exercise3_completed",
+    "register": "https://ogcincubator.github.io/bblocks-tutorial/build/register.json",
+    "version": "0.1",
+    "dateOfLastChange": "2026-08-11"
+  }
 }

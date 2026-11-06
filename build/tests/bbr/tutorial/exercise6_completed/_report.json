@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.bbr.tutorial.exercise6_completed - 06 - Features (completed)",
   "bblockName": "06 - Features (completed)",
   "bblockId": "ogc.bbr.tutorial.exercise6_completed",
-  "generated": "2026-08-11T10:19:46.097022+00:00",
+  "generated": "2026-11-06T04:22:11.020337+00:00",
   "result": true,
   "items": [
     {
@@ -65,7 +65,7 @@
               "exception": "ValidationError",
               "errorMessage": "'a' is a required property",
               "isError": true,
-              "message": "ValidationError: 'a' is a required property\n\nFailed validating 'required' in schema['allOf'][1]['properties']['properties']:\n    {'$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'description': 'My example schema',\n     'properties': {'a': {'format': 'uri',\n                          'type': 'string',\n                          'x-jsonld-id': '@type'},\n                    'b': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/b'},\n                    'c': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/c'}},\n     'required': ['a', 'b'],\n     'type': 'object',\n     'x-jsonld-prefixes': {'mynamespace': 'http://example.org/ns1/'}}\n\nOn instance['properties']:\n    {'notMyProp': 'Mandatory property not present example'}"
+              "message": "ValidationError: 'a' is a required property\n\nFailed validating 'required' in schema['allOf'][1]['properties']['properties']:\n    {'$schema': 'https://json-schema.org/draft/2020-12/schema',\n     'description': 'My example schema',\n     'properties': {'a': {'format': 'uri',\n                          'type': 'string',\n                          'x-jsonld-id': '@type'},\n                    'b': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/b'},\n                    'c': {'type': 'number',\n                          'x-jsonld-id': 'https://example.org/my-bb-model/c'}},\n     'required': ['a', 'b'],\n     'type': 'object',\n     'x-bblocks-metadata': {'dateOfLastChange': '2023-04-05',\n                            'itemIdentifier': 'ogc.bbr.tutorial.exercise4_completed',\n                            'register': 'https://ogcincubator.github.io/bblocks-tutorial/build/register.json',\n                            'version': '0.1'},\n     'x-jsonld-prefixes': {'mynamespace': 'http://example.org/ns1/'}}\n\nOn instance['properties']:\n    {'notMyProp': 'Mandatory property not present example'}"
             }
           ]
         },
@@ -75,37 +75,37 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
+              "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
+              "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: *none*\n"
             },
             {
               "op": "shacl-report",
@@ -117,26 +117,26 @@
             {
               "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
+                "geojson:LinkShape": {
+                  "nodes": []
+                },
                 "geojson:FeatureShape": {
                   "nodes": [
                     "<file:///github/workspace/f1>"
                   ]
                 },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
-                "geojson:LinkShape": {
+                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                "geojson:GeometryShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <file:///github/workspace/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n"
             }
           ]
         }
@@ -201,13 +201,13 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise5_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise5_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise5_completed/rules.shacl",
+              "shaclFile": "_sources/exercise5_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
@@ -216,17 +216,17 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise5_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
+              "message": "Focus nodes for _sources/exercise5_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
             },
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise4_completed/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise4_completed/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise4_completed/rules.shacl",
+              "shaclFile": "_sources/exercise4_completed/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
@@ -235,7 +235,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise4_completed/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
+              "message": "Focus nodes for _sources/exercise4_completed/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: <http://example.com/features/f1>\n"
             },
             {
               "op": "shacl-report",
@@ -247,26 +247,26 @@
             {
               "shaclFile": "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl",
               "focusNodes": {
+                "geojson:LinkShape": {
+                  "nodes": []
+                },
                 "geojson:FeatureShape": {
                   "nodes": [
                     "<http://example.com/features/f1>"
                   ]
                 },
-                "geojson:GeometryShape": {
-                  "nodes": []
-                },
-                "geojson:LinkShape": {
+                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
                   "nodes": []
                 },
                 "geojson:GeometryShape/sh:or/rdf:first": {
                   "nodes": []
                 },
-                "geojson:GeometryShape/sh:or/rdf:rest/rdf:first": {
+                "geojson:GeometryShape": {
                   "nodes": []
                 }
               },
               "isError": false,
-              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:FeatureShape: <http://example.com/features/f1>\n - Shape geojson:GeometryShape: *none*\n - Shape geojson:LinkShape: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n"
+              "message": "Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:\n - Shape geojson:LinkShape: *none*\n - Shape geojson:FeatureShape: <http://example.com/features/f1>\n - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*\n - Shape geojson:GeometryShape/sh:or/rdf:first: *none*\n - Shape geojson:GeometryShape: *none*\n"
             }
           ]
         }

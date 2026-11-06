@@ -17,7 +17,7 @@ Note: User Experience for FAIR transform publishing is a work in progress - feel
 
 ### Steps
 - See the documentation on [transform support](https://ogcincubator.github.io/bblocks-docs/create/transforms)
-- rename [transforms.example](context.example) to [transforms.yaml](context.jsonld)
+- rename [transforms.example](transforms.example) to [transforms.yaml](transforms.yaml)
 - run build
 - run viewer
 - navigate to [Transforms](bblocks://ogc.bbr.tutorial.exercise8/transforms) Tab
@@ -84,6 +84,11 @@ properties:
     x-jsonld-id: http://example.com/hasString
 x-jsonld-prefixes:
   ex: http://example.com/
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise8
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2024-10-03'
 
 ```
 

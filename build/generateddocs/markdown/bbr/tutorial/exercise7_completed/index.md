@@ -9,14 +9,23 @@ Profiling a BBlock from another register
 
 ## Description
 
-## Importing and profiling from an external register
+## Exercise 7 - Importing and profiling from an external register
+
+### Imported rules need a closure
+
+The `topo-line` block imported from the [topo-feature](https://ogcincubator.github.io/topo-feature)
+register carries a SHACL rule (`topo-refs-exist`) requiring every feature a topology references to be
+present in the graph being validated, with a Point geometry. The example references points `P1` and `P2`
+without defining them, so [closure.ttl](closure.ttl) supplies minimal Point stubs as a **SHACL closure**:
+background data merged into the example's RDF graph before validation. The example's `base-uri` in [examples.yaml](examples.yaml) makes the
+ids resolve to the same IRIs the closure uses.
 
 ### Steps
-- uncomment the import in [bblocks-config.yaml](../../bblocks-config.yaml)
+- view the import in line 17 of [bblocks-config.yaml](../../bblocks-config.yaml)
 - uncomment the reference to `topo-line` in [schema.yaml](schema.yaml)
+- reference [closure.ttl](closure.ttl) from the example snippet's `shacl-closure` list in
+  [examples.yaml](examples.yaml)
 - examine the examples and validation reports.
-
-
 
 ## Examples
 
@@ -62,9 +71,9 @@ Profiling a BBlock from another register
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix topo: <https://purl.org/geojson/topo#> .
 
-<file:///github/workspace/LineP1P2> a geojson:Feature ;
+<https://example.org/bblocks-tutorial/exercise7/LineP1P2> a geojson:Feature ;
     geojson:topology [ a geojson:LineString ;
-            topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> ) ] .
+            topo:relatedFeatures ( <https://example.org/bblocks-tutorial/exercise7/P1> <https://example.org/bblocks-tutorial/exercise7/P2> ) ] .
 
 
 ```
@@ -81,6 +90,11 @@ allOf:
         references:
           minItems: 2
           maxItems: 2
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise7_completed
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '1.0'
+  dateOfLastChange: '2023-05-19'
 
 ```
 
@@ -188,12 +202,6 @@ Links to the schema:
           "@container": "@list"
         },
         "directed_references": {
-          "@context": {
-            "ref": {
-              "@type": "@id",
-              "@id": "topo:ref"
-            }
-          },
           "@id": "topo:directedReferences",
           "@container": "@list"
         },
@@ -240,13 +248,18 @@ Links to the schema:
     "arcLength": "geojson:arcLength",
     "startTangentVector": "geojson:startTangentVector",
     "endTangentVector": "geojson:endTangentVector",
-    "ref": "topo:ref",
+    "ref": {
+      "@id": "topo:ref",
+      "@type": "@id"
+    },
     "orientation": "topo:orientation",
     "Edge": "topo:Edge",
     "Face": "topo:Face",
     "Ring": "topo:Ring",
     "Shell": "topo:Shell",
     "Solid": "topo:Solid",
+    "AggregateSolid": "topo:AggregateSolid",
+    "AggregatePolygon": "topo:AggregatePolygon",
     "rings": {
       "@id": "topo:rings",
       "@container": "@list"

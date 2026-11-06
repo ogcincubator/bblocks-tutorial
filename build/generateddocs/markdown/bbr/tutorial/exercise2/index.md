@@ -28,7 +28,7 @@ Enter the OGC Building Blocks!  The (only, currently) tool that will combine sim
 - navigate to [Examples](bblocks://ogc.bbr.tutorial.exercise2/examples) tab
 - choose "RDF/Turtle" to see generated RDF
 - navigate to [Semantic Uplift](bblocks://ogc.bbr.tutorial.exercise2/semantic-uplift) tab (present in completed example)
-- view validation results at [build-local/...](/register/build-local/tests/bbr/template/exercise2/_report.json)
+- view validation results at [build-local/...](/register/build-local/tests/bbr/tutorial/exercise2/_report.json)
 ## Examples
 
 ### Reference a local file for examples
@@ -63,6 +63,11 @@ properties:
 required:
 - a
 - b
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise2
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2023-04-05'
 
 ```
 
@@ -71,9 +76,6 @@ Links to the schema:
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2/schema.yaml)
 
-## Sources
-
-* [Sample source document](https://example.com/sources/1)
 
 # For developers
 

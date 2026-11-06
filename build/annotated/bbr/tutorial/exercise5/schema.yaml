@@ -1,1 +1,6 @@
 $schema: https://json-schema.org/draft/2020-12/schema
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise5
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2023-04-05'

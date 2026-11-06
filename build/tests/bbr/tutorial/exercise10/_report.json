@@ -2,9 +2,67 @@
   "title": "Validation report for ogc.bbr.tutorial.exercise10 - 10 - RDF BB",
   "bblockName": "10 - RDF BB",
   "bblockId": "ogc.bbr.tutorial.exercise10",
-  "generated": "2026-08-11T10:19:45.267408+00:00",
+  "generated": "2026-11-06T04:22:10.489089+00:00",
   "result": true,
   "items": [
+    {
+      "source": {
+        "type": "TEST_RESOURCE",
+        "requireFail": true,
+        "filename": "_sources/exercise10/tests/example-fail.ttl",
+        "url": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10/tests/example-fail.ttl",
+        "language": "ttl"
+      },
+      "result": true,
+      "sections": [
+        {
+          "name": "GENERAL",
+          "title": "General",
+          "entries": [
+            {
+              "op": "require-fail",
+              "isError": false,
+              "message": "Test was expected to fail and it did."
+            }
+          ]
+        },
+        {
+          "name": "FILES",
+          "title": "Files",
+          "entries": [
+            {
+              "isError": false,
+              "message": "Using example-fail.ttl from test resources"
+            }
+          ]
+        },
+        {
+          "name": "SHACL",
+          "title": "SHACL",
+          "entries": [
+            {
+              "op": "shacl-report",
+              "shaclFile": "_sources/exercise10/shapes.shacl",
+              "graph": "@prefix : <https://w3id.org/example#> .\n@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms false ;\n    sh:result [ a sh:ValidationResult ;\n            sh:focusNode <https://w3id.org/example-data#Fred> ;\n            sh:resultMessage \"Less than 1 values on eg:Fred->:partOf\" ;\n            sh:resultPath :partOf ;\n            sh:resultSeverity sh:Violation ;\n            sh:sourceConstraintComponent sh:MinCountConstraintComponent ;\n            sh:sourceShape [ sh:class :Organization ;\n                    sh:minCount 1 ;\n                    sh:path :partOf ] ] .\n\n",
+              "isError": true,
+              "message": "Validation result for _sources/exercise10/shapes.shacl:\n  Validation Report\n  Conforms: False\n  Results (1):\n  Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#MinCountConstraintComponent):\n  \tSeverity: sh:Violation\n  \tSource Shape: [ sh:class :Organization ; sh:minCount Literal(\"1\", datatype=xsd:integer) ; sh:path :partOf ]\n  \tFocus Node: eg:Fred\n  \tResult Path: :partOf\n  \tMessage: Less than 1 values on eg:Fred->:partOf\n  "
+            },
+            {
+              "shaclFile": "_sources/exercise10/shapes.shacl",
+              "focusNodes": {
+                "<https://www.ogc.org/rules/template/#testValues>": {
+                  "nodes": [
+                    "eg:Fred"
+                  ]
+                }
+              },
+              "isError": false,
+              "message": "Focus nodes for _sources/exercise10/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+            }
+          ]
+        }
+      ]
+    },
     {
       "source": {
         "type": "EXAMPLE",
@@ -51,13 +109,13 @@
           "entries": [
             {
               "op": "shacl-report",
-              "shaclFile": "_sources/exercise10/rules.shacl",
+              "shaclFile": "_sources/exercise10/shapes.shacl",
               "graph": "@prefix sh: <http://www.w3.org/ns/shacl#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a sh:ValidationReport ;\n    sh:conforms true .\n\n",
               "isError": false,
-              "message": "Validation result for _sources/exercise10/rules.shacl:\n  Validation Report\n  Conforms: True\n  "
+              "message": "Validation result for _sources/exercise10/shapes.shacl:\n  Validation Report\n  Conforms: True\n  "
             },
             {
-              "shaclFile": "_sources/exercise10/rules.shacl",
+              "shaclFile": "_sources/exercise10/shapes.shacl",
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
@@ -66,7 +124,7 @@
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/exercise10/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
+              "message": "Focus nodes for _sources/exercise10/shapes.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: eg:Fred\n"
             }
           ]
         }
@@ -75,8 +133,8 @@
   ],
   "globalErrors": {},
   "counts": {
-    "total": 1,
-    "passed": 1,
+    "total": 2,
+    "passed": 2,
     "failed": 0
   }
 }

@@ -1,5 +1,5 @@
-Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Rules (completed)
-Generated 2026-08-11T10:19:45.318354+00:00
+Validation report for ogc.bbr.tutorial.exercise4_completed - 04 - Add Semantic Rules (completed)
+Generated 2026-11-06T04:22:10.549681+00:00
 === Files ===
 Using ../exercise1/example.json from examples
 JSON-LD context is present - uplifting
@@ -12,12 +12,12 @@ Validation passed
 === End JSON Schema ===
 
 === SHACL ===
-Validation result for _sources/exercise4_completed/rules.shacl:
+Validation result for _sources/exercise4_completed/shapes.shacl:
   Validation Report
   Conforms: True
   
-Focus nodes for _sources/exercise4_completed/rules.shacl:
- - Shape <https://www.ogc.org/rules/template/#testValues>: _:N18d8dc14e6c14bbb8687ee4c0f31cc4f
+Focus nodes for _sources/exercise4_completed/shapes.shacl:
+ - Shape <https://www.ogc.org/rules/template/#testValues>: _:N21f6ae5f582f4c2fa9e4d23d01f658e1
 
 === End SHACL ===
 

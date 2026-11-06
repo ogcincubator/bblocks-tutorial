@@ -21,14 +21,14 @@
     rdfs:label "00 - Orientation" ;
     dct:abstract "Orientation on the structure of Building Blocks"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise0/index.md> ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise0/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise0/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise0> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "00 - Orientation" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
@@ -41,7 +41,6 @@
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise0/schema.yaml> ;
             prof:hasRole role:schema ] ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -52,14 +51,14 @@
     rdfs:label "01 - JSON schema" ;
     dct:abstract "Provide and validate an example JSON file.  Shows how the examples management component works and introduces a basic JSON schema.  (Note that building blocks may documented other forms of specification, however JSON schemas support semantic interoperability using available standard approaches and OpenAPI applications, and will be featured in these tutorials.)"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise1> ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise1/index.json> ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise1/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise1/index.json> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise1> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "01 - JSON schema" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
@@ -72,7 +71,6 @@
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise1/schema.json> ;
             prof:hasRole role:schema ] ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -83,14 +81,14 @@
     rdfs:label "01 - JSON schema (completed)" ;
     dct:abstract "Shows what Exercise 1 looks like when finished"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise1_completed> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise1_completed/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise1_completed/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise1_completed/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise1_completed> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "01 - JSON schema (completed)" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
@@ -103,7 +101,6 @@
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise1_completed/schema.json> ;
             prof:hasRole role:schema ] ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -116,18 +113,17 @@
     dct:created "2026-08-11T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise3> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise3/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise3/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise3/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise3/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://ogcincubator.github.io/bblocks-docs/create/semantic-uplift#overriding-an-inherited-binding> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "03 - Override a JSON-LD Binding" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
+    dcat:keyword "building-blocks-tutorial" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3/schema.json> ;
@@ -138,7 +134,6 @@
             prof:hasRole role:schema ] ;
     prof:isProfileOf <bblocks://ogc.bbr.tutorial.exercise2> ;
     bblocks:dependsOn <bblocks://ogc.bbr.tutorial.exercise2> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -149,36 +144,34 @@
     rdfs:label "03 - Override a JSON-LD Binding (completed)" ;
     dct:abstract "Profile a block and redeclare one of its inherited JSON-LD bindings so your own mapping wins"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2026-08-11T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise3_completed/index.md> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise3_completed> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise3_completed/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise3_completed/index.md> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise3_completed/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://ogcincubator.github.io/bblocks-docs/create/semantic-uplift#overriding-an-inherited-binding> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "03 - Override a JSON-LD Binding (completed)" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
+    dcat:keyword "building-blocks-tutorial" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/schema.yaml> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/schema.json> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise3_completed/schema.yaml> ;
             prof:hasRole role:schema ] ;
     prof:isProfileOf <bblocks://ogc.bbr.tutorial.exercise2_completed> ;
     bblocks:dependsOn <bblocks://ogc.bbr.tutorial.exercise2_completed> ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise3_completed/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -196,7 +189,7 @@
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise6/index.json> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "06 - Features" ;
@@ -204,10 +197,11 @@
     dcat:keyword "building-blocks-tutorial",
         "examples",
         "feature" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6/schema.yaml> ;
-            prof:hasRole role:schema ],
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6/context.jsonld> ;
@@ -216,13 +210,11 @@
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6/schema.json> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.geo.features.feature> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed false .
 
@@ -233,14 +225,14 @@
     rdfs:label "06 - Features (completed)" ;
     dct:abstract "This example shows a simple customisation for OGC API Feature schemas"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise6_completed/index.json> ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise6_completed/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise6_completed> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise6_completed/index.md> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise6_completed/index.json> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "06 - Features (completed)" ;
@@ -248,36 +240,35 @@
     dcat:keyword "building-blocks-tutorial",
         "examples",
         "feature" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6_completed/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6_completed/schema.yaml> ;
-            prof:hasRole role:schema ],
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6_completed/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise5_completed> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/rules.shacl> ;
-            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6_completed/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise4_completed> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/rules.shacl> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/shapes.shacl> ;
             prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6_completed/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise5_completed> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise6_completed/schema.yaml> ;
+            prof:hasRole role:schema ] ;
     bblocks:dependsOn <bblocks://ogc.bbr.tutorial.exercise5_completed>,
         <bblocks://ogc.geo.features.feature> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -288,29 +279,57 @@
     rdfs:label "07 - Import/Extend" ;
     dct:abstract "Profiling a BBlock from another register"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise7/index.json> ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise7/index.md> ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise7> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise7/index.md> ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise7/index.json> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "07 - Import/Extend" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
     dcat:keyword "building-blocks-tutorial",
         "examples",
         "feature" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature-collection> ;
+            prof:hasArtifact <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+                <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature> ;
+            prof:hasArtifact <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+                <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7/schema.yaml> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7/schema.json> ;
-            prof:hasRole role:schema ] ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    prof:isProfileOf <bblocks://ogc.geo.topo.features.topo-line> ;
+    bblocks:dependsOn <bblocks://ogc.geo.topo.features.topo-line> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -321,14 +340,14 @@
     rdfs:label "07 - Import/Extend (completed)" ;
     dct:abstract "Profiling a BBlock from another register"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise7_completed/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise7_completed/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise7_completed> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise7_completed> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise7_completed/index.json> ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "07 - Import/Extend (completed)" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
@@ -337,22 +356,28 @@
         "feature" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature> ;
-            prof:hasArtifact <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
-                <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
+            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
+            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/schema.yaml> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/schema.json> ;
-            prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.geo.features.featureCollection> ;
             prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.ontology> ;
+            prof:hasArtifact <https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.geo.topo.features.topo-feature> ;
+            prof:hasArtifact <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl>,
+                <https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
@@ -364,15 +389,14 @@
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/context.jsonld> ;
             prof:hasRole role:mapping ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.geo.features.feature> ;
-            prof:hasArtifact <https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl> ;
-            prof:hasRole role:validation ] ;
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/schema.json> ;
+            prof:hasRole role:schema ] ;
+    prof:isProfileOf <bblocks://ogc.geo.topo.features.topo-line> ;
     bblocks:dependsOn <bblocks://ogc.geo.topo.features.topo-line> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed false .
+    bblocks:validationPassed true .
 
 <bblocks://ogc.bbr.tutorial.exercise8> a skos:Concept,
         dcat:Dataset,
@@ -388,22 +412,23 @@
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise8/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "08 - Transforms" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
+    dcat:keyword "building-blocks-tutorial" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise8/schema.json> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise8/context.jsonld> ;
-            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise8/schema.yaml> ;
-            prof:hasRole role:schema ] ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise8/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise8/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -415,29 +440,30 @@
     rdfs:label "08 - Transforms (completed)" ;
     dct:abstract "schema and graph transforms"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-10-03T11:31:00+02:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise8_completed/index.json> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise8_completed/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise8_completed> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise8_completed> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise8_completed/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "08 - Transforms (completed)" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
+    dcat:keyword "building-blocks-tutorial" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise8_completed/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/yaml" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise8_completed/schema.yaml> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise8_completed/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise8_completed/schema.json> ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise8_completed/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
@@ -456,7 +482,7 @@
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise9/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "09 - Advanced Transform Example" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
@@ -470,18 +496,18 @@
 
 <https://ogcincubator.github.io/bblocks-tutorial/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N77e82189fc6f469096eba53c138edd1a ;
+    prov:wasAttributedTo _:N15c464d9233a44b290b42f88043a7871 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2026-08-11T10:19:49.498165"^^xsd:dateTime ;
-            prov:startedAtTime "2026-08-11T10:19:49.313585"^^xsd:dateTime ;
+            prov:endedAtTime "2026-11-06T04:22:13.650769"^^xsd:dateTime ;
+            prov:startedAtTime "2026-11-06T04:22:13.443026"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
                 [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:e8f9bb7559b13ebf3bfefd531f268dc93cdab804" ;
+                    dct:hasVersion "git:3a8821e29faa9526588f0fa654dca3ee25c86a11" ;
                     rdfs:seeAlso <https://ogcincubator.github.io/bblocks-tutorial/build/register.json> ] ;
-            prov:wasAssociatedWith _:N77e82189fc6f469096eba53c138edd1a ] .
+            prov:wasAssociatedWith _:N15c464d9233a44b290b42f88043a7871 ] .
 
 <bblocks://ogc.bbr.tutorial.exercise10> a skos:Concept,
         dcat:Dataset,
@@ -490,30 +516,23 @@
     rdfs:label "10 - RDF BB" ;
     dct:abstract "A building block defining a building block for a data model described in ontology standards OWL and SHACL.  Such a building block allows logical constraints to be inherited by multiple implementation schemas using semantic annotations (such as JSON-LD)"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise10> ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise10/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise10/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise10/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise10> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "10 - RDF BB" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
-    prof:hasResource [ dct:conformsTo owl:Ontology ;
-            dct:format "text/turtle" ;
-            prof:hasArtifact <https://ogcincubator.github.io/ontology.ttl> ;
-            prof:hasRole role:specification ],
-        [ dct:conformsTo shacl: ;
+    dcat:keyword "building-blocks-tutorial" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise10> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10/rules.shacl> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10/shapes.shacl> ;
             prof:hasRole role:validation ] ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -524,113 +543,72 @@
     rdfs:label "11 - Profiling an Ontology" ;
     dct:abstract "Often data models and schemas are re-used with specific constraints - i.e. as a profile. This example shows how using building blocks allows inheritance of rules from a base ontology and addition of such constraints using SHACL."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise11/index.md> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise11> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise11/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise11> ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise11/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "11 - Profiling an Ontology" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
+    dcat:keyword "building-blocks-tutorial" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise10_completed> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10_completed/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise11> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise11/rules.shacl> ;
-            prof:hasRole role:validation ] ;
-    bblocks:dependsOn <bblocks://ogc.bbr.tutorial.exercise10_completed> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> ;
-    bblocks:validationPassed true .
-
-<bblocks://ogc.bbr.tutorial.exercise4> a skos:Concept,
-        dcat:Dataset,
-        bblocks:BBlock,
-        bblocks:Model ;
-    rdfs:label "04 - Add Semantic Rules" ;
-    dct:abstract "Add logical rules using SHACL to exploit semantic annotations"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise4/index.json> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise4> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise4/index.md> ] ;
-    dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
-    skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    skos:prefLabel "04 - Add Semantic Rules" ;
-    skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4/context.jsonld> ;
-            prof:hasRole role:mapping ],
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise11/shapes.shacl> ;
+            prof:hasRole role:validation ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise4> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4/schema.json> ;
-            prof:hasRole role:schema ] ;
-    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise10_completed> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10_completed/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    prof:isProfileOf <bblocks://ogc.bbr.tutorial.exercise10_completed> ;
+    bblocks:dependsOn <bblocks://ogc.bbr.tutorial.exercise10_completed> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
 <bblocks://ogc.bbr.tutorial.exercise5> a skos:Concept,
         dcat:Dataset,
         bblocks:BBlock,
-        bblocks:Model ;
+        bblocks:Schema ;
     rdfs:label "05 - Profile a BB (using rules)" ;
     dct:abstract "Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise5/index.json> ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise5> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise5/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise5/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise5/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "05 - Profile a BB (using rules)" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
-    prof:hasResource [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise5> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5/rules.shacl> ;
-            prof:hasRole role:validation ],
+    dcat:keyword "building-blocks-tutorial" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5/schema.yaml> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5/schema.json> ;
             prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5/schema.yaml> ;
-            prof:hasRole role:schema ] ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise4> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise5> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    prof:isProfileOf <bblocks://ogc.bbr.tutorial.exercise4> ;
+    bblocks:dependsOn <bblocks://ogc.bbr.tutorial.exercise4> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed false .
 
@@ -645,29 +623,26 @@
     rdfs:label "02 - JSON-LD" ;
     dct:abstract "Semantically annotate a schema by adding a simple JSON-LD context"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise2> ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise2/index.md> ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise2/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise2/index.md> ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise2> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "02 - JSON-LD" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
+    dcat:keyword "building-blocks-tutorial" ;
     prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2/schema.yaml> ;
             prof:hasRole role:schema ] ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -680,32 +655,75 @@
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise2_completed/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise2_completed> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise2_completed/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise2_completed/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise2_completed> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
     skos:prefLabel "02 - JSON-LD (completed)" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
-    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2_completed/schema.yaml> ;
-            prof:hasRole role:schema ],
+    dcat:keyword "building-blocks-tutorial" ;
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2_completed/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2_completed/schema.json> ;
             prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2_completed/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise2_completed/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
+
+<bblocks://ogc.bbr.tutorial.exercise5_completed> a skos:Concept,
+        dcat:Dataset,
+        bblocks:BBlock,
+        bblocks:Schema ;
+    rdfs:label "05 - Profile a BB (using rules) (completed)" ;
+    dct:abstract "Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise5_completed> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise5_completed/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise5_completed/index.json> ] ;
+    dct:hasVersion "0.1" ;
+    dct:modified "2026-11-06"^^xsd:date ;
+    skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
+    skos:prefLabel "05 - Profile a BB (using rules) (completed)" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
+    dcat:keyword "building-blocks-tutorial" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise4_completed> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise5_completed> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/schema.json> ;
+            prof:hasRole role:schema ],
         [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise2_completed/context.jsonld> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/context.jsonld> ;
             prof:hasRole role:mapping ] ;
-    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise2_completed/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+    prof:isProfileOf <bblocks://ogc.bbr.tutorial.exercise4_completed> ;
+    bblocks:dependsOn <bblocks://ogc.bbr.tutorial.exercise4_completed> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
@@ -713,128 +731,112 @@
         dcat:Dataset,
         bblocks:BBlock,
         bblocks:Model ;
-    rdfs:label "10 - RDF BB (completed) " ;
+    rdfs:label "10 - RDF BB (completed)" ;
     dct:abstract "A building block defining a building block for a data model described in ontology standards OWL and SHACL.  Such a building block allows logical constraints to be inherited by multiple implementation schemas using semantic annotations (such as JSON-LD)"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise10_completed/index.json> ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise10_completed/index.md> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise10_completed> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise10_completed> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise10_completed/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    skos:prefLabel "10 - RDF BB (completed) " ;
+    skos:prefLabel "10 - RDF BB (completed)" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
+    dcat:keyword "building-blocks-tutorial" ;
     prof:hasResource [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
             rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise10_completed> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10_completed/rules.shacl> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise10_completed/shapes.shacl> ;
             prof:hasRole role:validation ],
         [ dct:conformsTo owl:Ontology ;
             dct:format "text/turtle" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise10_completed/ontology.ttl> ;
             prof:hasRole role:specification ] ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
-<bblocks://ogc.bbr.tutorial.exercise5_completed> a skos:Concept,
+<bblocks://ogc.bbr.tutorial.exercise4> a skos:Concept,
         dcat:Dataset,
         bblocks:BBlock,
-        bblocks:Model ;
-    rdfs:label "05 - Profiling (completed)" ;
-    dct:abstract "Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+        bblocks:Schema ;
+    rdfs:label "04 - Add Semantic Rules" ;
+    dct:abstract "Add logical rules using SHACL to exploit semantic annotations"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise5_completed/index.md> ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise5_completed> ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise4> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise5_completed/index.json> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise4/index.json> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise4/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    skos:prefLabel "05 - Profiling (completed)" ;
+    skos:prefLabel "04 - Add Semantic Rules" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
-    prof:hasResource [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise4_completed> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/rules.shacl> ;
-            prof:hasRole role:validation ],
+    dcat:keyword "building-blocks-tutorial" ;
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4/context.jsonld> ;
+            prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/schema.yaml> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4/schema.json> ;
             prof:hasRole role:schema ],
         [ dct:conformsTo shacl: ;
             dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise5_completed> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/rules.shacl> ;
-            prof:hasRole role:validation ],
-        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
-            dct:format "application/ld+json" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/context.jsonld> ;
-            prof:hasRole role:mapping ] ;
-    bblocks:dependsOn <bblocks://ogc.bbr.tutorial.exercise4_completed> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
+            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise4> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4/shapes.shacl> ;
+            prof:hasRole role:validation ] ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4/context.jsonld> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
 
 <bblocks://ogc.bbr.tutorial.exercise4_completed> a skos:Concept,
         dcat:Dataset,
         bblocks:BBlock,
-        bblocks:Model ;
-    rdfs:label "04 - Rules (completed)" ;
+        bblocks:Schema ;
+    rdfs:label "04 - Add Semantic Rules (completed)" ;
     dct:abstract "Add logical rules using SHACL to exploit semantic annotations"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/markdown/bbr/tutorial/exercise4_completed/index.md> ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise4_completed/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise4_completed> ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/bblock/ogc.bbr.tutorial.exercise4_completed> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-tutorial/build/generateddocs/json-full/bbr/tutorial/exercise4_completed/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2026-08-11"^^xsd:date ;
-    dct:source <https://example.com/sources/1> ;
+    dct:modified "2026-11-06"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    skos:prefLabel "04 - Rules (completed)" ;
+    skos:prefLabel "04 - Add Semantic Rules (completed)" ;
     skos:topConceptOf <https://ogcincubator.github.io/bblocks-tutorial/> ;
-    dcat:keyword "building-blocks-tutorial",
-        "templates" ;
-    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+    dcat:keyword "building-blocks-tutorial" ;
+    prof:hasResource [ dct:conformsTo shacl: ;
+            dct:format "text/turtle" ;
+            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise4_completed> ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/shapes.shacl> ;
+            prof:hasRole role:validation ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
             dct:format "application/ld+json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/context.jsonld> ;
             prof:hasRole role:mapping ],
         [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
             dct:format "application/json" ;
             prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.json> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
-            dct:format "application/yaml" ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml> ;
-            prof:hasRole role:schema ],
-        [ dct:conformsTo shacl: ;
-            dct:format "text/turtle" ;
-            rdfs:seeAlso <bblocks://ogc.bbr.tutorial.exercise4_completed> ;
-            prof:hasArtifact <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/rules.shacl> ;
-            prof:hasRole role:validation ] ;
+            prof:hasRole role:schema ] ;
     bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/context.jsonld> ;
-    bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> ;
     bblocks:validationPassed true .
-
-<https://example.com/sources/1> rdfs:label "Sample source document" .
 
 <https://ogcincubator.github.io/bblocks-tutorial/> a skos:ConceptScheme,
         dcat:Catalog,
@@ -844,7 +846,7 @@
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:description """Follow the instructions in the "About section" of each building block, starting with the [Orientation](bblock/ogc.bbr.tutorial.exercise0) exercise.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
-    dct:modified "2026-08-11T10:19:39.661191"^^xsd:dateTime ;
+    dct:modified "2026-11-06T04:22:05.388072"^^xsd:dateTime ;
     owl:imports <https://ogcincubator.github.io/topo-feature/build/register.json>,
         <https://opengeospatial.github.io/bblocks/register.json> ;
     skos:hasTopConcept <bblocks://ogc.bbr.tutorial.exercise0>,
@@ -869,24 +871,24 @@
         <bblocks://ogc.bbr.tutorial.exercise8_completed>,
         <bblocks://ogc.bbr.tutorial.exercise9> ;
     skos:prefLabel "Building Blocks - OGC Building Blocks tutorial examples repository" ;
-    prof:hasResource [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
+    prof:hasResource [ rdfs:label "This Building Blocks Register in JSON format" ;
+            dct:type "application/json" ;
+            ns2:relation <http://www.iana.org/assignments/relation/self> ;
+            ns1:hasTarget <https://ogcincubator.github.io/bblocks-tutorial/build/register.json> ],
+        [ rdfs:label "This Building Blocks Register in RDF Turtle format" ;
             dct:type "text/turtle" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
             ns1:hasTarget <https://ogcincubator.github.io/bblocks-tutorial/build/bblocks.ttl> ],
         [ rdfs:label "This Building Blocks Register in JSON-LD format" ;
             dct:type "application/ld+json" ;
             ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://ogcincubator.github.io/bblocks-tutorial/build/bblocks.jsonld> ],
-        [ rdfs:label "This Building Blocks Register in JSON format" ;
-            dct:type "application/json" ;
-            ns2:relation <http://www.iana.org/assignments/relation/self> ;
-            ns1:hasTarget <https://ogcincubator.github.io/bblocks-tutorial/build/register.json> ] ;
+            ns1:hasTarget <https://ogcincubator.github.io/bblocks-tutorial/build/bblocks.jsonld> ] ;
     foaf:homepage <https://ogcincubator.github.io/bblocks-tutorial/> ;
     bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-tutorial/build/tests/report.html> .
 
-_:N77e82189fc6f469096eba53c138edd1a a prov:Agent,
+_:N15c464d9233a44b290b42f88043a7871 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.5.32.dev1+g4f7b75c19" ;
+    dct:hasVersion "0.5.36" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

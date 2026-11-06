@@ -17,3 +17,8 @@ required:
 - b
 x-jsonld-prefixes:
   mynamespace: http://example.com/mythings/
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise2_completed
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2023-04-05'

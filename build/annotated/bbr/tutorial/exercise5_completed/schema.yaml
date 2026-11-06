@@ -1,2 +1,7 @@
 $schema: https://json-schema.org/draft/2020-12/schema
 $ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise5_completed
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2023-04-05'

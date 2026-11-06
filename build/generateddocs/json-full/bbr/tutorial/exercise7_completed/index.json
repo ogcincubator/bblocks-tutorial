@@ -2,6 +2,7 @@
 
 {
   "itemIdentifier": "ogc.bbr.tutorial.exercise7_completed",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/schemas/bblock.schema.yaml",
   "name": "07 - Import/Extend (completed)",
   "abstract": "Profiling a BBlock from another register",
   "status": "under-development",
@@ -9,28 +10,27 @@
   "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "1.0",
-  "dateOfLastChange": "2026-08-11",
-  "sources": [],
-  "maturity": "development",
-  "scope": "unstable",
-  "dependsOn": [
-    "ogc.geo.topo.features.topo-line"
-  ],
   "tags": [
     "building-blocks-tutorial",
     "feature",
     "examples"
   ],
-  "group": "Examples",
   "highlighted": true,
+  "isProfileOf": [
+    "ogc.geo.topo.features.topo-line"
+  ],
+  "group": "4 \u00b7 Composition & reuse",
   "shaclShapes": {
+    "ogc.geo.topo.ontology": [
+      "https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl"
+    ],
     "ogc.geo.topo.features.topo-feature": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "ogc.geo.topo.features.topo-feature-collection": [
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl",
-      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl"
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl",
+      "https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl"
     ],
     "ogc.geo.features.feature": [
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl"
@@ -39,6 +39,10 @@
       "https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl"
     ]
   },
+  "dependsOn": [
+    "ogc.geo.topo.features.topo-line"
+  ],
+  "dateOfLastChange": "2026-11-06",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/schema.json"
@@ -47,16 +51,20 @@
   "ldContext": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/context.jsonld",
   "resolvedSchemaProperties": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise7_completed/resolvedProperties.json",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise7_completed/",
-  "validationPassed": false,
+  "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise7_completed/",
-  "description": "## Importing and profiling from an external register\n\n### Steps\n- uncomment the import in [bblocks-config.yaml](../../bblocks-config.yaml)\n- uncomment the reference to `topo-line` in [schema.yaml](schema.yaml)\n- examine the examples and validation reports.\n\n\n",
+  "description": "## Exercise 7 - Importing and profiling from an external register\n\n### Imported rules need a closure\n\nThe `topo-line` block imported from the [topo-feature](https://ogcincubator.github.io/topo-feature)\nregister carries a SHACL rule (`topo-refs-exist`) requiring every feature a topology references to be\npresent in the graph being validated, with a Point geometry. The example references points `P1` and `P2`\nwithout defining them, so [closure.ttl](closure.ttl) supplies minimal Point stubs as a **SHACL closure**:\nbackground data merged into the example's RDF graph before validation. The example's `base-uri` in [examples.yaml](examples.yaml) makes the\nids resolve to the same IRIs the closure uses.\n\n### Steps\n- view the import in line 17 of [bblocks-config.yaml](../../bblocks-config.yaml)\n- uncomment the reference to `topo-line` in [schema.yaml](schema.yaml)\n- reference [closure.ttl](closure.ttl) from the example snippet's `shacl-closure` list in\n  [examples.yaml](examples.yaml)\n- examine the examples and validation reports.\n",
   "examples": [
     {
       "title": "Line with 2 points",
+      "base-uri": "https://example.org/bblocks-tutorial/exercise7/",
       "snippets": [
         {
           "language": "json",
           "ref": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise7_completed/examples/example.json",
+          "shacl-closure": [
+            "closure.ttl"
+          ],
           "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise7_completed/example_1_1.json",
           "sizeBytes": 181,
           "code": "{\n  \"type\": \"Feature\",\n  \"id\": \"LineP1P2\",\n  \"geometry\": null,\n  \"topology\": {\n    \"type\": \"LineString\",\n    \"references\": [\n      \"P1\",\n      \"P2\"\n    ]\n  },\n  \"properties\": null\n}"
@@ -70,13 +78,13 @@
         {
           "language": "ttl",
           "url": "https://ogcincubator.github.io/bblocks-tutorial/build/tests/bbr/tutorial/exercise7_completed/example_1_1.ttl",
-          "sizeBytes": 368,
-          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix topo: <https://purl.org/geojson/topo#> .\n\n<file:///github/workspace/LineP1P2> a geojson:Feature ;\n    geojson:topology [ a geojson:LineString ;\n            topo:relatedFeatures ( <file:///github/workspace/P1> <file:///github/workspace/P2> ) ] .\n\n"
+          "sizeBytes": 434,
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix topo: <https://purl.org/geojson/topo#> .\n\n<https://example.org/bblocks-tutorial/exercise7/LineP1P2> a geojson:Feature ;\n    geojson:topology [ a geojson:LineString ;\n            topo:relatedFeatures ( <https://example.org/bblocks-tutorial/exercise7/P1> <https://example.org/bblocks-tutorial/exercise7/P2> ) ] .\n\n"
         }
       ]
     }
   ],
-  "annotatedSchema": "description: Line with only two points\nallOf:\n- $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml\n- properties:\n    topology:\n      properties:\n        references:\n          minItems: 2\n          maxItems: 2\n",
+  "annotatedSchema": "description: Line with only two points\nallOf:\n- $ref: https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/features/topo-line/schema.yaml\n- properties:\n    topology:\n      properties:\n        references:\n          minItems: 2\n          maxItems: 2\nx-bblocks-metadata:\n  itemIdentifier: ogc.bbr.tutorial.exercise7_completed\n  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json\n  version: '1.0'\n  dateOfLastChange: '2023-05-19'\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-tutorial",
   "gitPath": "_sources/exercise7_completed"
 }

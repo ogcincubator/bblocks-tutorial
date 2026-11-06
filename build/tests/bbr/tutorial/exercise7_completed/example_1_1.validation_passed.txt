@@ -1,0 +1,72 @@
+Validation report for ogc.bbr.tutorial.exercise7_completed - 07 - Import/Extend (completed)
+Generated 2026-11-06T04:22:13.299480+00:00
+=== Files ===
+Using examples/example.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_1_1.jsonld created
+Output Turtle example_1_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+
+=== SHACL ===
+Error processing closure source ../../examples/referenced-objects-closure.ttl: <urlopen error [Errno 2] No such file or directory: 'examples/referenced-objects-closure.ttl'> - SHACL validation will run against an incomplete closure graph
+Using SHACL closure graph sources (declared closures, ontologies and RDF data resources):
+ - https://ogcincubator.github.io/topo-feature/build/annotated/geo/topo/ontology/ontology.ttl
+Using snippet SHACL closures:
+ - closure.ttl
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/ontology/shapes.shacl:
+ - Shape :OrientedReferenceShape: *none*
+ - Shape :RadiusRequiredShape: *none*
+ - Shape :DirectedReferencesShape: *none*
+ - Shape :OrientedArcShape: *none*
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature/tests/geometry-coordinates.shacl:
+ - Shape _:n2323251abe574022aaef84d7f00780b1b3: *none*
+ - Shape _:n2323251abe574022aaef84d7f00780b1b1: *none*
+
+Validation result for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://ogcincubator.github.io/topo-feature/_sources/features/topo-feature-collection/tests/topo-refs-exist.shacl:
+ - Shape toporules:testTopoLinesReferencePoints: <https://example.org/bblocks-tutorial/exercise7/LineP1P2>/geojson:topology
+ - Shape toporules:testTopoEdgesReferencePoints: <https://example.org/bblocks-tutorial/exercise7/LineP1P2>/geojson:topology
+ - Shape toporules:testTopoReferencesExist: <https://example.org/bblocks-tutorial/exercise7/LineP1P2>/geojson:topology
+ - Shape toporules:testTopoDirectedReferencesExist: *none*
+
+Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/feature/shapes.shacl:
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: <https://example.org/bblocks-tutorial/exercise7/LineP1P2>
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+
+Validation result for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+  Validation Report
+  Conforms: True
+  
+Focus nodes for https://opengeospatial.github.io/bblocks/registereditems/geo/features/featureCollection/shapes.shacl:
+ - Shape geojson:LinkShape: *none*
+ - Shape geojson:FeatureShape: *none*
+ - Shape geojson:FeatureCollectionShape: *none*
+ - Shape geojson:GeometryShape: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:rest/rdf:first: *none*
+ - Shape geojson:GeometryShape/sh:or/rdf:first: *none*
+
+=== End SHACL ===
+

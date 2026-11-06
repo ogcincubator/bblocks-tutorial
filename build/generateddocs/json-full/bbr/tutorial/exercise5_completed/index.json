@@ -2,40 +2,34 @@
 
 {
   "itemIdentifier": "ogc.bbr.tutorial.exercise5_completed",
-  "$schema": "metaschema.yaml",
-  "name": "05 - Profiling (completed)",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/schemas/bblock.schema.yaml",
+  "name": "05 - Profile a BB (using rules) (completed)",
   "highlighted": true,
   "abstract": "Profile another Building Block with additional constraint rules, include unit testing of these rules with pass and fail cases.",
   "status": "under-development",
   "dateTimeAddition": "2023-04-05T00:00:00Z",
-  "itemClass": "model",
+  "itemClass": "schema",
   "register": "building-blocks-tutorial",
   "version": "0.1",
-  "dateOfLastChange": "2026-08-11",
-  "link": "https://github.com/opengeospatial/bblock-template",
-  "sources": [
-    {
-      "title": "Sample source document",
-      "link": "https://example.com/sources/1"
-    }
-  ],
-  "maturity": "mature",
-  "scope": "unstable",
   "tags": [
-    "building-blocks-tutorial",
-    "templates"
+    "building-blocks-tutorial"
   ],
+  "isProfileOf": [
+    "ogc.bbr.tutorial.exercise4_completed"
+  ],
+  "group": "3 \u00b7 Rules & profiling (SHACL)",
   "shaclShapes": {
     "ogc.bbr.tutorial.exercise5_completed": [
-      "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/rules.shacl"
+      "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/shapes.shacl"
     ],
     "ogc.bbr.tutorial.exercise4_completed": [
-      "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/rules.shacl"
+      "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise4_completed/shapes.shacl"
     ]
   },
   "dependsOn": [
     "ogc.bbr.tutorial.exercise4_completed"
   ],
+  "dateOfLastChange": "2026-11-06",
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/schema.json"
@@ -46,7 +40,7 @@
   "sourceFiles": "https://ogcincubator.github.io/bblocks-tutorial/_sources/exercise5_completed/",
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/bblocks-tutorial/blob/master/build/tests/bbr/tutorial/exercise5_completed/",
-  "description": "## Exercise 5\n\nGoal: Profile a building block with additional rules, with tests\n\nNote this illustrates how to use examples to test rules fail when expected. This is a critical capability for complex systems.\n\n### Steps\n- uncomment import from schema.yaml\n- uncomment line #11 in rules.shacl and examine the additional profile constraint (B<5))\n- run build\n- run viewer\n- navigate to \"Exercise 5\"/Validation\n- view validation results on \"about tab\"\n- move `examples/*-fail` to `tests`\n- run build\n- run viewer\n- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)",
+  "description": "## Exercise 5\n\nGoal: Profile a building block with additional rules, with tests\n\nNote this illustrates how to use examples to test rules fail when expected. This is a critical capability for complex systems.\n\n### Steps\n- uncomment import from schema.yaml\n- uncomment line #11 in [shapes.shacl](shapes.shacl) and examine the additional profile constraint (B<5))\n- run build\n- run viewer\n- navigate to \"Exercise 5\"/Validation\n- view validation results on \"about tab\"\n- move `examples/*-fail` to `tests`\n- run build\n- run viewer\n- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/tutorial/exercise5_completed/_report.json)",
   "examples": [
     {
       "title": "Valid under new rule",
@@ -79,7 +73,7 @@
   "examplePrefixes": {
     "mynamespace": "http://example.org/ns1/"
   },
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml\n",
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml\nx-bblocks-metadata:\n  itemIdentifier: ogc.bbr.tutorial.exercise5_completed\n  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json\n  version: '0.1'\n  dateOfLastChange: '2023-04-05'\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-tutorial",
   "gitPath": "_sources/exercise5_completed"
 }

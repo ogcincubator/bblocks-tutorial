@@ -9,7 +9,7 @@ This example shows a simple customisation for OGC API Feature schemas
 
 ## Description
 
-## Using a standard container
+## Exercise 6 - Using a standard container
 
 This is an **interoperable** approach to packaging a data model in a standardised structure.
 
@@ -124,10 +124,15 @@ properties:
 ## Schema
 
 ```yaml
-$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml
+$schema: https://json-schema.org/draft/2020-12/schema
 description: Example of a simple GeoJSON Feature specialisation
 allOf:
 - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise6
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '1.0'
+  dateOfLastChange: '2023-05-19'
 
 ```
 

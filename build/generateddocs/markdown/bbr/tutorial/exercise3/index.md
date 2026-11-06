@@ -13,7 +13,7 @@ Profile a block and redeclare one of its inherited JSON-LD bindings so your own 
 
 Goal: Redeclare (override) a JSON-LD binding inherited from another block
 
-A block whose schema composes another via `allOf`/`$ref` — as this exercise does with [Exercise 2](../exercise2)
+A block whose schema composes another via `allOf`/`$ref` — as this exercise does with [Exercise 2](bblocks://ogc.bbr.tutorial.exercise2)
 — can redeclare a term's mapping in its own `context.jsonld` and have it win over the inherited one. This is
 useful for a profile that needs to specialise an inherited term without forking the base schema or context.
 
@@ -24,11 +24,11 @@ own `context.jsonld` rename step done too — if you skipped ahead, go back and 
 
 ### Steps
 - rename [context.example](context.example) to [context.jsonld](context.jsonld) — it redeclares `b`, which
-  [Exercise 2](../exercise2)'s own context already maps to `https://example.org/my-bb-model/b`
+  [Exercise 2](bblocks://ogc.bbr.tutorial.exercise2)'s own context already maps to `https://example.org/my-bb-model/b`
 - run build
 - run viewer
 - navigate to [Semantic Uplift](bblocks://ogc.bbr.tutorial.exercise3/semantic-uplift) tab and compare the
-  assembled context here to [Exercise 2](../exercise2)'s: `b` should now resolve to this block's own mapping,
+  assembled context here to [Exercise 2](bblocks://ogc.bbr.tutorial.exercise2)'s: `b` should now resolve to this block's own mapping,
   not Exercise 2's, while `a` and `c` are still inherited unchanged
 - choose "RDF/Turtle" on the [Examples](bblocks://ogc.bbr.tutorial.exercise3/examples) tab to see the effect on
   an actual instance
@@ -70,6 +70,11 @@ allOf:
   properties:
     b:
       type: number
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise3
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2026-08-11'
 
 ```
 

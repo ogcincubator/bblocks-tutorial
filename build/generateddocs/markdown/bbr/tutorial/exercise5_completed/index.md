@@ -1,5 +1,5 @@
 
-# 05 - Profiling (completed) (Model)
+# 05 - Profile a BB (using rules) (completed) (Schema)
 
 `ogc.bbr.tutorial.exercise5_completed` *v0.1*
 
@@ -17,7 +17,7 @@ Note this illustrates how to use examples to test rules fail when expected. This
 
 ### Steps
 - uncomment import from schema.yaml
-- uncomment line #11 in rules.shacl and examine the additional profile constraint (B<5))
+- uncomment line #11 in [shapes.shacl](shapes.shacl) and examine the additional profile constraint (B<5))
 - run build
 - run viewer
 - navigate to "Exercise 5"/Validation
@@ -25,7 +25,7 @@ Note this illustrates how to use examples to test rules fail when expected. This
 - move `examples/*-fail` to `tests`
 - run build
 - run viewer
-- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/template/exercise3/_report.json)
+- view validation results at [Validation Report](validation) or [build-local/...](/register/build-local/tests/bbr/tutorial/exercise5_completed/_report.json)
 ## Examples
 
 ### Valid under new rule
@@ -73,6 +73,11 @@ Note this illustrates how to use examples to test rules fail when expected. This
 ```yaml
 $schema: https://json-schema.org/draft/2020-12/schema
 $ref: https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/schema.yaml
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise5_completed
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2023-04-05'
 
 ```
 
@@ -99,9 +104,6 @@ Links to the schema:
 You can find the full JSON-LD context here:
 [context.jsonld](https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise5_completed/context.jsonld)
 
-## Sources
-
-* [Sample source document](https://example.com/sources/1)
 
 # For developers
 

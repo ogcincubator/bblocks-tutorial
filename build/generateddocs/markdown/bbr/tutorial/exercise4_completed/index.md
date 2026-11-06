@@ -1,5 +1,5 @@
 
-# 04 - Rules (completed) (Model)
+# 04 - Add Semantic Rules (completed) (Schema)
 
 `ogc.bbr.tutorial.exercise4_completed` *v0.1*
 
@@ -16,7 +16,7 @@ Goal: Define logical rules to exploit semantic annotation
 This will be a basic example that uses the JSON-LD bindings and simple rules.  Note that richer rules can be defined that use referenced semantic models and advanced reasoning, however significant extra functionality is provided simply by being able to identify and operate on schema elements with richer logic languages like SHACL.
 
 ### Steps
-- uncomment line 11 in [rules.shacl](rules.shacl) 
+- uncomment line 11 in [shapes.shacl](shapes.shacl) 
 - run build
 - run viewer
 - navigate to "Exercise 4"/Validation
@@ -89,6 +89,11 @@ required:
 - b
 x-jsonld-prefixes:
   mynamespace: http://example.org/ns1/
+x-bblocks-metadata:
+  itemIdentifier: ogc.bbr.tutorial.exercise4_completed
+  register: https://ogcincubator.github.io/bblocks-tutorial/build/register.json
+  version: '0.1'
+  dateOfLastChange: '2023-04-05'
 
 ```
 
@@ -115,9 +120,6 @@ Links to the schema:
 You can find the full JSON-LD context here:
 [context.jsonld](https://ogcincubator.github.io/bblocks-tutorial/build/annotated/bbr/tutorial/exercise4_completed/context.jsonld)
 
-## Sources
-
-* [Sample source document](https://example.com/sources/1)
 
 # For developers
 
